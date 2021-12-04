@@ -45,14 +45,90 @@
 
 <section id="section_Theorie">
     <h1>Theorie</h1>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <h2><span id="So funktioniert die binäre Suche"><span id="So_funktioniert_die__binarer_Suche">So funktioniert die binäre Suche</span></span></h2>
+    <p>Mit etwas Glück finden wir das Wort auf den ersten Seiten des Buches. Wenn wir Pech haben, finden wir es erst gegen Ende des Buches – oder gar nicht (das würden wir erst auf der allerletzten Seite feststellen). Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir so ziemlich lange suchen.</p>
+    <p>Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf und schauen, ob das Wort alphabetisch davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buchs sich das Wort befindet und können die andere Hälfte ignorieren. Danach suchen wir wieder die Mitte und schränken den Suchbereich erneut auf die Hälfte (also insgesamt ein Viertel) ein. Mit jedem weiteren Suchschritt halbieren wir die Anzahl der verbleibenden Seiten. Auf diese Weise kommen wir in relativ wenigen Schritten zur Zielseite – und auf der Zielseite zum gesuchten Wort.</p>
+    <p>Mit der Binärsuche brauchen wir lediglich drei Schritte:</p>
+    <ol><li>Im ersten Schritt vergleichen wir den gesuchten Wert 61 mit dem mittleren Element 36. Der gesuchte Wert ist größer, muss sich also rechts von der 36 befinden.</li><li>Im zweiten Schritt vergleichen wir die 61 mit dem mittleren Element des rechten Bereichs, der 79. Der gesucht Wert ist kleiner, muss sich also links von der 79 befinden.</li><li>Zwischen 36 und 79 befindet sich nur noch ein Element. Auch dieses müssen wir noch einmal mit dem gesuchten Element vergleichen. In diesem Beispiel haben wir das gesuchte Element 61 gefunden. Hier hätte sich aber auch eine andere Zahl zwischen 36 und 79 befinden können. Das hätte bedeutet, dass das Array gar keine 61 enthält.</li></ol>
+
+    <h3><span id="Binare_Suche_iterativ"><span id="Binare_Suche_iterativ">Binäre Suche iterativ</span></span></h3>
+    <div><code class="hljs language-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">binarySearchRecursively</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> key)</span> </span>{
+        <span class="hljs-keyword">return</span> binarySearchRecursively(array, <span class="hljs-number">0</span>, array.length, key);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">binarySearchRecursively</span><span class="hljs-params">(
+    <span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> fromIndex, <span class="hljs-keyword">int</span> toIndex, <span class="hljs-keyword">int</span> key)</span> </span>{
+        <span class="hljs-keyword">if</span> (toIndex &lt;= fromIndex) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">int</span> mid = (fromIndex + toIndex) &gt;&gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> midVal = array[mid];
+
+        <span class="hljs-keyword">if</span> (key == midVal) {
+        <span class="hljs-keyword">return</span> mid;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (key &lt; midVal) {
+        <span class="hljs-keyword">return</span> binarySearchRecursively(array, fromIndex, mid, key);
+        } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> binarySearchRecursively(array, mid + <span class="hljs-number">1</span>, toIndex, key);
+        }
+        }</code></div>
+
+    <h3><span id="Binare_Suche_rekursiv"><span id="Binare_Suche_rekursiv">Binäre Suche rekursiv</span></span></h3>
+    <div><code class="hljs language-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">binarySearchRecursively</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> key)</span> </span>{
+        <span class="hljs-keyword">return</span> binarySearchRecursively(array, <span class="hljs-number">0</span>, array.length, key);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">binarySearchRecursively</span><span class="hljs-params">(
+    <span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> fromIndex, <span class="hljs-keyword">int</span> toIndex, <span class="hljs-keyword">int</span> key)</span> </span>{
+        <span class="hljs-keyword">if</span> (toIndex &lt;= fromIndex) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">int</span> mid = (fromIndex + toIndex) &gt;&gt;&gt; <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> midVal = array[mid];
+
+        <span class="hljs-keyword">if</span> (key == midVal) {
+        <span class="hljs-keyword">return</span> mid;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (key &lt; midVal) {
+        <span class="hljs-keyword">return</span> binarySearchRecursively(array, fromIndex, mid, key);
+        } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> binarySearchRecursively(array, mid + <span class="hljs-number">1</span>, toIndex, key);
+        }
+        }</code></div>
+
 </section>
 
 <section id="section_Simulation">
     <h1>Simulation</h1>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <div class="wrapper">
+        <div class="projects">
+            <div class="project project01">
+                <nav>
+                    <ul>
+                        <li><button class="btn next" id="btnNext" style="opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Reee</button></li>
+                        <li><button class="btn play" id="btnPlay" style="opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Bruh Button</button></li>
+                    </ul>
+                </nav>
+
+                <section id="range">
+                    <div data-value="20" style="height: 100%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">20</div><div data-value="7" style="height: 35%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">7</div><div data-value="7" style="height: 35%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">7</div><div data-value="9" style="height: 45%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">9</div><div data-value="16" style="height: 80%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">16</div><div data-value="16" style="height: 80%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">16</div><div data-value="3" style="height: 15%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">3</div><div data-value="7" style="height: 35%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">7</div><div data-value="18" style="height: 90%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">18</div><div data-value="9" style="height: 45%; transform: translate(0px, 0px); opacity: 1; visibility: inherit;" class="bar">9</div></section>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+    <script src="js/main_final.js" defer=""></script>
 
 </section>
-
+<footer>
+    <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+<ul class="list-inline">
+    <li class="list-inline-item"><a href="#">Home</a></li>
+    <li class="list-inline-item"><a href="#">Services</a></li>
+    <li class="list-inline-item"><a href="#">About</a></li>
+    <li class="list-inline-item"><a href="#">Terms</a></li>
+    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+</ul>
+<p class="copyright">Company Name © 2018</p>
+</footer>
 </body>
 </html>
