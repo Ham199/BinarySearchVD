@@ -1,0 +1,161 @@
+
+.project {
+    text-align: center;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.8;
+    font-size: 17px;
+    font-weight: 400;
+    color: #222;
+}
+body {
+    font-family: 'Open Sans';
+}
+
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+h2, h3, h4, h5, h6 {
+    font-size: 40px;
+    line-height: 1.4;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+h2 {
+    font-size: 40px;
+    line-height: 1.4;
+}
+h1, h2 {
+    font-family: 'Roboto Slab';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.ct-inner-content, .oxy-stock-content-styles p, .oxy-stock-content-styles ul, .oxy-stock-content-styles ol, .oxy-stock-content-styles h2, .oxy-stock-content-styles h3 {
+    overflow-x: hidden;
+}
+.oxy-stock-content-styles p {
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, p, .oxy-rich-text p:last-child {
+    margin: 0 0 24px;
+}
+h1, h2, p {
+    margin: 0 0 24px;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+.wp-block-code code.hljs:not(.shcb-wrap-lines) {
+    white-space: pre;
+}
+pre.wp-block-code code {
+    font-family: Hack,"Fira Code",Consolas,Menlo,Monaco,"Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
+    line-height: 1.5;
+    padding: 1em 0 1em 1em;
+}
+.wp-block-code code {
+    display: block;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace,monospace;
+    font-size: 1em;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+section#range {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 70%;
+    background-color: #dee8d7;
+}
+section#range div {
+    flex: 1 1 10%;
+    background-color: #80ba24;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+}
+
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+.footer-basic li {
+    padding:0 10px;
+}
+
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity:1;
+}
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+}
