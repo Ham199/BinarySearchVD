@@ -8,15 +8,24 @@ html {
 }
 
 body {
-    line-height: 1.8;
+    margin: 0;
+    line-height: 1.2;
     font-size: 17px;
     font-weight: 400;
     color: #222;
-}
-body {
-    font-family: 'Open Sans';
+    background: linear-gradient(white,#cecece);
+    font-family: "roboto", sans-serif;
+    text-align: justify;
 }
 
+    img{
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 
 *, ::after, ::before {
     box-sizing: inherit;
@@ -24,25 +33,55 @@ body {
 *, ::after, ::before {
     box-sizing: inherit;
 }
-h2, h3, h4, h5, h6 {
-    font-size: 40px;
-    line-height: 1.4;
+
+div.hintergrund {
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.5% 1%;
+    box-shadow: 5px 5px;
+    -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
+
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab';
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 1.2;
+.logo {
+     text-align: right;
+ }
+    h1, h2 {
+
+    }
+
+h1{
+    background: #6E8898;
+    color: white;
+    text-align: center;
+    padding: 1%;
 }
-h2 {
-    font-size: 40px;
-    line-height: 1.4;
+
+h2{
+
 }
-h1, h2 {
-    font-family: 'Roboto Slab';
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 1.2;
+
+h3{
+
+}
+
+h4{
+
+}
+ul {
+    list-style: none;
+}
+
+p, li{ color: #404040;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+.navi{
+
+    color: #222222;
+    text-align: center;
+    padding: 1%;
 }
 
 .ct-inner-content, .oxy-stock-content-styles p, .oxy-stock-content-styles ul, .oxy-stock-content-styles ol, .oxy-stock-content-styles h2, .oxy-stock-content-styles h3 {
@@ -102,8 +141,8 @@ section#range div {
 }
 .footer-basic {
     padding:40px 0;
-    background-color:#ffffff;
-    color:#4b4c4d;
+
+    color: #939393;
 }
 
 .footer-basic ul {
@@ -142,7 +181,7 @@ section#range div {
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    border:1px solid #ccc;
+    border:1px solid #ffffff;
     margin:0 8px;
     color:inherit;
     opacity:0.75;
@@ -156,6 +195,6 @@ section#range div {
     margin-top:15px;
     text-align:center;
     font-size:13px;
-    color:#aaa;
+    color: #8a8a8a;
     margin-bottom:0;
 }
