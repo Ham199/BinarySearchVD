@@ -9,55 +9,62 @@
     <title>Binäre Suche - Frontend Daniel Van</title>
 </head>
 <body>
-<div class="hintergrund">
 
-    <a class="navi" href="index.html"> Binäre Suche</a>
+<section class="toolbar">
+<div class="logozeile">
+    <a class="Logo" href="index.html"> Binäre Suche</a>
+</div>
+<nav class="navi">
 
-    <nav class="navi">
-        <ul>
-        <li>
-
-            <a href="#section_Beispiel">
+        <span class="beispielzeile">
+            <a class="beispielbutton" href="#section_Beispiel">
                 Beispiel
             </a>
-
-        </li>
-        <li>
-            <a href="#section_Theorie">
-                <span>Theorie</span>
+        </span>
+    <span class="theoriezeile">
+            <a class="theoriebutton" href="#section_Theorie">
+                Theorie
             </a>
-       </li>
-        <li>
-            <a href="#section_Simulation">
-                <span>Simulation</span>
+        </span>
+    <span class="simulationzeile">
+            <a class="simulationbutton" href="#section_Simulation">
+                Simulation
             </a>
+        </span>
+</nav>
 
-        </li>
-        </ul>
-    </nav>
+</section>
+
+<div class="hintergrund">
+
+
+<div class="Titelbild part">
+
+
+
     <section id="start_animation">
-        <img src="img/iUIvzCd.jpg" alt="">
+        <img class="banner" src="img/376e347.jpg" alt="">
     </section>
-
+</div>
     <section id="section_Beispiel">
         <h1>Beispiel</h1>
-        <img src="img/How-Much-Are-Teacup-Pomeranians-730x422.jpg" alt="">
+        <img class="Titel" src="img/How-Much-Are-Teacup-Pomeranians-730x422.jpg" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <img src="img/frontend beispiel1.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel1.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel2.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel2.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel3.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel3.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel4.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel4.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel5.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel5.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel6.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel6.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel7.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel7.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-        <img src="img/frontend beispiel8.png" alt="">
+        <img class="beispiel" src="img/frontend beispiel8.png" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
 
     </section>
@@ -100,9 +107,9 @@
             <span class="hljs-keyword">return</span> binarySearchRecursively(array, <span class="hljs-number">0</span>, array.length, key);
             }
 
-            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">binarySearchRecursively</span><span class="hljs-params">(
-        <span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> fromIndex, <span class="hljs-keyword">int</span> toIndex, <span class="hljs-keyword">int</span> key)</span> </span>{
-            <span class="hljs-keyword">if</span> (toIndex &lt;= fromIndex) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+             <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">binarySearchRecursively</span><span class="hljs-params">(
+             <span class="hljs-keyword">int</span>[] array, <span class="hljs-keyword">int</span> fromIndex, <span class="hljs-keyword">int</span> toIndex, <span class="hljs-keyword">int</span> key)</span> </span>{
+                <span class="hljs-keyword">if</span> (toIndex &lt;= fromIndex) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
 
             <span class="hljs-keyword">int</span> mid = (fromIndex + toIndex) &gt;&gt;&gt; <span class="hljs-number">1</span>;
             <span class="hljs-keyword">int</span> midVal = array[mid];
@@ -114,7 +121,8 @@
             } <span class="hljs-keyword">else</span> {
             <span class="hljs-keyword">return</span> binarySearchRecursively(array, mid + <span class="hljs-number">1</span>, toIndex, key);
             }
-            }</code></div>
+            }</code>
+        </div>
 
     </section>
 

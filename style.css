@@ -13,12 +13,79 @@ body {
     font-size: 17px;
     font-weight: 400;
     color: #222;
-    background: linear-gradient(white,#cecece);
+    background: #f2f2f2;
     font-family: "roboto", sans-serif;
     text-align: justify;
 }
+img.banner{
+   display: flex;
 
-    img{
+    margin-left: auto;
+    margin-right: auto;
+width: 100% ;
+
+
+}
+.toolbar{
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.logozeile{
+    background: #37474d;
+}
+
+
+nav.navi{
+    display:flex;
+    justify-content:space-around;
+    background: white;
+    width: auto;
+    margin: 0 auto;
+    box-shadow: 5px 5px;
+    padding: 0.3%;
+    -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
+}
+.beispielbutton, .theoriebutton, .simulationbutton, .Logo{
+    display: inline-block;
+    margin: .4em .2em;
+    padding: .3em 1em;
+    border: .2em solid #37474d;
+    border-radius: .2em;
+    font-size: 1.1em;
+    letter-spacing: .05em;
+}
+.platzhalter{
+    display: table-cell;
+    vertical-align: top;
+}
+
+a:link, :visited {
+    color: gray;
+    text-decoration: none;
+
+}
+
+a:hover{
+
+    color: #5e5e5e;
+
+    text-decoration: none;
+}
+
+
+img.Titel{
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+    img.beispiel{
         display: block;
         margin-top: 24px;
         margin-bottom: 48px;
@@ -26,13 +93,6 @@ body {
         margin-right: auto;
         width: 50%;
     }
-
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-*, ::after, ::before {
-    box-sizing: inherit;
-}
 
 div.hintergrund {
     background: white;
@@ -72,7 +132,8 @@ ul {
     list-style: none;
 }
 
-p, li{ color: #404040;
+span.beispielzeile,.theoriezeile,.simulationzeiel{
+
     padding-left: 24px;
     padding-right: 24px;
 
