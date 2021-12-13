@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    padding: 0;
     margin: 0;
     line-height: 1.2;
     font-size: 17px;
@@ -58,8 +59,8 @@ nav.navi{
     letter-spacing: .05em;
 }
 .platzhalter{
-    display: table-cell;
-    vertical-align: top;
+    margin-top: 120px;
+
 }
 
 a:link, :visited {
@@ -94,10 +95,11 @@ img.Titel{
         width: 50%;
     }
 
-div.hintergrund {
+div.mittelpart {
     background: white;
     width: 50%;
     margin: 0 auto;
+    margin-top: 120px;
     padding: 1.5% 1%;
     box-shadow: 5px 5px;
     -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -144,6 +146,11 @@ span.beispielzeile,.theoriezeile,.simulationzeiel{
     text-align: center;
     padding: 1%;
 }
+
+#section_Beispiel,#section_Simulation,#section_Theorie{
+    scroll-margin-top: 140px;
+}
+
 
 .ct-inner-content, .oxy-stock-content-styles p, .oxy-stock-content-styles ul, .oxy-stock-content-styles ol, .oxy-stock-content-styles h2, .oxy-stock-content-styles h3 {
     overflow-x: hidden;
