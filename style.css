@@ -183,11 +183,19 @@ pre.wp-block-code code {
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
-
+.hljs {
+    display: block;
+    overflow-x: auto;
+    background: #2b2b2b;
+    color: #f8f8f2;
+    padding: .5em;
+}
 code, kbd, pre, samp {
     font-family: monospace,monospace;
     font-size: 1em;
 }
+
+
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -197,20 +205,56 @@ section#range {
     justify-content: space-evenly;
     align-items: flex-end;
     height: 70%;
-    background-color: #dee8d7;
+    background-color: greenyellow;
 }
-section#range div {
+div.bar {
     flex: 1 1 10%;
-    background-color: #80ba24;
+    background-color: green;
     margin: 0 0.5rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+div.bar_hlgt {
+    border: 2px solid green;
+    background-color: greenyellow;
+}
+div.bar_high {
+    background-color: red;
+}
+div.bar_low {
+    background-color: yellow;
+}
+
 .footer-basic {
     padding:40px 0;
 
     color: #939393;
+}
+
+#array {
+    background-color: white;
+    height: 305px;
+    width: 598px;
+    margin: auto;
+    position: relative;
+    margin-top: 64px;
+}
+
+.block {
+    width: 28px;
+    background-color: #6b5b95;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.2s all ease;
+}
+
+.block_id {
+    position: absolute;
+    color: black;
+    margin-top: -20px;
+    width: 100%;
+    text-align: center;
 }
 
 .footer-basic ul {

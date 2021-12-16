@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <script src="index.js"></script>
+
     <title>Binäre Suche - Frontend Daniel Van</title>
 </head>
 
@@ -134,46 +134,50 @@
     <section id="section_Simulation">
         <h1>Simulation</h1>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
+<section id="range">
                 <div class="project project01">
                     <nav>
                         <ul>
-                            <li><button class="btn next" id="btnNext" style="opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Reee</button></li>
-                            <li><button class="btn play" id="btnPlay" style="opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Bruh Button</button></li>
+                            <li><button class="btnPlay" id="btnPlay" style="opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Bruh Button</button></li>
                         </ul>
                     </nav>
                 </div>
 
-        <div data-value="3" style="height: 80%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">3</div>
-        <div data-value="4" style="height: 20%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">4</div>
-        <div data-value="17" style="height: 85%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">17</div>
-        <div data-value="14" style="height: 70%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">14</div>
-        <div data-value="20" style="height: 100%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">20</div>
-        <div data-value="16" style="height: 80%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">16</div>
-        <div data-value="9" style="height: 45%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">9</div>
-        <div data-value="7" style="height: 35%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">7</div>
-        <div data-value="18" style="height: 90%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">18</div>
-        <div data-value="11" style="height: 55%; transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">11</div>
+        <div data-value="Berlin" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Berlin</div>
+        <div data-value="Düsseldorf" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Düsseldorf</div>
+        <div data-value="Frankfurt" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Frankfurt</div>
+        <div data-value="Hamburg" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Hamburg</div>
+        <div data-value="Köln" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Köln</div>
+        <div data-value="Leipzig" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Leipzig</div>
+        <div data-value="München" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">München</div>
+        <div data-value="Stuttgart" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Stuttgart</div>
+
+    </section>
     </section>
 
+    // new animation
+
+    <div id="array"></div>
+    <br /><br />
+
+    <div style="text-align: center">
+        <label for="fname">
+            Number to be Searched:
+        </label>
+        <input type="text" id="fname"
+               name="fname" />
+        <br /><br />
+        <button id="btn"
+                onclick="BinarySearch()">Search</button>
+        <button id="btnSelf"
+                onclick="SelfSearch()">Try it by yourself</button>
+        <br />
+        <br />
+        <div id="text"></div>
+    </div>
 
     <div class="footer-basic">
     <footer>
-        <div class="social"><a href="#">
-            <i class="icon ion-social-instagram"></i></a>
-            <a href="#"><i class="icon ion-social-snapchat"></i>
-        </a>
-            <a href="#">
-                <i class="icon ion-social-twitter">
-
-                </i>
-        </a>
-            <a href="#">
-                <i class="icon ion-social-facebook">
-
-                </i>
-        </a>
-        </div>
         <ul class="list-inline">
         <li class="list-inline-item"><a href="#">Home</a></li>
         <li class="list-inline-item"><a href="#">Services</a></li>
@@ -185,5 +189,8 @@
     </footer>
     </div>
 </div>
+
+
+<script src="index.js"></script>
 </body>
 </html>

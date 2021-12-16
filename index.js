@@ -1,108 +1,200 @@
-let maxValue = 20;
-let numberOfBars = 10;
-let barIndex = 0;
-let lastIndex = numberOfBars-2;
-let listBar, thisBar, nextBar = null;
 
-let range = document.getElementById("range");
-let tlAnimationStart = gsap.timeline();
-let tlAnimationDecide = gsap.timeline();
 
-let btnNext = document.getElementById("btnNext");
-let btnPlay = document.getElementById("btnPlay");
-btnNext.addEventListener("click", function(){
-    if(!tlAnimationStart.isActive()&&!tlAnimationDecide.isActive()){
-        decide();
+var container = document.getElementById("array");
+//var citynames = {Berlin, Düsseldorf, Frankfurt, Hamburg, Köln, Leipzig, München, Stuttgart}
+// Function to generate the array of blocks
+
+
+// Function to generate the array of blocks
+function generatearray() {
+
+// Creating an array
+    var arr = [];
+
+// Filling array with random values
+    for (var i = 0; i < 20; i++) {
+        // Return a value from 1 to 100 (both inclusive)
+        var val = Number(Math.ceil(Math.random() * 100));
+        arr.push(val);
     }
-});
-btnPlay.addEventListener("click", function(){
-    if(!tlAnimationStart.isActive()&&!tlAnimationDecide.isActive()){
-        tlAnimationDecide
-            .eventCallback("onComplete", decide)
-            .timeScale(4);
-        ;
-        decide();
+
+// Sorting Array in ascending order
+    arr.sort(function (a, b) {
+        return a - b;
+    });
+
+    for (var i = 0; i < 20; i++) {
+        var value = arr[i];
+
+        // Creating element div
+        var array_ele = document.createElement("div");
+
+        // Adding class 'block' to div
+        array_ele.classList.add("block");
+
+        // Adding style to div
+        array_ele.style.height = `${value * 3}px`;
+        array_ele.style.transform = `translate(${i * 30}px)`;
+
+        // Creating label element for displaying
+        // size of particular block
+        var array_ele_label = document.createElement("label");
+        array_ele_label.classList.add("block_id");
+        array_ele_label.innerText = value;
+
+        // Appending created elements to index.html
+        array_ele.appendChild(array_ele_label);
+        container.appendChild(array_ele);
     }
-});
-
-
-function init(){
-    for(let i=0; i<numberOfBars; i++){
-        let random = Math.round((maxValue - 1) * Math.random()) +1;
-
-        let node = document.createElement("div");
-        let height = random * 100 / maxValue;
-        node.innerText = random;
-        node.setAttribute("data-value", random);
-        node.setAttribute("style", "height: "+height+"%;");
-        node.setAttribute("class", "bar");
-        range.appendChild(node);
-    }
-    animationStart();
 }
 
+// Asynchronous BinarySearch function
+async function BinarySearch(delay = 300) {
+    var blocks = document.querySelectorAll(".block");
+    var output = document.getElementById("text");
 
-function animationStart(){
-    tlAnimationStart
-        .add("startTl")
-        .set(".bar", {autoAlpha:0, x:+50})
-        .from(".btn",{x:"-=200", duration: 1, stagger: 0.2, autoAlpha:0, ease: "back.out(2)"})
-        .from("h2",{duration: 2, ease: "back.out(3)", x:+500, autoAlpha:0}, "startTL")
-        .to(".bar", {duration: 0.9, stagger: 0.2, autoAlpha:1, ease:"back.out(3)" , x:0},"startTl")
-    ;
-}
+    //Extracting the value of the element to be searched
+    var num = document.getElementById("fname").value;
 
+    //Colouring all the blocks voilet
+    for (var i = 0; i < blocks.length; i += 1) {
+        blocks[i].style.backgroundColor = "#6b5b95";
+    }
 
-function decide(){
-    listBar = document.getElementsByClassName("bar");
-    thisBar = listBar[barIndex];
-    nextBar = listBar[barIndex+1];
+    output.innerText = "";
 
-    tlAnimationDecide
-        .to( thisBar, {className:"bar bar_hlgt"})
-        .to( nextBar, {className:"bar bar_hlgt"}, "<")
-    ;
+    // BinarySearch Algorithm
 
-    if(lastIndex < 0){
-        tlAnimationDecide.kill();
-        gsap.to(".btn", {autoAlpha:0, duration:1});
-    }else{
-        if(barIndex < lastIndex){
-            barIndex++;
-        }else{
-            barIndex = 0;
-            lastIndex--;
+    var start = 0;
+    var end = 19;
+    var flag = 0;
+    while (start <= end) {
+        //Middle index
+        var mid = Math.floor((start + end) / 2);
+        blocks[mid].style.backgroundColor = "#FF4949";
+
+        //Value at mid index
+        var value = Number(blocks[mid].childNodes[0].innerHTML);
+
+        // To wait for .1 sec
+        await new Promise((resolve) =>
+            setTimeout(() => {
+                resolve();
+            }, delay)
+        );
+
+        //Current element is equal to the element
+        //entered by the user
+        if (value == num) {
+            output.innerText = "Element Found";
+            blocks[mid].style.backgroundColor = "#13CE66";
+            flag = 1;
+            break;
+        }
+        //Current element is greater than the element
+        //entered by the user
+        if (value > num) {
+            end = mid - 1;
+            blocks[mid].style.backgroundColor = "#6b5b95";
+        } else {
+            start = mid + 1;
+            blocks[mid].style.backgroundColor = "#6b5b95";
         }
     }
-
-    if(parseInt(thisBar.dataset.value) > parseInt(nextBar.dataset.value)){
-        tlAnimationDecide
-            .to( thisBar,{className:"bar bar_high", duration:0.5})
-            .to( nextBar,{className:"bar bar_low", duration:0.5},"<")
-            .to( thisBar, {scale: 0, transformOrigin: "center bottom", duration:0.5, ease: "power4.in"})
-            .to( nextBar, {scale: 0, transformOrigin: "center bottom", duration: 0.8, ease: "power4.in"}, "<")
-            .call(swap,[thisBar, nextBar],">")
-            .to( thisBar, {scale: 1, transformOrigin: "center bottom", duration:0.5, ease: "power2.out"})
-            .to( nextBar, {scale: 1, transformOrigin: "center bottom", duration: 0.8, ease: "power2.out"}, "<")
-            .to( thisBar, {className:"bar"})
-            .to( nextBar, {className:"bar"}, "<")
-        ;
-    }else{
-        tlAnimationDecide
-            .to( thisBar,{className:"bar bar_low", duration:0.5})
-            .to( nextBar,{className:"bar bar_high", duration:0.5},"<")
-            .to( thisBar, {className:"bar"})
-            .to( nextBar, {className:"bar"}, "<")
-        ;
+    if (flag === 0) {
+        output.innerText = "Element Not Found";
     }
 }
 
-function swap(node1, node2){
-    const parent = node1.parentNode;
-    const oldNode = parent.removeChild(node1);
-    node2.after(oldNode);
+// Calling generatearray function
+
+
+
+
+
+
+// Asynchronous SelfSearch function
+async function SelfSearch(delay = 300) {
+    var blocks = document.querySelectorAll(".block");
+    var output = document.getElementById("text");
+
+//Extracting the value of the element to be searched
+    var Snum = document.getElementById("fname").value;
+
+//Colouring all the blocks voilet
+    for (var i = 0; i < blocks.length; i += 1) {
+        blocks[i].style.backgroundColor = "#1b5b95";
+    }
+
+    output.innerText = "";
+
+
+    var start = 0;
+    var end = 19;
+    var flag = 0;
+    while (start <= end) {
+        //Middle index
+        var Smid = Math.floor((start + end) / 2);
+
+        //Value at mid index
+        var Svalue = Number(blocks[Smid].childNodes[0].innerHTML);
+
+        // To wait for .1 sec
+        await new Promise((resolve) =>
+            setTimeout(() => {
+                resolve();
+            }, delay)
+        );
+        var divclick = document.getElementById('fname');
+        divclick.onclick = function() {
+            output.innerText = "Moin";
+        };
+
+
+        //Current element is equal to the element
+        //entered by the user
+        if (Svalue == Snum) {
+            output.innerText = "Element Found";
+            blocks[Smid].style.backgroundColor = "#13CE66";
+            flag = 1;
+            break;
+        }
+        //Current element is greater than the element
+        //entered by the user
+        if (Svalue > Snum) {
+            end = Smid - 1;
+            blocks[Smid].style.backgroundColor = "#6b5b95";
+        } else {
+            start = Smid + 1;
+            blocks[Smid].style.backgroundColor = "#6b5b95";
+        }
+    }
+    if (flag === 0) {
+        output.innerText = "Element Not Found";
+    }
 }
 
-window.addEventListener('DOMContentLoaded', function(){
-    init();
-});
+// Calling generatearray function
+generatearray();
+
+
+
+/* function binaryseach(array,target){
+    let left = 0;
+    let right=array.length - 1;
+
+    while (left < right){
+        let mid = Math.floor((left + right) / 2 );
+        if(target === array[mid]){
+
+            return mid;
+        } else if (target < array[mid]){
+            right = mid - 1;
+        } else{
+            left = mid + 1;
+        }
+
+    }
+return false;
+}
+*/
