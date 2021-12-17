@@ -151,38 +151,13 @@ span.beispielzeile,.theoriezeile,.simulationzeiel{
     scroll-margin-top: 140px;
 }
 
-
-.ct-inner-content, .oxy-stock-content-styles p, .oxy-stock-content-styles ul, .oxy-stock-content-styles ol, .oxy-stock-content-styles h2, .oxy-stock-content-styles h3 {
-    overflow-x: hidden;
-}
-.oxy-stock-content-styles p {
-    overflow-x: hidden;
-}
 h1, h2, h3, h4, h5, h6, p, .oxy-rich-text p:last-child {
     margin: 0 0 24px;
 }
 h1, h2, p {
     margin: 0 0 24px;
 }
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-.wp-block-code code.hljs:not(.shcb-wrap-lines) {
-    white-space: pre;
-}
-pre.wp-block-code code {
-    font-family: Hack,"Fira Code",Consolas,Menlo,Monaco,"Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
-    line-height: 1.5;
-    padding: 1em 0 1em 1em;
-}
-.wp-block-code code {
-    display: block;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-}
+
 .hljs {
     display: block;
     overflow-x: auto;
@@ -245,7 +220,7 @@ div.bar_low {
     width: 28px;
     background-color: #6b5b95;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     transition: 0.2s all ease;
 }
 
