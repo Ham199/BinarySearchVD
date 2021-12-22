@@ -108,9 +108,6 @@ div.mittelpart {
 .logo {
      text-align: right;
  }
-    h1, h2 {
-
-    }
 
 h1{
     background: #6E8898;
@@ -119,20 +116,7 @@ h1{
     padding: 1%;
 }
 
-h2{
 
-}
-
-h3{
-
-}
-
-h4{
-
-}
-ul {
-    list-style: none;
-}
 
 span.beispielzeile,.theoriezeile,.simulationzeiel{
 
@@ -168,37 +152,6 @@ h1, h2, p {
 code, kbd, pre, samp {
     font-family: monospace,monospace;
     font-size: 1em;
-}
-
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-section#range {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    height: 70%;
-    background-color: greenyellow;
-}
-div.bar {
-    flex: 1 1 10%;
-    background-color: green;
-    margin: 0 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-div.bar_hlgt {
-    border: 2px solid green;
-    background-color: greenyellow;
-}
-div.bar_high {
-    background-color: red;
-}
-div.bar_low {
-    background-color: yellow;
 }
 
 .footer-basic {
@@ -253,29 +206,6 @@ div.bar_low {
 
 .footer-basic ul a:hover {
     opacity:1;
-}
-
-.footer-basic .social {
-    text-align:center;
-    padding-bottom:25px;
-}
-
-.footer-basic .social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ffffff;
-    margin:0 8px;
-    color:inherit;
-    opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-    opacity:0.9;
 }
 
 .footer-basic .copyright {
