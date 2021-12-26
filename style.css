@@ -241,7 +241,15 @@ h4, h5, h6, p, .oxy-rich-text p:last-child {
     color: #939393;
 }
 
-#array {
+#arrayBS {
+    background-color: white;
+    height: 305px;
+    width: 598px;
+    margin: auto;
+    position: relative;
+    margin-top: 64px;
+}
+#arraySS {
     background-color: white;
     height: 305px;
     width: 598px;
@@ -250,7 +258,14 @@ h4, h5, h6, p, .oxy-rich-text p:last-child {
     margin-top: 64px;
 }
 
-.block {
+.blockBS {
+    width: 28px;
+    background-color: #6b5b95;
+    position: absolute;
+    bottom: 0;
+    transition: 0.2s all ease;
+}
+.blockSS {
     width: 28px;
     background-color: #6b5b95;
     position: absolute;

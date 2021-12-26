@@ -1,80 +1,81 @@
 
 
-var container = document.getElementById("array");
+var containerBS = document.getElementById("arrayBS");
+var containerSS = document.getElementById("arraySS");
 //var citynames = {Berlin, Düsseldorf, Frankfurt, Hamburg, Köln, Leipzig, München, Stuttgart}
 // Function to generate the array of blocks
 
 
 // Function to generate the array of blocks
-function generatearray() {
+function generatearrayBS() {
 
 // Creating an array
-    var arr = [];
+    var arrBS = [];
 
 // Filling array with random values
     for (var i = 0; i < 20; i++) {
         // Return a value from 1 to 100 (both inclusive)
-        var val = Number(Math.ceil(Math.random() * 100));
-        arr.push(val);
+        var valBS = Number(Math.ceil(Math.random() * 100));
+        arrBS.push(valBS);
     }
 
 // Sorting Array in ascending order
-    arr.sort(function (a, b) {
+    arrBS.sort(function (a, b) {
         return a - b;
     });
 
     for (var i = 0; i < 20; i++) {
-        var value = arr[i];
+        var valueBS = arrBS[i];
 
         // Creating element div
-        var array_ele = document.createElement("div");
+        var array_eleBS = document.createElement("div");
 
         // Adding class 'block' to div
-        array_ele.classList.add("block");
+        array_eleBS.classList.add("blockBS");
 
         // Adding style to div
-        array_ele.style.height = `${value * 3}px`;
-        array_ele.style.transform = `translate(${i * 30}px)`;
+        array_eleBS.style.height = `${valueBS * 3}px`;
+        array_eleBS.style.transform = `translate(${i * 30}px)`;
 
         // Creating label element for displaying
         // size of particular block
-        var array_ele_label = document.createElement("label");
-        array_ele_label.classList.add("block_id");
-        array_ele_label.innerText = value;
+        var array_ele_labelBS = document.createElement("label");
+        array_ele_labelBS.classList.add("block_id");
+        array_ele_labelBS.innerText = valueBS;
 
         // Appending created elements to index.html
-        array_ele.appendChild(array_ele_label);
-        container.appendChild(array_ele);
+        array_eleBS.appendChild(array_ele_labelBS);
+        containerBS.appendChild(array_eleBS);
     }
 }
 
 // Asynchronous BinarySearch function
 async function BinarySearch(delay = 300) {
-    var blocks = document.querySelectorAll(".block");
-    var output = document.getElementById("text");
+    var blocksBS = document.querySelectorAll(".blockBS");
+    var outputBS= document.getElementById("textBS");
 
     //Extracting the value of the element to be searched
-    var num = document.getElementById("fname").value;
+    var numBS = document.getElementById("BSname").value;
 
     //Colouring all the blocks voilet
-    for (var i = 0; i < blocks.length; i += 1) {
-        blocks[i].style.backgroundColor = "#6b5b95";
+    for (var i = 0; i < blocksBS.length; i += 1) {
+        blocksBS[i].style.backgroundColor = "#6b5b95";
     }
 
-    output.innerText = "";
+    outputBS.innerText = "";
 
     // BinarySearch Algorithm
 
-    var start = 0;
-    var end = 19;
-    var flag = 0;
-    while (start <= end) {
+    var startBS = 0;
+    var endBS = 19;
+    var flagBS = 0;
+    while (startBS <= endBS) {
         //Middle index
-        var mid = Math.floor((start + end) / 2);
-        blocks[mid].style.backgroundColor = "#FF4949";
+        var midBS = Math.floor((startBS + endBS) / 2);
+        blocksBS[midBS].style.backgroundColor = "#FF4949";
 
         //Value at mid index
-        var value = Number(blocks[mid].childNodes[0].innerHTML);
+        var valueBS = Number(blocksBS[midBS].childNodes[0].innerHTML);
 
         // To wait for .1 sec
         await new Promise((resolve) =>
@@ -85,59 +86,59 @@ async function BinarySearch(delay = 300) {
 
         //Current element is equal to the element
         //entered by the user
-        if (value == num) {
-            output.innerText = "Element Found";
-            blocks[mid].style.backgroundColor = "#13CE66";
-            flag = 1;
+        if (valueBS == numBS) {
+            outputBS.innerText = "Element Found";
+            blocksBS[midBS].style.backgroundColor = "#13CE66";
+            flagBS = 1;
             break;
         }
         //Current element is greater than the element
         //entered by the user
-        if (value > num) {
-            end = mid - 1;
-            blocks[mid].style.backgroundColor = "#6b5b95";
+        if (valueBS > numBS) {
+            endBS = midBS - 1;
+            blocksBS[midBS].style.backgroundColor = "#6b5b95";
         } else {
-            start = mid + 1;
-            blocks[mid].style.backgroundColor = "#6b5b95";
+            startBS = midBS + 1;
+            blocksBS[midBS].style.backgroundColor = "#6b5b95";
         }
     }
-    if (flag === 0) {
-        output.innerText = "Element Not Found";
+    if (flagBS === 0) {
+        outputBS.innerText = "Element Not Found";
     }
 }
 
 // Calling generatearray function
 
 
-
+generatearrayBS();
 
 
 
 // Asynchronous SelfSearch function
 async function SelfSearch(delay = 300) {
-    var blocks = document.querySelectorAll(".block");
-    var output = document.getElementById("text");
+    var blocksSS = document.querySelectorAll(".blockSS");
+    var outputSS = document.getElementById("textSS");
 
 //Extracting the value of the element to be searched
-    var Snum = document.getElementById("fname").value;
+    var numSS = document.getElementById("SSname").value;
 
 //Colouring all the blocks voilet
-    for (var i = 0; i < blocks.length; i += 1) {
-        blocks[i].style.backgroundColor = "#1b5b95";
+    for (var i = 0; i < blocksSS.length; i += 1) {
+        blocksSS[i].style.backgroundColor = "#125b95";
     }
 
-    output.innerText = "";
+    outputSS.innerText = "";
 
 
-    var start = 0;
-    var end = 19;
-    var flag = 0;
-    while (start <= end) {
+    var startSS = 0;
+    var endSS = 19;
+    var flagSS = 0;
+    while (startSS <= endSS) {
         //Middle index
-        var Smid = Math.floor((start + end) / 2);
+        var midSS = Math.floor((startSS + endSS) / 2);
 
         //Value at mid index
-        var Svalue = Number(blocks[Smid].childNodes[0].innerHTML);
+        var valueSS = Number(blocksSS[midSS].childNodes[0].innerHTML);
 
         // To wait for .1 sec
         await new Promise((resolve) =>
@@ -145,39 +146,76 @@ async function SelfSearch(delay = 300) {
                 resolve();
             }, delay)
         );
-        var divclick = document.getElementById('fname');
-        divclick.onclick = function() {
-            output.innerText = "Moin";
-        };
+
 
 
         //Current element is equal to the element
         //entered by the user
-        if (Svalue == Snum) {
-            output.innerText = "Element Found";
-            blocks[Smid].style.backgroundColor = "#13CE66";
-            flag = 1;
+        if (valueSS == numSS) {
+            outputSS.innerText = "Element Found";
+            blocksSS[midSS].style.backgroundColor = "#66CE66";
+            flagSS = 1;
             break;
         }
         //Current element is greater than the element
         //entered by the user
-        if (Svalue > Snum) {
-            end = Smid - 1;
-            blocks[Smid].style.backgroundColor = "#6b5b95";
+        if (valueSS > numSS) {
+            endSS = midSS - 1;
+            blocksSS[midSS].style.backgroundColor = "#6b5b95";
         } else {
-            start = Smid + 1;
-            blocks[Smid].style.backgroundColor = "#6b5b95";
+            startSS = midSS + 1;
+            blocksSS[midSS].style.backgroundColor = "#6b5b95";
         }
     }
-    if (flag === 0) {
-        output.innerText = "Element Not Found";
+    if (flagSS === 0) {
+        outputSS.innerText = "Element Not Found";
+    }
+}
+function generatearraySS() {
+
+// Creating an array
+    var arrSS = [];
+
+// Filling array with random values
+    for (var i = 0; i < 20; i++) {
+        // Return a value from 1 to 100 (both inclusive)
+        var valSS = Number(Math.ceil(Math.random() * 100));
+        arrSS.push(valSS);
+    }
+
+// Sorting Array in ascending order
+    arrSS.sort(function (a, b) {
+        return a - b;
+    });
+
+    for (var i = 0; i < 20; i++) {
+        var valueSS = arrSS[i];
+
+        // Creating element div
+        var array_eleSS = document.createElement("div");
+
+        // Adding class 'block' to div
+        array_eleSS.classList.add("blockSS");
+
+        // Adding style to div
+        array_eleSS.style.height = `${valueSS * 3}px`;
+        array_eleSS.style.transform = `translate(${i * 30}px)`;
+
+        // Creating label element for displaying
+        // size of particular block
+        var array_ele_labelSS = document.createElement("label");
+        array_ele_labelSS.classList.add("block_id");
+        array_ele_labelSS.innerText = valueSS;
+
+        // Appending created elements to index.html
+        array_eleSS.appendChild(array_ele_labelSS);
+        containerSS.appendChild(array_eleSS);
     }
 }
 
 // Calling generatearray function
-generatearray();
 
-
+generatearraySS();
 
 /* function binaryseach(array,target){
     let left = 0;
