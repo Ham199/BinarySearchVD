@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Binäre Suche - Frontend Daniel Van</title>
 </head>
 
@@ -17,23 +17,23 @@
 
 <section class="toolbar">
     <div class="logozeile">
-        <a class="Logo" href="index.html"> Binäre Suche</a>
+        <a class="Logo" href="index.html"> BINÄRE SUCHE</a>
     </div>
     <nav class="navi">
 
         <span class="beispielzeile">
             <a class="beispielbutton" href="#section_Beispiel">
-                Beispiel
+                <span class="material-icons">code </span> Beispiel
             </a>
         </span>
         <span class="theoriezeile">
             <a class="theoriebutton" href="#section_Theorie">
-                Theorie
+                <span class="material-icons">article </span> Theorie
             </a>
         </span>
         <span class="simulationzeile">
             <a class="simulationbutton" href="#section_Simulation">
-                Simulation
+                <span class="material-icons">terminal</span> Simulation
             </a>
         </span>
     </nav>
@@ -51,6 +51,7 @@
 
     <section id="start_animation">
         <img class="banner" src="img/376e347.jpg" alt="">
+        <div id="grenze"> </div>
     </section>
     </div>
     <section id="section_Beispiel">
@@ -78,6 +79,7 @@
 
     <section id="section_Theorie">
         <h1>Theorie</h1>
+        <img class="Titel" src="img/2Q.png" alt="">
         <h2><span id="So funktioniert die binäre Suche"><span id="So_funktioniert_die__binarer_Suche">So funktioniert die binäre Suche</span></span></h2>
         <p>Mit etwas Glück finden wir das Wort auf den ersten Seiten des Buches. Wenn wir Pech haben, finden wir es erst gegen Ende des Buches – oder gar nicht (das würden wir erst auf der allerletzten Seite feststellen). Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir so ziemlich lange suchen.</p>
         <p>Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf und schauen, ob das Wort alphabetisch davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buchs sich das Wort befindet und können die andere Hälfte ignorieren. Danach suchen wir wieder die Mitte und schränken den Suchbereich erneut auf die Hälfte (also insgesamt ein Viertel) ein. Mit jedem weiteren Suchschritt halbieren wir die Anzahl der verbleibenden Seiten. Auf diese Weise kommen wir in relativ wenigen Schritten zur Zielseite – und auf der Zielseite zum gesuchten Wort.</p>
@@ -137,7 +139,7 @@
 /*
     <section id="section_Simulation">
         <h1>Simulation</h1>
-        <img class="Simulation" src="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg" alt="">
+        <img class="Titel" src="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg" alt="">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 <section id="range">
                 <div class="project project01">
@@ -158,7 +160,7 @@
         <div data-value="Stuttgart" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Stuttgart</div>
 
     </section>
-    </section>
+
 
     // new animation
 */
@@ -216,7 +218,7 @@
 
     </div>
 
-
+    </section>
 </div>
 
 
