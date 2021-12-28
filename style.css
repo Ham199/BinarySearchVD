@@ -32,6 +32,9 @@ div.mittelpart {
     -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
 
 }
+.material-icons{
+    line-height: normal;
+}
 
 .logozeile{
     background: #3a475b;
@@ -41,6 +44,7 @@ div.mittelpart {
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 img{
     border-radius: .4em;
@@ -74,14 +78,6 @@ img.beispiel{
     width: 75%;
 }
 
-img.Simulation{
-    display: block;
-    margin-top: 24px;
-    margin-bottom: 48px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
 
 
 nav.navi{
@@ -99,18 +95,19 @@ nav.navi{
     display: inline-block;
     margin: .4em .2em;
     padding: .3em 1em;
+    color: #dedede;
+    font-family: Roboto, serif;
 
-    border-radius: .2em;
-    font-size: 1.1em;
+    font-size: 1.5em;
     letter-spacing: .05em;
-    -webkit-box-shadow: 2px 2px 0 0 rgba(0,0,0,0.35);
+
 }
 
-.beispielbutton, .theoriebutton, .simulationbutton, .Logo{
+.beispielbutton, .theoriebutton, .simulationbutton{
     display: inline-block;
     margin: .4em .2em;
     padding: .3em 1em;
-
+    color: #5b5b5b;
     border-radius: .2em;
     font-size: 1.1em;
     letter-spacing: .05em;
@@ -118,13 +115,15 @@ nav.navi{
 }
 
 
-a:link, :visited {
-    color: gray;
+.beispielbutton:link, .theoriebutton:link, .simulationbutton:link, .Logo:link{
+
     text-decoration: none;
 
 }
 
-a:hover{
+
+
+.beispielbutton:hover, .theoriebutton:hover, .simulationbutton:hover{
 
     color: #4e6e6e;
     -webkit-filter: brightness(150%);
@@ -242,15 +241,16 @@ h4, h5, h6, p, .oxy-rich-text p:last-child {
 }
 
 #arrayBS {
-    background-color: white;
+
     height: 305px;
     width: 598px;
     margin: auto;
     position: relative;
     margin-top: 64px;
+
 }
 #arraySS {
-    background-color: white;
+
     height: 305px;
     width: 598px;
     margin: auto;
