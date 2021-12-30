@@ -1,4 +1,30 @@
 
+gsap.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine'})
+gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
+gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
+gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
+//gsap.from('img', { duration: 1, y: '-100%', opacity: 0, ease: 'sine'})
+
+gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
+
+
+gsap.to('.beispiel_titelbild',{
+    scrollTrigger: { trigger: '.beispiel_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
+})
+gsap.to('.theorie_titelbild',{
+    scrollTrigger: { trigger: '.theorie_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
+})
+gsap.to('.simulation_titelbild',{
+    scrollTrigger: { trigger: '.simulation_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
+})
+gsap.to('.beispiel',{
+    scrollTrigger: { trigger: '.beispiel', start: "top center" }, opacity: 1, ease: 'sine'
+})
+
+
+
+
+
 
 var containerBS = document.getElementById("arrayBS");
 var containerSS = document.getElementById("arraySS");
