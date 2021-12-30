@@ -5,7 +5,8 @@ var containerSS = document.getElementById("arraySS");
 //var citynames = {Berlin, Düsseldorf, Frankfurt, Hamburg, Köln, Leipzig, München, Stuttgart}
 // Function to generate the array of blocks
 var RandomNumber = Number(Math.ceil(Math.random() * 20));
-
+let startSS = 0;
+let endSS = 19;
 
 // Function to generate the array of blocks
 function generatearrayBS() {
@@ -170,23 +171,22 @@ async function SelfSearch(delay = 300) {
     var numSS = document.getElementById("SSname").value;
 
 //Colouring all the blocks voilet
-    for (var i = 0; i < blocksSS.length; i += 1) {
+   /* for (var i = 0; i < blocksSS.length; i += 1) {
         blocksSS[i].style.backgroundColor = "#125b95";
-    }
+    } */
 
     outputSS.innerText = "";
 
 
-    var startSS = 0;
-    var endSS = 19;
+
     var flagSS = 0;
 
-        //Middle index
-        var midSS = Math.floor((startSS + endSS) / 2);
-
+    //Middle index
+    while (startSS <= endSS) {
+        let midSS = Math.floor((startSS + endSS) / 2);
         //Value at mid index
         var valueSS = Number(blocksSS[midSS].childNodes[0].innerHTML);
-    MidSS.innerText = "Mitte" + valueSS;
+        MidSS.innerText = "Mitte" + valueSS;
         // To wait for .1 sec
         await new Promise((resolve) =>
             setTimeout(() => {
@@ -195,31 +195,45 @@ async function SelfSearch(delay = 300) {
         );
 
 
-
         //Current element is equal to the element
         //entered by the user
-        if (valueSS == numSS) {
+
+
+        if (arrRN == numSS) {
+
+            outputSS.innerText = "Finished";
+            for (var i = 0; i < blocksSS.length; i += 1) {
+                blocksSS[i].style.backgroundColor = "#d2b41d";
+            }
+            break;
+        } else if (numSS == valueSS) {
 
 
             outputSS.innerText = "Right";
             blocksSS[midSS].style.backgroundColor = "#40bd1c";
 
+            if (arrRN < numSS) {
+                endSS = midSS - 1;
+               // midSS = Math.round(midSS)-1;
+                console.log("Mitte ist:",midSS,"if");
+                break;
+            } else  {
+                startSS = midSS + 1;
+               // midSS = Math.round(midSS)-1;
+                console.log("Mitte ist:",midSS, "else");
+                break;
+            }
+            break;
+
+        } else {
+            outputSS.innerText = "False";
+            for (var i = 0; i < blocksSS.length; i += 1) {
+                blocksSS[i].style.backgroundColor = "#c7071d";
+            }
+            console.log("Mitte ist:",midSS, "");
+            break;
         }
-
-    if  (arrRN == numSS) {
-
-        outputSS.innerText = "Finished";
-        for (var i = 0; i < blocksSS.length; i += 1) {
-            blocksSS[i].style.backgroundColor = "#d2b41d";
-        }
-
     }
-         else {
-        outputSS.innerText = "False";
-        for (var i = 0; i < blocksSS.length; i += 1) {
-            blocksSS[i].style.backgroundColor = "#c7071d";
-        }
-        }
 
 
 }
