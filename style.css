@@ -23,6 +23,10 @@ body {
     font-family: Bahnschrift, serif;
     text-align: justify;
 }
+hr{
+    margin-top: auto;
+    opacity: 30%;
+}
 
 div.mittelpart {
     background: #fafafa;
@@ -34,6 +38,8 @@ div.mittelpart {
     -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
 
 }
+
+
 .material-icons{
     line-height: normal;
 }
@@ -41,11 +47,11 @@ div.mittelpart {
 .logozeile{
     background: rgba(93, 111, 126,99%);
 }
-.Logo{
-    display: flex;
 
+section{
+
+    margin-bottom: 2em;
 }
-
 .toolbar{
     position: fixed;
     left: 0;
@@ -60,6 +66,7 @@ img{
 }
 img.banner{
     display: flex;
+    margin-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
     width: 100% ;
@@ -76,6 +83,8 @@ img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    object-fit: cover;
+    height: 20vh;
     opacity: 40%;
 
 }
@@ -84,10 +93,10 @@ img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
 
 img.beispiel{
     display: block;
-    margin-top: 24px;
-    margin-bottom: 48px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+   margin-left: 0;
+    margin-right: 0;
     width: 75%;
     opacity: 40%;
 }
@@ -120,12 +129,11 @@ nav.navi{
 
 .beispiel_button, .theorie_button, .simulation_button{
     display: inline-block;
-    margin: .4em .2em;
-    padding: .3em 1em;
+
+
     color: #707070;
-    border-radius: .2em;
     font-size: 1.1em;
-    letter-spacing: 0;
+
 
 }
 
@@ -155,7 +163,7 @@ nav.navi{
 
 h1{
     font-family: 'Roboto Condensed', sans-serif;
-    margin-top: 48px;
+    margin-top: 36px;
     color: #2c2c2c;
     font-size: 60px;
     text-align: center;
@@ -191,6 +199,32 @@ p{
     font-family: "roboto", serif;
     line-height: 1.4em;
 }
+
+p.beispiel_beschreibung{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "roboto", serif;
+    line-height: 1.4em;
+    margin-bottom: 5em;
+}
+div.beispiel_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+p.beispiel_bild_beschreibung{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "roboto", serif;
+    line-height: 1.4em;
+    text-align: center;
+    width: 75%;
+    margin-top: 2em;
+
+}
+
 ol{
     padding-left: 6%;
     padding-right: 5%;
@@ -200,14 +234,25 @@ ol{
 }
 
 ul.buttonlist {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
+    width: 30%;
 }
 li{
     padding-left: 6%;
     padding-right: 5%;
+    line-height: 1.4em;
+    margin-bottom: 12px;
+    font-family: Roboto, serif;
+
+}
+li.list_element{
+    padding-left: 5%;
+    padding-right: 6%;
     line-height: 1.4em;
     margin-bottom: 12px;
     font-family: Roboto, serif;

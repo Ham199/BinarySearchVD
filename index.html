@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
@@ -29,19 +29,19 @@
     </div>
     <nav class="navi">
         <ul class="buttonlist">
-            <li>
+            <li class="list_element">
             <a class="beispiel_button" href="#section_Beispiel">
-                <span class="material-icons">code </span> Beispiel
+                <span class="material-icons">code </span> <br>Beispiel
             </a>
             </li>
-            <li>
+            <li class="list_element">
             <a class="theorie_button" href="#section_Theorie">
-                <span class="material-icons">article </span> Theorie
+                <span class="material-icons">article </span> <br>Theorie
             </a>
             </li>
-            <li>
+            <li class="list_element">
             <a class="simulation_button" href="#section_Simulation">
-                <span class="material-icons">terminal</span> Simulation
+                <span class="material-icons">terminal</span> <br>Simulation
             </a>
             </li>
         </ul>
@@ -60,35 +60,41 @@
 
     <section id="start_animation">
         <img class="banner" src="img/376e347.jpg" alt="">
+
+        <hr>
+
         <div id="grenze"> </div>
     </section>
     </div>
     <section id="section_Beispiel">
         <h1>Beispiel</h1>
-        <img class="beispiel_titelbild" src="img/How-Much-Are-Teacup-Pomeranians-730x422.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <img class="beispiel_titelbild" src="img/pixabay.comdephotostafel-kreide-business-job-arbeit-3695073.jpg" alt="">
+    <div class="beispiel_text">
+        <p class="beispiel_beschreibung">Bevor es an die Theorie geht, fangen wir erst einmal mit einem Beispiel an. Die folgenden Abbildungen zeigt Schritt für Schritt, wie die binäre Suche vorgeht, um den gesuchten Wert zu finden. Wir haben ein Array mit 9 Feldern.
+            Der Algorithmus schaut sich in jeder Iteration den Wert an, der in der Mitte des Arrays steht. In diesem Beispiel wird die Zahl <b>55</b> gesucht.
+            </p>
         <img class="beispiel" src="img/frontend beispiel1.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung">In der Mitte des Arrays ist der Wert <b>14</b>, welches kleiner als <b>55</b> ist.</p>
         <img class="beispiel" src="img/frontend beispiel2.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung">Das bedeutet: wir brauchen alle anderen Werte, die vor <b>14</b> stehen, nicht zu beachten, da sich der Wert sich nach <b>14</b> befinden muss.</p>
         <img class="beispiel" src="img/frontend beispiel3.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung">Die neue Mitte im nun reduzierten Array ist <b>32</b>.</p>
         <img class="beispiel" src="img/frontend beispiel4.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung">Die <b>32</b> ist kleiner als der gesuchte Wert:<b> 55</b>. Demnach muss der Wert ebenfalls auf der rechten Seite liegen.</p>
         <img class="beispiel" src="img/frontend beispiel5.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung">Es sind nun drei Felder übrig, in denen sich der gesuchte Wert befinden kann. Die Mitte hier ist die <b>45</b>.</p>
         <img class="beispiel" src="img/frontend beispiel6.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung"><b>45</b> ist kleiner als <b>55</b>. Der Wert kann also wieder nur rechts von <b>45</b> sein. Zwei Felder sind nun übrig</p>
         <img class="beispiel" src="img/frontend beispiel7.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+        <p class="beispiel_bild_beschreibung">Es wird direkt die <b>55</b>, da wir wissen, dass <b>55</b> auf der rechten Seite sein muss. </p>
         <img class="beispiel" src="img/frontend beispiel8.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-
+        <p class="beispiel_bild_beschreibung"><b>55</b> wurde gefunden.</p>
+    </div>
     </section>
-
+    <hr>
     <section id="section_Theorie">
         <h1>Theorie</h1>
-        <img class="theorie_titelbild" src="img/2Q.png" alt="">
+        <img class="theorie_titelbild" src="img/pixabay.comdephotosschreibtisch-laptop-notizbuch-stift-593327.jpg" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
         <h2><span id="So funktioniert die binäre Suche"><span id="So_funktioniert_die__binarer_Suche">So funktioniert die binäre Suche</span></span></h2>
         <p>Mit etwas Glück finden wir das Wort auf den ersten Seiten des Buches. Wenn wir Pech haben, finden wir es erst gegen Ende des Buches – oder gar nicht (das würden wir erst auf der allerletzten Seite feststellen). Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir so ziemlich lange suchen.</p>
         <p>Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf und schauen, ob das Wort alphabetisch davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buchs sich das Wort befindet und können die andere Hälfte ignorieren. Danach suchen wir wieder die Mitte und schränken den Suchbereich erneut auf die Hälfte (also insgesamt ein Viertel) ein. Mit jedem weiteren Suchschritt halbieren wir die Anzahl der verbleibenden Seiten. Auf diese Weise kommen wir in relativ wenigen Schritten zur Zielseite – und auf der Zielseite zum gesuchten Wort.</p>
@@ -145,10 +151,10 @@
         </div>
 
     </section>
-/*
+<hr>
     <section id="section_Simulation">
         <h1>Simulation</h1>
-        <img class="simulation_titelbild" src="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg" alt="">
+        <img class="simulation_titelbild" src="img/pixabay.comdevectorsgetriebe-arbeit-team-zusammen-5193383.png" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 <section id="range">
                 <div class="project project01">
