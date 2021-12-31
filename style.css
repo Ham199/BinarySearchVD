@@ -130,7 +130,7 @@ nav.navi{
 }
 
 
-.beispielbutton:link, .theoriebutton:link, .simulationbutton:link, .Logo:link{
+.beispiel_button:link, .theorie_button:link, .simulation_button:link, .Logo:link{
 
     text-decoration: none;
 
@@ -138,7 +138,7 @@ nav.navi{
 
 
 
-.beispielbutton:hover, .theoriebutton:hover, .simulationbutton:hover{
+.beispiel_button:hover, .theorie_button:hover, .simulation_button:hover{
 
     color: rgba(60, 84, 136, 0.53);
     -webkit-filter: brightness(150%);
