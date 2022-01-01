@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-    <title>Binäre Suche - Frontend Daniel Van</title>
+    <title>Binäre Suche - Alles was du wissen musst</title>
 </head>
 
 
@@ -151,83 +151,79 @@
         </div>
 
     </section>
+
 <hr>
+
     <section id="section_Simulation">
         <h1>Simulation</h1>
         <img class="simulation_titelbild" src="img/pixabay.comdevectorsgetriebe-arbeit-team-zusammen-5193383.png" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-<section id="range">
-                <div class="project project01">
-                    <nav>
-                        <ul>
-                            <li><button class="btnPlay" id="btnPlay" style="opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Bruh Button</button></li>
-                        </ul>
-                    </nav>
-                </div>
+        <h3 style="text-align: center">Binäre Suche - Simulator</h3>
+        <p>Nun wird es ein bisschen praktischer. Denn durch den Binäre Suche - Simulator wird die Binäre Suche das erste Mal visulaisiert. Hier kann jede beliebige Zahl im Bereich von 1 bis 100 eingeben werden und daraufhin wird durch die binäre Suche überprüft, ob diese Zahl in der dargestellten zufällig erzeugten Zahlenmenge enthalten ist. Die Arbeitsschritte werden durch die grünen Balken dargestellt</p>
+        <p>Probiere es doch gerne einmal aus.</p>
 
-        <div data-value="Berlin" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Berlin</div>
-        <div data-value="Düsseldorf" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Düsseldorf</div>
-        <div data-value="Frankfurt" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Frankfurt</div>
-        <div data-value="Hamburg" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Hamburg</div>
-        <div data-value="Köln" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Köln</div>
-        <div data-value="Leipzig" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Leipzig</div>
-        <div data-value="München" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">München</div>
-        <div data-value="Stuttgart" style="transform: translate(0px); opacity: 1; visibility: inherit;" class="bar">Stuttgart</div>
+        <hr>
 
-    </section>
-
-
-    // new animation
-*/
     <div id="arrayBS"></div>
-    <br /><br />
-
+        <br />
+        <br />
     <div style="text-align: center">
         <label for="BSname">
-            Number to be Searched:
+            Gesuchte Nummer:
         </label>
         <input type="text" id="BSname"
                name="BSname" />
         <br /><br />
         <button id="btnBS"
-                onclick="BinarySearch()">Search</button>
+                onclick="BinarySearch()">Suche</button>
+        <br><br />
+        <hr>
 
         <br />
         <br />
         <div id="textBS"></div>
     </div>
 
-    <div id="arraySS"></div>
-    <br /><br />
+        <br />
+        <h3 style="text-align: center">Binäre Suche - interaktiv</h3>
+        <p>Hier bist du nun selbst dran! Im interaktiven Teil kannst du nun zeigen, wie gut du die Binäre Suche drauf hast. Deine Aufgabe ist nämlich die vorgegebene Zahl zu finden. Hierfür darfst du allerdings ausschliesslich die Vorgehensweise der Binären Suche verwenden.</p>
+        <p> Dies tust du indem du die Zahl die als nächster Schritt an der Reihe ist in das Suchfeld tippst. Liegst du richtig so wird der Balken grün. Wenn du jedoch falsch liegst, dann färben sich alle Balken rot! In diesem Fall kannst du einfach mit dem dafür vorgesehen Button einen neuen Durchlauf starten. Kommst du schließlich am Ziel an, dann erscheinen alle Balken in Gold. </p>
+        <p>Nun bleibt nur noch zu sagen, viel Erfolg beim Traineren!</p>
 
-//Second Simulation
-    <div id="textRN"></div>
-    <div id="MidRN"></div>
+        <hr>
+        <br />
+        <div id="arraySS"></div>
+        <br />
+
+    <div id="textRN" style="text-align: center"></div>
+    <div id="MidRN" style="text-align: center"></div>
+        <br />
+        <br />
     <div style="text-align: center">
         <label for="SSname">
-            Number to be Searched:
+            Dein Tipp:
         </label>
         <input type="text" id="SSname"
                name="SSname" />
         <br /><br />
         <button id="btnSS"
-                onclick="SelfSearch()">Search</button>
-
+                onclick="SelfSearch()">Abschicken</button>
+        <button onClick="window.location.reload();">Versuche es noch ein mal</button>
         <br />
         <br />
-        <div id="textSS"></div>
+        <div id="textSS" ></div>
     </div>
+
+        <hr>
 
     <div class="footer-basic">
     <footer>
         <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Home</a></li>
-        <li class="list-inline-item"><a href="#">Services</a></li>
-        <li class="list-inline-item"><a href="#">About</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="#">Kontakt</a></li>
+        <li class="list-inline-item"><a href="#">Impressumg</a></li>
+        <li class="list-inline-item"><a href="#">Datenschutz</a></li>
+        <li class="list-inline-item"><a href="#">AGB</a></li>
     </ul>
-    <p class="copyright">Company Name © 2018</p>
+    <p class="copyright">Binäre Suche © 2021</p>
     </footer>
 
 

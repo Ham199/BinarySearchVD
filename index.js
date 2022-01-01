@@ -115,7 +115,7 @@ async function BinarySearch(delay = 300) {
         //Current element is equal to the element
         //entered by the user
         if (valueBS == numBS) {
-            outputBS.innerText = "Element Found";
+            outputBS.innerText = "Die Zahl wurde in der Zahlenmenge gefunden!";
             blocksBS[midBS].style.backgroundColor = "#13CE66";
             flagBS = 1;
             break;
@@ -131,7 +131,7 @@ async function BinarySearch(delay = 300) {
         }
     }
     if (flagBS === 0) {
-        outputBS.innerText = "Element Not Found";
+        outputBS.innerText = "Die Zahl ist nicht in der Zahlenmenge enthalten";
     }
 }
 
@@ -227,7 +227,7 @@ async function SelfSearch(delay = 300) {
 
         if (arrRN == numSS) {
 
-            outputSS.innerText = "Finished";
+            outputSS.innerText = "Du hast es geschafft";
             for (var i = 0; i < blocksSS.length; i += 1) {
                 blocksSS[i].style.backgroundColor = "#d2b41d";
             }
@@ -235,7 +235,7 @@ async function SelfSearch(delay = 300) {
         } else if (numSS == valueSS) {
 
 
-            outputSS.innerText = "Right";
+            outputSS.innerText = "Richtig";
             blocksSS[midSS].style.backgroundColor = "#40bd1c";
 
             if (arrRN < numSS) {
@@ -252,7 +252,7 @@ async function SelfSearch(delay = 300) {
             break;
 
         } else {
-            outputSS.innerText = "False";
+            outputSS.innerText = "Falsch";
             for (var i = 0; i < blocksSS.length; i += 1) {
                 blocksSS[i].style.backgroundColor = "#c7071d";
             }
