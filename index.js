@@ -3,7 +3,7 @@ gsap.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine'})
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
-//gsap.from('img', { duration: 1, y: '-100%', opacity: 0, ease: 'sine'})
+
 
 gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
 
