@@ -25,12 +25,12 @@ body {
 }
 hr{
     margin-top: auto;
-    opacity: 40%;
+    opacity: 30%;
 }
 
 div.mittelpart {
     background: #fafafa;
-    width: 35%;
+    width: 45%;
     margin: 10em auto 0 auto ;
     padding: 1.5% 1%;
     box-shadow: 3px 3px;
