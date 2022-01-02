@@ -288,22 +288,24 @@ h4, h5, h6, p, .oxy-rich-text p:last-child {
 
 
 
-.hljs {
+
+pre {
     display: block;
-    overflow-x: auto;
-    background: #2b2b2b;
-    color: #f8f8f2;
-    padding: .5em;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #000000;
+    background-color: #ececec;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
 }
 
 
 
-
-.footer-basic {
-    padding:48px 0;
-
-    color: #939393;
-}
 
 #arrayBS {
 
@@ -345,7 +347,11 @@ h4, h5, h6, p, .oxy-rich-text p:last-child {
     width: 100%;
     text-align: center;
 }
-
+.footer-basic {
+    padding:48px 0;
+    background-color: #ececec;
+    color: rgb(103, 103, 103);
+}
 .footer-basic ul {
     padding:0;
     list-style:none;

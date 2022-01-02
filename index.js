@@ -195,11 +195,11 @@ async function SelfSearch(delay = 300) {
 
 //Extracting the value of the element to be searched
     var numSS = document.getElementById("SSname").value;
-
 //Colouring all the blocks voilet
-   /* for (var i = 0; i < blocksSS.length; i += 1) {
-        blocksSS[i].style.backgroundColor = "#125b95";
-    } */
+    /* for (var i = 0; i < blocksSS.length; i += 1) {
+         blocksSS[i].style.backgroundColor = "#125b95";
+     } */
+
 
     outputSS.innerText = "";
 
@@ -212,7 +212,7 @@ async function SelfSearch(delay = 300) {
         let midSS = Math.floor((startSS + endSS) / 2);
         //Value at mid index
         var valueSS = Number(blocksSS[midSS].childNodes[0].innerHTML);
-        MidSS.innerText = "Mitte" + valueSS;
+
         // To wait for .1 sec
         await new Promise((resolve) =>
             setTimeout(() => {
@@ -227,26 +227,22 @@ async function SelfSearch(delay = 300) {
 
         if (arrRN == numSS) {
 
-            outputSS.innerText = "Du hast es geschafft";
+            outputSS.innerText = "Du hast es geschafft!";
             for (var i = 0; i < blocksSS.length; i += 1) {
-                blocksSS[i].style.backgroundColor = "#d2b41d";
+                blocksSS[i].style.backgroundColor = "#ffd700";
             }
             break;
         } else if (numSS == valueSS) {
 
 
             outputSS.innerText = "Richtig";
-            blocksSS[midSS].style.backgroundColor = "#40bd1c";
+            blocksSS[midSS].style.backgroundColor = "#3cc016";
 
             if (arrRN < numSS) {
                 endSS = midSS - 1;
-               // midSS = Math.round(midSS)-1;
-                console.log("Mitte ist:",midSS,"if");
                 break;
             } else  {
                 startSS = midSS + 1;
-               // midSS = Math.round(midSS)-1;
-                console.log("Mitte ist:",midSS, "else");
                 break;
             }
             break;
@@ -254,9 +250,8 @@ async function SelfSearch(delay = 300) {
         } else {
             outputSS.innerText = "Falsch";
             for (var i = 0; i < blocksSS.length; i += 1) {
-                blocksSS[i].style.backgroundColor = "#c7071d";
+                blocksSS[i].style.backgroundColor = "#c50319";
             }
-            console.log("Mitte ist:",midSS, "");
             break;
         }
     }
@@ -264,26 +259,5 @@ async function SelfSearch(delay = 300) {
 
 }
 
-// Calling generatearray function
 
 
-
-/* function binaryseach(array,target){
-    let left = 0;
-    let right=array.length - 1;
-
-    while (left < right){
-        let mid = Math.floor((left + right) / 2 );
-        if(target === array[mid]){
-
-            return mid;
-        } else if (target < array[mid]){
-            right = mid - 1;
-        } else{
-            left = mid + 1;
-        }
-
-    }
-return false;
-}
-*/
