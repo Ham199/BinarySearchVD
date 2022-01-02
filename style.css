@@ -30,7 +30,7 @@ hr{
 
 div.mittelpart {
     background: #fafafa;
-    width: 50%;
+    width: 35%;
     margin: 10em auto 0 auto ;
     padding: 1.5% 1%;
     box-shadow: 3px 3px;
@@ -45,6 +45,8 @@ div.mittelpart {
 }
 
 .logozeile{
+    display: flex;
+    justify-content: center;
     background: rgba(93, 111, 126,99%);
 }
 
@@ -115,7 +117,7 @@ nav.navi{
 }
 
 .Logo{
-    display: inline-block;
+
     margin: .4em .2em;
     padding: .3em 1em;
     color: #dedede;
@@ -163,7 +165,7 @@ nav.navi{
 
 h1{
     font-family: 'Roboto Condensed', sans-serif;
-    margin-top: 36px;
+    margin-top: 48px;
     color: #2c2c2c;
     font-size: 60px;
     text-align: center;
@@ -252,7 +254,7 @@ li{
 }
 li.list_element{
     padding-left: 5%;
-    padding-right: 6%;
+    padding-right: 5%;
     line-height: 1.4em;
     margin-bottom: 12px;
     font-family: Roboto, serif;
