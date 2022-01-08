@@ -1,4 +1,3 @@
-
 gsap.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine'})
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
@@ -23,10 +22,12 @@ gsap.to('.beispiel',{
 var containerBS = document.getElementById("arrayBS");
 var containerSS = document.getElementById("arraySS");
 var RandomNumber = Number(Math.ceil(Math.random() * 20));
+
 let startSS = 0;
 let endSS = 19;
+let arrSS = [];
 
-
+ numSS = 0;
 function generatearrayBS() {
 
 
@@ -64,7 +65,7 @@ function generatearrayBS() {
 }
 
 // Binäre Suche
-async function BinarySearch(delay = 300) {
+async function BinarySearch(delay = 1000) {
     var blocksBS = document.querySelectorAll(".blockBS");
     var outputBS= document.getElementById("textBS");
 
@@ -118,15 +119,9 @@ async function BinarySearch(delay = 300) {
     }
 }
 
-
-
-
 generatearrayBS();
 
 function generatearraySS() {
-
-
-    var arrSS = [];
 
 
     for (var i = 0; i < 20; i++) {
@@ -168,32 +163,29 @@ function generatearraySS() {
 }
 generatearraySS();
 
+//Div Element anklickbar
+
+var clicked = document.getElementsByClassName('blockSS');
+for (let i = 0; i < clicked.length; i++ ){
+    clicked[i].addEventListener("click",function (){
+       numSS = arrSS[i];
+       SelfSearch();
+    })
+
+}
+
 // Funktion für die interaktive Suche
-async function SelfSearch(delay = 300) {
+function SelfSearch() {
     var blocksSS = document.querySelectorAll(".blockSS");
     var outputSS = document.getElementById("textSS");
-    
-
-
-    var numSS = document.getElementById("SSname").value;
-
 
     outputSS.innerText = "";
-
-
 
    //Iterativ
     while (startSS <= endSS) {
         let midSS = Math.floor((startSS + endSS) / 2);
 
         var valueSS = Number(blocksSS[midSS].childNodes[0].innerHTML);
-
-
-        await new Promise((resolve) =>
-            setTimeout(() => {
-                resolve();
-            }, delay)
-        );
 
 
         if (arrRN == numSS) {
