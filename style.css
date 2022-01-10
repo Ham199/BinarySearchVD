@@ -86,7 +86,7 @@ img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
     margin-right: auto;
     width: 100%;
     object-fit: cover;
-    height: 20vh;
+    height: 35vh;
     opacity: 40%;
 
 }
@@ -131,10 +131,12 @@ nav.navi{
 
 .beispiel_button, .theorie_button, .simulation_button{
     display: inline-block;
-
+    border-radius: 4px;
+    padding: 8px;
+    -webkit-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.14);
 
     color: #707070;
-    font-size: 1.1em;
+    font-size: 1.4em;
 
 
 }
@@ -149,8 +151,8 @@ nav.navi{
 
 
 .beispiel_button:hover, .theorie_button:hover, .simulation_button:hover{
-
-    color: rgba(60, 84, 136, 0.53);
+    background: rgba(169, 169, 169, 0.2);
+    color: rgba(93, 111, 126,99%);
     -webkit-filter: brightness(150%);
     text-decoration: none;
     transition: 0.5s;
@@ -178,7 +180,7 @@ h2{
     margin-top: 38px;
     color: #525252;
     font-size: 36px;
-    text-align: left;
+    text-align: center;
     border-radius: .2em;
     padding: 1%;
 
@@ -189,7 +191,8 @@ h3{
     margin-top: 38px;
     color: #656565;
     font-size: 24px;
-    text-align: left;
+    text-align: center;
+    line-height: 1.7;
     border-radius: .2em;
     padding: 1%;
 
