@@ -27,7 +27,7 @@ let startSS = 0;
 let endSS = 19;
 let arrSS = [];
 
- numSS = 0;
+numSS = 0;
 function generatearrayBS() {
 
 
@@ -65,9 +65,12 @@ function generatearrayBS() {
 }
 
 // Binäre Suche
-async function BinarySearch(delay = 1000) {
+async function BinarySearch(delay = 2000) {
     var blocksBS = document.querySelectorAll(".blockBS");
     var outputBS= document.getElementById("textBS");
+    var ArrowLeft = document.getElementById("imgleft");
+    var ArrowRight = document.getElementById("imgright");
+
 
 
     var numBS = document.getElementById("BSname").value;
@@ -108,10 +111,24 @@ async function BinarySearch(delay = 1000) {
 
         if (valueBS > numBS) {
             endBS = midBS - 1;
-            blocksBS[midBS].style.backgroundColor = "#6b5b95";
+
+                ArrowLeft.style.display = 'block';
+                ArrowRight.style.display = 'none';
+            for (var i = startBS; i < midBS; i += 1) {
+                blocksBS[i].style.backgroundColor = "#90da93";
+            }
+            for (var i = midBS; i < blocksBS.length; i += 1) {
+                blocksBS[i].style.backgroundColor = "#6b5b95";
+            }
         } else {
             startBS = midBS + 1;
-            blocksBS[midBS].style.backgroundColor = "#6b5b95";
+
+            ArrowLeft.style.display = 'none';
+            ArrowRight.style.display = 'block';
+            for (var i = midBS; i < endBS+1; i += 1) {
+                blocksBS[i].style.backgroundColor = "#90da93";
+            }
+
         }
     }
     if (flagBS === 0) {
@@ -168,8 +185,8 @@ generatearraySS();
 var clicked = document.getElementsByClassName('blockSS');
 for (let i = 0; i < clicked.length; i++ ){
     clicked[i].addEventListener("click",function (){
-       numSS = arrSS[i];
-       SelfSearch();
+        numSS = arrSS[i];
+        SelfSearch();
     })
 
 }
@@ -181,7 +198,7 @@ function SelfSearch() {
 
     outputSS.innerText = "";
 
-   //Iterativ
+    //Iterativ
     while (startSS <= endSS) {
         let midSS = Math.floor((startSS + endSS) / 2);
 
@@ -219,8 +236,5 @@ function SelfSearch() {
         }
     }
 
-w
+    w
 }
-
-
-

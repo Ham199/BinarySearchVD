@@ -352,6 +352,26 @@ pre {
     width: 100%;
     text-align: center;
 }
+
+
+#imgleft {
+    display: none;
+    height: 200px;
+    width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+#imgright {
+    display: none;
+    height: 200px;
+    width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
 .footer-basic {
     padding:48px 0;
     background-color: #ececec;
