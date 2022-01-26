@@ -68,8 +68,8 @@ function generatearrayBS() {
 async function BinarySearch(delay = 2000) {
     var blocksBS = document.querySelectorAll(".blockBS");
     var outputBS= document.getElementById("textBS");
-    var ArrowLeft = document.getElementById("imgleft");
-    var ArrowRight = document.getElementById("imgright");
+    var LeftArrow = document.getElementById("leftArrow");
+    var RightArrow = document.getElementById("rightArrow");
 
 
 
@@ -112,8 +112,8 @@ async function BinarySearch(delay = 2000) {
         if (valueBS > numBS) {
             endBS = midBS - 1;
 
-                ArrowLeft.style.display = 'block';
-                ArrowRight.style.display = 'none';
+            LeftArrow.style.display = 'block';
+            RightArrow.style.display = 'none';
             for (var i = startBS; i < midBS; i += 1) {
                 blocksBS[i].style.backgroundColor = "#90da93";
             }
@@ -123,12 +123,18 @@ async function BinarySearch(delay = 2000) {
         } else {
             startBS = midBS + 1;
 
-            ArrowLeft.style.display = 'none';
-            ArrowRight.style.display = 'block';
-            for (var i = midBS; i < endBS+1; i += 1) {
+            LeftArrow.style.display = 'none';
+            RightArrow.style.display = 'block';
+            for (var i = midBS; i <= endBS; i += 1) {
                 blocksBS[i].style.backgroundColor = "#90da93";
-            }
 
+            }
+            for (var i = 0; i <= midBS; i += 1) {
+                blocksBS[i].style.backgroundColor = "#6b5b95";
+            }
+            console.log("Start:"+startBS);
+            console.log("Mid:"+midBS);
+            console.log("End:"+endBS);
         }
     }
     if (flagBS === 0) {

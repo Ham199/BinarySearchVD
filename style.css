@@ -354,23 +354,20 @@ pre {
 }
 
 
-#imgleft {
+#leftArrow{
     display: none;
     height: 200px;
-    width: 200px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0;
-    margin-right: 0;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
-#imgright {
+#rightArrow {
     display: none;
     height: 200px;
-    width: 200px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0;
-    margin-right: 0;
+    width: 300px;
+   margin-left: auto;
+margin-right: auto;
 }
 .footer-basic {
     padding:48px 0;
