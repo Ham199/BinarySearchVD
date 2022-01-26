@@ -18,32 +18,40 @@ gsap.to('.beispiel',{
     scrollTrigger: { trigger: '.beispiel', start: "top center" }, opacity: 1, ease: 'sine'
 })
 
-
+let numberOfBars =0;
 var containerBS = document.getElementById("arrayBS");
 var containerSS = document.getElementById("arraySS");
-var RandomNumber = Number(Math.ceil(Math.random() * 20));
 
 let startSS = 0;
 let endSS = 19;
 let arrSS = [];
-
-numSS = 0;
+let startBS = 0;
+let endBS = 19;
+let flagBS = 0;
+ let numSS = 0;
 function generatearrayBS() {
+    if (window.innerWidth < 960) {
+        numberOfBars = 14;
+        endBS=13;
+    } else{
+        numberOfBars = 20;
 
+    }
 
     var arrBS = [];
 
 // Array befüllen
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < numberOfBars; i++) {
         var valBS = Number(Math.ceil(Math.random() * 100));
         arrBS.push(valBS);
+
     }
 
     arrBS.sort(function (a, b) {
         return a - b;
     });
 
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < numberOfBars; i++) {
         var valueBS = arrBS[i];
 
         // Div Elemente werden erstellt
@@ -84,9 +92,7 @@ async function BinarySearch(delay = 2000) {
 
     // Iterativ
 
-    var startBS = 0;
-    var endBS = 19;
-    var flagBS = 0;
+
     while (startBS <= endBS) {
 
         var midBS = Math.floor((startBS + endBS) / 2);
@@ -145,9 +151,14 @@ async function BinarySearch(delay = 2000) {
 generatearrayBS();
 
 function generatearraySS() {
+    if (window.innerWidth < 960) {
+        numberOfBars = 14;
+        endSS=13;
+    } else{
+        numberOfBars = 20;
+    }
 
-
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < numberOfBars; i++) {
         // Return a value from 1 to 100 (both inclusive)
         var valSS = Number(Math.ceil(Math.random() * 100));
         arrSS.push(valSS);
@@ -157,11 +168,13 @@ function generatearraySS() {
     arrSS.sort(function (a, b) {
         return a - b;
     });
-
+    var RandomNumber = Number(Math.ceil(Math.random() * numberOfBars));
     var TextRN= document.getElementById("textRN");
     arrRN =arrSS[RandomNumber];
+    console.log(arrRN);
+    console.log(RandomNumber);
     TextRN.innerText = "Suche nach der Nummer: "+ arrRN;
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < numberOfBars; i++) {
         var valueSS = arrSS[i];
 
 
@@ -242,5 +255,5 @@ function SelfSearch() {
         }
     }
 
-    w
+
 }
