@@ -31,8 +31,8 @@ let flagBS = 0;
  let numSS = 0;
 function generatearrayBS() {
     if (window.innerWidth < 960) {
-        numberOfBars = 14;
-        endBS=13;
+        numberOfBars = 11
+        endBS=10;
     } else{
         numberOfBars = 20;
 
@@ -60,7 +60,7 @@ function generatearrayBS() {
 
         array_eleBS.classList.add("blockBS");
         array_eleBS.style.height = `${valueBS * 3}px`;
-        array_eleBS.style.transform = `translate(${i * 30}px)`;
+       // array_eleBS.style.transform = `translate(${i * 30}px)`;
 
         var array_ele_labelBS = document.createElement("label");
         array_ele_labelBS.classList.add("block_id");
@@ -152,8 +152,8 @@ generatearrayBS();
 
 function generatearraySS() {
     if (window.innerWidth < 960) {
-        numberOfBars = 14;
-        endSS=13;
+        numberOfBars = 11;
+        endSS=10;
     } else{
         numberOfBars = 20;
     }
@@ -185,7 +185,7 @@ function generatearraySS() {
 
 
         array_eleSS.style.height = `${valueSS * 3}px`;
-        array_eleSS.style.transform = `translate(${i * 30}px)`;
+        //array_eleSS.style.transform = `translate(${i * 30}px)`;
 
         var array_ele_labelSS = document.createElement("label");
         array_ele_labelSS.classList.add("block_id");

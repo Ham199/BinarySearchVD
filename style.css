@@ -15,29 +15,17 @@ body {
     margin: 0;
     line-height: 1.2;
     color: #676767;
-    background: url("img/vecteezy_abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background_534015.jpg");
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     font-family: Bahnschrift, serif;
     text-align: justify;
 }
+
 hr{
     margin-top: auto;
     opacity: 30%;
 }
 
-div.mittelpart {
-    background: #fafafa;
-    width: 45%;
-    margin: 10em auto 0 auto ;
-    padding: 1.5% 1%;
-    box-shadow: 3px 3px;
-    border-radius: .4em;
-    -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
 
-}
 
 
 .material-icons{
@@ -84,10 +72,11 @@ img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
     margin-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    object-fit: cover;
-    height: 35vh;
+    width: 90%;
+
+    height: 350px;
     opacity: 40%;
+
 
 }
 
@@ -97,7 +86,7 @@ img.beispiel{
     display: block;
     margin-top: auto;
     margin-bottom: auto;
-   margin-left: 0;
+    margin-left: 0;
     margin-right: 0;
     width: 75%;
     opacity: 40%;
@@ -106,15 +95,43 @@ img.beispiel{
 
 
 nav.navi{
-    display:flex;
-    justify-content:center;
+    display: inline-block;
+    position: center;
     background: rgba(248, 248, 248,95%);
-    width: auto;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 5px 5px;
     padding: 0.3%;
     -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.35);
+
+    color: #222222;
+    text-align: center;
+
+
 }
+ul.buttonlist {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.beispiel_button, .theorie_button, .simulation_button{
+    display: inline-block;
+    border-radius: 4px;
+    padding: 8px;
+    -webkit-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.14);
+
+    color: #707070;
+    font-size: 1.4em;
+
+
+}
+
+
 
 .Logo{
 
@@ -129,17 +146,8 @@ nav.navi{
 }
 
 
-.beispiel_button, .theorie_button, .simulation_button{
-    display: inline-block;
-    border-radius: 4px;
-    padding: 8px;
-    -webkit-box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.14);
-
-    color: #707070;
-    font-size: 1.4em;
 
 
-}
 
 
 .beispiel_button:link, .theorie_button:link, .simulation_button:link, .Logo:link{
@@ -211,8 +219,19 @@ p.beispiel_beschreibung{
     font-family: "roboto", serif;
     line-height: 1.4em;
     margin-bottom: 5em;
+    width: 85%;
 }
-div.beispiel_text{
+
+p.content_text{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "roboto", serif;
+    line-height: 1.4em;
+
+    width: 85%;
+}
+
+div.beispiel_text, .theorie_text, .simulation_text{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,24 +250,16 @@ p.beispiel_bild_beschreibung{
 }
 
 ol{
-    padding-left: 6%;
+    padding-left: 15%;
     padding-right: 5%;
     line-height: 1.4em;
     margin-bottom: 48px;
 
 }
 
-ul.buttonlist {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 30%;
-}
+
 li{
-    padding-left: 6%;
+    padding-left: 5%;
     padding-right: 5%;
     line-height: 1.4em;
     margin-bottom: 12px;
@@ -272,12 +283,7 @@ span.beispielzeile,.theoriezeile,.simulationzeile{
     padding-right: 24px;
 
 }
-.navi{
 
-    color: #222222;
-    text-align: center;
-    padding: 1%;
-}
 
 #section_Beispiel,#section_Simulation,#section_Theorie{
     scroll-margin-top: 180px;
@@ -306,7 +312,7 @@ pre {
     background-color: #ececec;
     border: 1px solid #cccccc;
     border-radius: 5px;
-
+    overflow: auto;
 }
 
 
@@ -314,33 +320,38 @@ pre {
 
 #arrayBS {
 
-    height: 305px;
-    width: 598px;
-    margin: auto;
-    position: relative;
-    margin-top: 64px;
+    height: 300px;
+    width: auto;
+    margin-top: 60px;
+    position: center;
+    text-align: center;
 
 }
 #arraySS {
 
-    height: 305px;
-    width: 598px;
-    margin: auto;
-    position: relative;
-    margin-top: 64px;
+    height: 300px;
+    width: auto;
+    margin-top: 60px;
+    position: center;
+    text-align: center;
+
 }
 
 .blockBS {
+    display: inline-block;
     width: 28px;
     background-color: #6b5b95;
-    position: absolute;
+    position: relative;
+    margin: 2px ;
     bottom: 0;
     transition: 0.2s all ease;
 }
 .blockSS {
+    display: inline-block;
     width: 28px;
     background-color: #6b5b95;
-    position: absolute;
+    position: relative;
+    margin: 2px ;
     bottom: 0;
     transition: 0.2s all ease;
 }
@@ -349,7 +360,7 @@ pre {
     position: absolute;
     color: black;
     margin-top: -20px;
-    width: 100%;
+     right: 5px;
     text-align: center;
 }
 
@@ -426,4 +437,98 @@ margin-right: auto;
     font-size:13px;
     color: #8a8a8a;
     margin-bottom:0;
+}
+
+@media (min-width: 320px) {
+    img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 36px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        object-fit: cover;
+        height: 200px;
+        opacity: 40%;
+    }
+    img.beispiel{
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+        opacity: 40%;
+    }
+    }
+
+    @media (min-width: 768px) {
+        img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
+            display: block;
+            margin-top: 24px;
+            margin-bottom: 36px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            object-fit: cover;
+            height: 350px;
+            opacity: 40%;
+
+
+        }
+        img.beispiel{
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 0;
+            margin-right: 0;
+            width: 50%;
+            opacity: 40%;
+        }
+        p.beispiel_bild_beschreibung{
+            width: 50%;
+        }
+    }
+
+@media (min-width: 1500px) {
+    div.mittelpart {
+        background: #fafafa;
+        width: 50%;
+        margin: 10em auto 0 auto ;
+        padding: 1.5% 1%;
+        box-shadow: 3px 3px;
+        border-radius: .4em;
+        -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
+
+    }
+    body{
+        background: url("img/vecteezy_abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background_534015.jpg");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+
+        height: 350px;
+        opacity: 40%;
+        object-fit: none;
+
+    }
+
+    img.beispiel{
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-right: 0;
+        width: 80%;
+    }
 }
