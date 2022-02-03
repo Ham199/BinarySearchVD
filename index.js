@@ -1,4 +1,4 @@
-gsap.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine'})
+
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
@@ -17,6 +17,15 @@ gsap.to('.simulation_titelbild',{
 gsap.to('.beispiel',{
     scrollTrigger: { trigger: '.beispiel', start: "top center" }, opacity: 1, ease: 'sine'
 })
+
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.to(".text", { y: "0%", duration: 1, stagger: 0.5 });
+tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 ,ease: 'power1'});
+tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+tl.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine', duration: 1 }, "-=1")
 
 let numberOfBars =0;
 var containerBS = document.getElementById("arrayBS");
@@ -257,3 +266,4 @@ function SelfSearch() {
 
 
 }
+
