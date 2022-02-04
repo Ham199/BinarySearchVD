@@ -19,15 +19,27 @@ gsap.to('.beispiel',{
     scrollTrigger: { trigger: '.beispiel', start: "top center" }, opacity: 1, ease: 'sine'
 })
 
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-tl.to(".text", { y: "0%", duration: 1, stagger: 0.5 });
-tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 ,ease: 'power1'});
-tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine', duration: 1 }, "-=1")
-tl.from('.mittelpart', {duration: 3, y: '100%', ease: 'sine'}, "-=3")
+if (window.innerWidth > 500) {
+
+    const tl = gsap.timeline({defaults: {ease: "power1.out"}});
+
+    tl.to(".text", {y: "0%", duration: 1, stagger: 0.5});
+    tl.to(".slider", {y: "-100%", duration: 1.5, delay: 0.5});
+    tl.to(".intro", {y: "-100%", duration: 1}, "-=1");
+    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
+    tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 1}, "-=1");
+    tl.from('.toolbar', {duration: 1, y: '-100%', ease: 'sine', duration: 1}, "-=1")
+    tl.from('.mittelpart', {duration: 3, y: '100%', ease: 'sine'}, "-=3")
+} else {
+    gsap.to(".slider", {y: "100%", duration: 0});
+    gsap.to(".intro", {y: "100%", duration: 0});
+
+}
+
+
+
+
 
 let numberOfBars =0;
 var containerBS = document.getElementById("arrayBS");
