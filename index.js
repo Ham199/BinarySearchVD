@@ -2,6 +2,7 @@
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
+gsap.from('.ubung_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
 
 
@@ -26,6 +27,7 @@ tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 ,ease: 'power1'});
 tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 tl.from('.toolbar', { duration: 1, y: '-100%', ease: 'sine', duration: 1 }, "-=1")
+tl.from('.mittelpart', {duration: 3, y: '100%', ease: 'sine'}, "-=3")
 
 let numberOfBars =0;
 var containerBS = document.getElementById("arrayBS");

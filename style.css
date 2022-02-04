@@ -191,7 +191,7 @@ img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
     width: 90%;
 
     height: 350px;
-    opacity: 40%;
+
 
 
 }
@@ -205,7 +205,7 @@ img.beispiel{
     margin-left: 0;
     margin-right: 0;
     width: 75%;
-    opacity: 40%;
+
 }
 
 
@@ -566,7 +566,7 @@ margin-right: auto;
         width: 90%;
         object-fit: cover;
         height: 200px;
-        opacity: 40%;
+
     }
     img.beispiel{
         display: block;
@@ -575,7 +575,7 @@ margin-right: auto;
         margin-left: 0;
         margin-right: 0;
         width: 90%;
-        opacity: 40%;
+
     }
     }
 
@@ -590,7 +590,7 @@ margin-right: auto;
             width: 90%;
             object-fit: cover;
             height: 350px;
-            opacity: 40%;
+
 
 
         }
@@ -601,7 +601,7 @@ margin-right: auto;
             margin-left: 0;
             margin-right: 0;
             width: 50%;
-            opacity: 40%;
+
         }
         p.beispiel_bild_beschreibung{
             width: 50%;
@@ -654,7 +654,7 @@ margin-right: auto;
         width: 90%;
 
         height: 350px;
-        opacity: 40%;
+
         object-fit: none;
 
     }
