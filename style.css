@@ -50,6 +50,87 @@ section{
     border-bottom: 1px solid #DFE1E6;
     z-index: 1;
 }
+#headerright{
+    flex-basis: 50%;
+    flex-grow: 1;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+#burger{
+    align-self: flex-end;
+    height: 100%;
+    width: 20px;
+
+    background: #FEA82F;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index:100;
+}
+
+#bars{
+    text-align: center;
+}
+#burger:hover{
+    background: #F8F9FB;
+    color: #FEA82F;
+}
+#burger:hover .popup{
+    display: block;
+}
+.popup{
+    background: #F8F9FB;
+    width: 200px;
+    height: auto;
+    top: 8%;
+    right: 0;
+    display: none;
+    position: fixed;
+    z-index:99;
+    border-radius: 0 0 0 20px;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.05);
+}
+.show {
+    display: block;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+
+#mobilenav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.navitem2{
+    text-align: left;
+    display: inline;
+}
+
+.navlink2 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 20px;
+}
+.navitem2 a:hover{
+    background: #83B0E1;
+    color: white;
+}
+
 img{
     border-radius: .4em;
 
@@ -440,6 +521,7 @@ margin-right: auto;
 }
 
 @media (min-width: 320px) {
+
     img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
         display: block;
         margin-top: 24px;
@@ -463,6 +545,7 @@ margin-right: auto;
     }
 
     @media (min-width: 768px) {
+
         img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
             display: block;
             margin-top: 24px;
@@ -501,6 +584,24 @@ margin-right: auto;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
 
     }
+
+    }
+@media (max-width: 500px) {
+    nav.navi{
+        display: none;
+
+    }
+    .toolbar {
+        border-bottom: 0px solid #DFE1E6;
+
+    }
+    #burger {
+        display: flex;
+    }
+    #headerright {
+        display: flex;
+    }
+
     body{
         background: url("img/vecteezy_abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background_534015.jpg");
 

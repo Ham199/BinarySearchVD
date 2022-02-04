@@ -29,6 +29,16 @@ let startBS = 0;
 let endBS = 19;
 let flagBS = 0;
  let numSS = 0;
+function showDropdown() {
+    document.getElementById("popup").classList.toggle("show");
+}
+window.onclick = function(event) {
+    if (!event.target.matches(".burger") || event.target.parentNode.matches(".burger")) {
+        let dropdowns = document.getElementById("popup");
+
+        dropdowns.classList.remove("show");
+    }
+}
 function generatearrayBS() {
     if (window.innerWidth < 960) {
         numberOfBars = 11
@@ -254,6 +264,7 @@ function SelfSearch() {
             break;
         }
     }
+
 
 
 }
