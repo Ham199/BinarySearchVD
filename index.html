@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <title>Binäre Suche - Alles was du wissen musst</title>
@@ -31,18 +32,38 @@
 </div>
 <div class="slider"></div>
 
-<body >
+<body>
 
 <section class="toolbar">
+
+
+
+
     <div class="logozeile">
         <a class="Logo" href="index.html"> BINÄRE SUCHE</a>
-        <div id="headerright">
-            <button onclick="showDropdown()" id="burger" class="burger"> <i id="bars" class="fas fa-bars" aria-hidden="true"></i> </button>
+
+        <div class="header">
+            <div class="dropdown" data-dropdown>
+                <span class="link" data-dropdown-button ><i class="fa fa-bars"></i> Menu</span>
+                <div class="dropdown-menu">
+                    <a class="beispiel_button" href="#section_Beispiel">
+                        <span class="material-icons">code </span> <br>Beispiele
+                    </a>
+
+                    <a class="theorie_button" href="#section_Theorie">
+                        <span class="material-icons">article </span> <br>Theorie
+                    </a>
+                    <a class="simulation_button" href="#section_Simulation">
+                        <span class="material-icons">terminal</span> <br>Simulation
+                    </a>
+                    <a class="ubung_button" href="#section_ubung">
+                        <span class="material-icons">task_alt</span> <br>Übung
+                    </a>
+                </div>
+            </div>
         </div>
+
     </div>
-
-
-
 
     <nav class="navi">
         <ul class="buttonlist">
@@ -70,15 +91,7 @@
 
     </nav>
 
-    <div class="popup" id="popup">
-        <ul id="mobilenav">
-            <li class="navitem2" ><a class="navlink2" > <span>Navigation</span> </a></li>
-            <li class="navitem2" ><a class="navlink2" href="#section_Beispiel">Beispiele</a></li>
-            <li class="navitem2" ><a class="navlink2" href="#section_Theorie">Theorie</a></li>
-            <li class="navitem2" ><a class="navlink2" href="#section_Simulation">Simulation</a></li>
-            <li class="navitem2" ><a class="navlink2" href="#section_ubung">Übung</a></li>
-        </ul>
-    </div>
+
 </section>
 
 
@@ -133,13 +146,13 @@
         <img class="theorie_titelbild" src="img/pixabay.comdephotosschreibtisch-laptop-notizbuch-stift-593327.jpg" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
         <h2><span id="so funktioniert die binäre Suche"><span id="So_funktioniert_die__binarer_Suche">Wie funktioniert die binäre Suche?</span></span></h2>
         <div class="theorie_text">
-        <p class="content_text">Beispiel, wir suchen in einem Wörterbuch einen bestimmten Begriff. Mit etwas Glück finden wir das Wort auf den ersten Seiten vielleicht erst am Ende oder gar nicht. Das würden wir aber erst auf der letzten Seite feststellen. Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir also ziemlich lange suchen.</p>
-        <p class="content_text">Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf, schauen, ob das Wort in der alphabetischen Reihenfolge davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buches sich das gesuchte Wort befindet und können somit den anderen Teil ignorieren. Danach orientieren wir uns wieder in der Mitte des verbelibenden Teils, und schränken somit den Suchbereich erneut um die Hälfte ein. Mit jedem weiteren Suchschritt wird die Anzahl der verbleibenden Seiten wiederrum halbiert. Auf diese Weise kommen wir mit relativ wenigen Suchschritten zur Zielseite und damit zum gesuchten Wort.</p>
-        <p class="content_text">Allgemein formuliert benötigt die Binäre Suche drei Schritte:</p>
-        <ol><li class="theorie_tabelle">Im ersten Schritt vergleichen wir den gesuchten Wert 61 mit dem mittleren Element 36. Der gesuchte Wert ist größer, muss sich also rechts von der 36 befinden.</li>
-            <li class="theorie_tabelle">Im zweiten Schritt vergleichen wir die 61 mit dem mittleren Element des rechten Bereichs, der 79. Der gesucht Wert ist kleiner, muss sich also links von der 79 befinden.</li>
-            <li class="theorie_tabelle">Zwischen 36 und 79 befindet sich nur noch ein Element. Auch dieses müssen wir noch einmal mit dem gesuchten Element vergleichen.
-                In diesem Beispiel haben wir das gesuchte Element 61 gefunden. Hier hätte sich aber auch eine andere Zahl zwischen 36 und 79 befinden können. Das hätte bedeutet, dass das Array gar keine 61 enthält.</li></ol>
+            <p class="content_text">Beispiel, wir suchen in einem Wörterbuch einen bestimmten Begriff. Mit etwas Glück finden wir das Wort auf den ersten Seiten vielleicht erst am Ende oder gar nicht. Das würden wir aber erst auf der letzten Seite feststellen. Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir also ziemlich lange suchen.</p>
+            <p class="content_text">Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf, schauen, ob das Wort in der alphabetischen Reihenfolge davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buches sich das gesuchte Wort befindet und können somit den anderen Teil ignorieren. Danach orientieren wir uns wieder in der Mitte des verbelibenden Teils, und schränken somit den Suchbereich erneut um die Hälfte ein. Mit jedem weiteren Suchschritt wird die Anzahl der verbleibenden Seiten wiederrum halbiert. Auf diese Weise kommen wir mit relativ wenigen Suchschritten zur Zielseite und damit zum gesuchten Wort.</p>
+            <p class="content_text">Allgemein formuliert benötigt die Binäre Suche drei Schritte:</p>
+            <ol><li class="theorie_tabelle">Im ersten Schritt vergleichen wir den gesuchten Wert 61 mit dem mittleren Element 36. Der gesuchte Wert ist größer, muss sich also rechts von der 36 befinden.</li>
+                <li class="theorie_tabelle">Im zweiten Schritt vergleichen wir die 61 mit dem mittleren Element des rechten Bereichs, der 79. Der gesucht Wert ist kleiner, muss sich also links von der 79 befinden.</li>
+                <li class="theorie_tabelle">Zwischen 36 und 79 befindet sich nur noch ein Element. Auch dieses müssen wir noch einmal mit dem gesuchten Element vergleichen.
+                    In diesem Beispiel haben wir das gesuchte Element 61 gefunden. Hier hätte sich aber auch eine andere Zahl zwischen 36 und 79 befinden können. Das hätte bedeutet, dass das Array gar keine 61 enthält.</li></ol>
         </div>
         <h3><span id="Binare Suche iterativ"><span id="Binare_Suche_iterativ">Pseudocode: Binäre Suche - iterativ</span></span></h3>
         <pre>  BinarySearch(A[0..N-1], value) {
@@ -186,8 +199,8 @@
         <img class="simulation_titelbild" src="img/pixabay.comdevectorsgetriebe-arbeit-team-zusammen-5193383.png" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
         <h3 style="text-align: center">Binäre Suche - Simulator</h3>
         <div class="simulation_text">
-        <p class="content_text">Nun wird es ein bisschen praktischer. Durch den Binäre Suche - Simulator wird die Binäre Suche visuell dargestellt. Hier kann eine Zahl aus der unten aufgeführten Zahlenreihe im Bereich von 1 bis 100 eingeben werden. Im Anschluss wird durch die binäre Suche überprüft, ob die ausgewählte Zahl in der dargestellten, zufällig erzeugten Zahlenreihe enthalten ist. Die jeweiligen Arbeitsschritte werden über das Aufleuchten eines bestimmten Balkens angezeigt</p>
-        <p class="content_text">Probiere es doch gerne einmal aus.</p>
+            <p class="content_text">Nun wird es ein bisschen praktischer. Durch den Binäre Suche - Simulator wird die Binäre Suche visuell dargestellt. Hier kann eine Zahl aus der unten aufgeführten Zahlenreihe im Bereich von 1 bis 100 eingeben werden. Im Anschluss wird durch die binäre Suche überprüft, ob die ausgewählte Zahl in der dargestellten, zufällig erzeugten Zahlenreihe enthalten ist. Die jeweiligen Arbeitsschritte werden über das Aufleuchten eines bestimmten Balkens angezeigt</p>
+            <p class="content_text">Probiere es doch gerne einmal aus.</p>
         </div>
         <hr>
 
@@ -217,22 +230,22 @@
         <div></div>
         <h3 id="section_ubung" style="text-align: center">Binäre Suche - interaktiv</h3>
         <div class="simulation_text">
-        <p class="beispiel_beschreibung">Hier bist du nun selbst dran! Im interaktiven Teil kannst du nun zeigen, wie gut du die Binäre Suche drauf hast. Deine Aufgabe ist nämlich die vorgegebene Zahl zu finden. Hierfür darfst du allerdings ausschliesslich die Vorgehensweise der Binären Suche verwenden.</p>
-        <p class="beispiel_beschreibung"> Dies tust du indem du die Zahl die als nächster Schritt an der Reihe ist anklickst. Liegst du richtig so wird der Balken grün. Wenn du jedoch falsch liegst, dann färben sich alle Balken rot! In diesem Fall kannst du einfach mit dem dafür vorgesehen Button einen neuen Durchlauf starten. Kommst du schließlich am Ziel an, dann erscheinen alle Balken in Gold. </p>
-        <p>Nun bleibt nur noch zu sagen, viel Erfolg beim Traineren!</p>
+            <p class="beispiel_beschreibung">Hier bist du nun selbst dran! Im interaktiven Teil kannst du nun zeigen, wie gut du die Binäre Suche drauf hast. Deine Aufgabe ist nämlich die vorgegebene Zahl zu finden. Hierfür darfst du allerdings ausschliesslich die Vorgehensweise der Binären Suche verwenden.</p>
+            <p class="beispiel_beschreibung"> Dies tust du indem du die Zahl die als nächster Schritt an der Reihe ist anklickst. Liegst du richtig so wird der Balken grün. Wenn du jedoch falsch liegst, dann färben sich alle Balken rot! In diesem Fall kannst du einfach mit dem dafür vorgesehen Button einen neuen Durchlauf starten. Kommst du schließlich am Ziel an, dann erscheinen alle Balken in Gold. </p>
+            <p>Nun bleibt nur noch zu sagen, viel Erfolg beim Traineren!</p>
         </div>
         <hr>
         <br />
         <div id="arraySS"></div>
         <br />
 
-        <p style="font-style: italic">Klicke die Zahl an die im Algorithmus als nächstes dran ist!</p>
+        <p class= "beispiel_bild_beschreibung"style="font-style: italic; width: auto">Klicke die Zahl an die im Algorithmus als nächstes dran ist!</p>
         <div id="textRN" style="text-align: center"></div>
         <div id="MidRN" style="text-align: center"></div>
         <br />
         <br />
         <div style="text-align: center">
-            <button onClick="window.location.reload();">Versuche es noch ein mal</button>
+            <button onClick="window.location.reload();" class="try_knopf">RESET</button>
             <br />
             <br />
             <div id="textSS" ></div>
