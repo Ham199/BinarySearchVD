@@ -306,8 +306,8 @@ li{
 
 }
 li.list_element{
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     line-height: 1.4em;
     margin-bottom: 12px;
     font-family: Roboto, serif;
@@ -525,7 +525,7 @@ margin-right: auto;
         background: #fafafa;
         width: 100%;
         margin: 10em auto 0 auto ;
-        padding: 1.5% 1%;
+        padding: 1.5% 0%;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -541,7 +541,7 @@ margin-right: auto;
         background: #fafafa;
         width: 100%;
         margin: 10em auto 0 auto ;
-        padding: 1.5% 1%;
+        padding: 1.5% 0%;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -581,7 +581,7 @@ margin-right: auto;
             background: #fafafa;
             width: 100%;
             margin: 10em auto 0 auto ;
-            padding: 1.5% 1%;
+            padding: 1.5% 0%;
             box-shadow: 3px 3px;
             border-radius: .4em;
             -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -602,7 +602,7 @@ margin-right: auto;
         background: #fafafa;
         width: 50%;
         margin: 10em auto 0 auto ;
-        padding: 1.5% 1%;
+        padding: 1.5% 0%;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -610,7 +610,7 @@ margin-right: auto;
     }
 
     }
-@media (max-width: 500px) {
+@media (max-width: 499px) {
 
 
 
@@ -622,12 +622,7 @@ margin-right: auto;
         border-bottom: 0px solid #DFE1E6;
 
     }
-    #burger {
-        display: flex;
-    }
-    #headerright {
-        display: flex;
-    }
+
 
 
 
