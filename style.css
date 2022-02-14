@@ -99,10 +99,18 @@ img.banner{
     margin-left: auto;
     margin-right: auto;
     width: 100% ;
-    opatcity: 100%
+    opatcity: 100%;
+    z-index: 0;
 
 
 }
+.Titelbild_part{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
 
 
 img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
@@ -525,7 +533,7 @@ margin-right: auto;
         background: #fafafa;
         width: 100%;
         margin: 10em auto 0 auto ;
-        padding: 1.5% 0%;
+        padding: 0 0%;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -537,11 +545,20 @@ margin-right: auto;
     .header{
         display: none;
     }
+    div.banner2{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+    }
+
     div.mittelpart {
         background: #fafafa;
         width: 100%;
         margin: 10em auto 0 auto ;
-        padding: 1.5% 0%;
+        padding: 0 0%;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -550,7 +567,14 @@ margin-right: auto;
 }
 
     @media (min-width: 768px) {
-  
+        div.banner2{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+        }
         img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
             display: block;
             margin-top: 24px;
@@ -581,7 +605,7 @@ margin-right: auto;
             background: #fafafa;
             width: 100%;
             margin: 10em auto 0 auto ;
-            padding: 1.5% 0%;
+            padding: 0 0%;
             box-shadow: 3px 3px;
             border-radius: .4em;
             -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -597,12 +621,19 @@ margin-right: auto;
         display: none;
     }
 
+    div.banner2{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
 
+
+    }
     div.mittelpart {
         background: #fafafa;
         width: 50%;
         margin: 10em auto 0 auto ;
-        padding: 1.5% 0%;
+        padding: 0 0%;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
@@ -623,7 +654,14 @@ margin-right: auto;
 
     }
 
+    div.banner2{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
 
+
+    }
 
 
     img.beispiel_titelbild,.theorie_titelbild,.simulation_titelbild{
@@ -693,8 +731,9 @@ margin-right: auto;
     div.mittelpart {
         background: #fafafa;
         width: 100%;
+
         margin: 4em auto 0 auto ;
-        padding: 1.5% 0;
+        padding: 0 0;
         box-shadow: 3px 3px;
         border-radius: .4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0,0,0,0.35);
