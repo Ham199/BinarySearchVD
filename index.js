@@ -5,7 +5,6 @@ gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.ubung_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
 
-
 gsap.to('.beispiel_titelbild',{
     scrollTrigger: { trigger: '.beispiel_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
 })
@@ -19,7 +18,7 @@ gsap.to('.beispiel',{
     scrollTrigger: { trigger: '.beispiel', start: "top center" }, opacity: 1, ease: 'sine'
 })
 
-
+//Für eine Bildschirmbreite unter 500 px
 if (window.innerWidth > 500) {
 
     const tl = gsap.timeline({defaults: {ease: "power1.out"}});
@@ -54,17 +53,16 @@ document.addEventListener("click", e=>{
 
 
 
-let numberOfBars =0;
-var containerBS = document.getElementById("arrayBS");
-var containerSS = document.getElementById("arraySS");
-
-let startSS = 0;
-let endSS = 19;
-let arrSS = [];
-let startBS = 0;
-let endBS = 19;
-let flagBS = 0;
- let numSS = 0;
+let NumberOfBars =0;
+var ContainerSimulation = document.getElementById("arraySimulation");
+var ContainerTrainer = document.getElementById("arrayTrainer");
+let StartTrainer = 0;
+let EndTrainer = 19;
+let ArrayTrainer = [];
+let StartSimulation = 0;
+let EndSimulation = 19;
+let FlagSimulation = 0;
+ let NumberTrainer = 0;
 function showDropdown() {
     document.getElementById("popup").classList.toggle("show");
 }
@@ -75,78 +73,77 @@ window.onclick = function(event) {
         dropdowns.classList.remove("show");
     }
 }
-function generatearrayBS() {
+
+// Array erstellen
+function generateArraySimulation() {
     if (window.innerWidth < 960) {
-        numberOfBars = 11
-        endBS=10;
+        NumberOfBars = 11
+        EndSimulation=10;
     } else{
-        numberOfBars = 20;
+        NumberOfBars = 20;
 
     }
 
-    var arrBS = [];
+    var ArraySimulation = [];
 
 // Array befüllen
-    for (var i = 0; i < numberOfBars; i++) {
-        var valBS = Number(Math.ceil(Math.random() * 100));
-        arrBS.push(valBS);
+    for (var i = 0; i < NumberOfBars; i++) {
+        var ValueSimulation = Number(Math.ceil(Math.random() * 100));
+        ArraySimulation.push(ValueSimulation);
 
     }
 
-    arrBS.sort(function (a, b) {
+    ArraySimulation.sort(function (a, b) {
         return a - b;
     });
 
-    for (var i = 0; i < numberOfBars; i++) {
-        var valueBS = arrBS[i];
+    for (var i = 0; i < NumberOfBars; i++) {
+        var DivValueSimulation = ArraySimulation[i];
 
         // Div Elemente werden erstellt
-        var array_eleBS = document.createElement("div");
+        var ElementSimulation = document.createElement("div");
 
 
-        array_eleBS.classList.add("blockBS");
-        array_eleBS.style.height = `${valueBS * 3}px`;
-       // array_eleBS.style.transform = `translate(${i * 30}px)`;
+        ElementSimulation.classList.add("blockSimulation");
+        ElementSimulation.style.height = `${DivValueSimulation * 3}px`;
+       // ElementSimulation.style.transform = `translate(${i * 30}px)`;
 
-        var array_ele_labelBS = document.createElement("label");
-        array_ele_labelBS.classList.add("block_id");
-        array_ele_labelBS.innerText = valueBS;
+        var LabelSimulation = document.createElement("label");
+        LabelSimulation.classList.add("blockId");
+        LabelSimulation.innerText = DivValueSimulation;
 
         // Div Elemente werden zur HTML Datei hinzugefügt
-        array_eleBS.appendChild(array_ele_labelBS);
-        containerBS.appendChild(array_eleBS);
+        ElementSimulation.appendChild(LabelSimulation);
+        ContainerSimulation.appendChild(ElementSimulation);
     }
 }
 
 // Binäre Suche
-async function BinarySearch(delay = 2000) {
-    var blocksBS = document.querySelectorAll(".blockBS");
-    var outputBS= document.getElementById("textBS");
+async function binarySearchSimulation(delay = 2000) {
+    var BlocksSimulation = document.querySelectorAll(".blockSimulation");
+    var OutputSimulation= document.getElementById("textSimulation");
     var LeftArrow = document.getElementById("leftArrow");
     var RightArrow = document.getElementById("rightArrow");
+    var NumberSimulation = document.getElementById("nameSimulation").value;
 
 
-
-    var numBS = document.getElementById("BSname").value;
-
-
-    for (var i = 0; i < blocksBS.length; i += 1) {
-        blocksBS[i].style.backgroundColor = "#6b5b95";
+    for (var i = 0; i < BlocksSimulation.length; i += 1) {
+        BlocksSimulation[i].style.backgroundColor = "#5e7080";
     }
 
-    outputBS.innerText = "";
+    OutputSimulation.innerText = "";
 
     // Iterativ
 
 
-    while (startBS <= endBS) {
+    while (StartSimulation <= EndSimulation) {
 
-        var midBS = Math.floor((startBS + endBS) / 2);
-        blocksBS[midBS].style.backgroundColor = "#FF4949";
+        var MidSimulation = Math.floor((StartSimulation + EndSimulation) / 2);
+        BlocksSimulation[MidSimulation].style.backgroundColor = "#c50219";
 
-        var valueBS = Number(blocksBS[midBS].childNodes[0].innerHTML);
+        var ElementValueSimulation = Number(BlocksSimulation[MidSimulation].childNodes[0].innerHTML);
 
-        // 0.1 Sekunden Verzögerung
+        // Verzögerung
         await new Promise((resolve) =>
             setTimeout(() => {
                 resolve();
@@ -154,154 +151,147 @@ async function BinarySearch(delay = 2000) {
         );
 
 
-        if (valueBS == numBS) {
-            outputBS.innerText = "Die Zahl wurde in der Zahlenmenge gefunden!";
-            blocksBS[midBS].style.backgroundColor = "#13CE66";
-            flagBS = 1;
+        if (ElementValueSimulation == NumberSimulation) {
+            OutputSimulation.innerText = "Die Zahl wurde in der Zahlenmenge gefunden!";
+            BlocksSimulation[MidSimulation].style.backgroundColor = "#36dc0a";
+            FlagSimulation = 1;
             break;
         }
 
-        if (valueBS > numBS) {
-            endBS = midBS - 1;
+        if (ElementValueSimulation > NumberSimulation) {
+            EndSimulation = MidSimulation - 1;
 
             LeftArrow.style.display = 'block';
             RightArrow.style.display = 'none';
-            for (var i = startBS; i < midBS; i += 1) {
-                blocksBS[i].style.backgroundColor = "#90da93";
+            for (var i = StartSimulation; i < MidSimulation; i += 1) {
+                BlocksSimulation[i].style.backgroundColor = "#90da93";
             }
-            for (var i = midBS; i < blocksBS.length; i += 1) {
-                blocksBS[i].style.backgroundColor = "#6b5b95";
+            for (var i = MidSimulation; i < BlocksSimulation.length; i += 1) {
+                BlocksSimulation[i].style.backgroundColor = "#5e7080";
             }
         } else {
-            startBS = midBS + 1;
+            StartSimulation = MidSimulation + 1;
 
             LeftArrow.style.display = 'none';
             RightArrow.style.display = 'block';
-            for (var i = midBS; i <= endBS; i += 1) {
-                blocksBS[i].style.backgroundColor = "#90da93";
+            for (var i = MidSimulation; i <= EndSimulation; i += 1) {
+                BlocksSimulation[i].style.backgroundColor = "#90da93";
 
             }
-            for (var i = 0; i <= midBS; i += 1) {
-                blocksBS[i].style.backgroundColor = "#6b5b95";
+            for (var i = 0; i <= MidSimulation; i += 1) {
+                BlocksSimulation[i].style.backgroundColor = "#5e7080";
             }
-            console.log("Start:"+startBS);
-            console.log("Mid:"+midBS);
-            console.log("End:"+endBS);
         }
     }
-    if (flagBS === 0) {
-        outputBS.innerText = "Die Zahl ist nicht in der Zahlenmenge enthalten";
+    if (FlagSimulation === 0) {
+        OutputSimulation.innerText = "Die Zahl existiert nicht in der Zahlenmenge.";
     }
 }
 
-generatearrayBS();
+generateArraySimulation();
 
-function generatearraySS() {
+function generateArrayTrainer() {
     if (window.innerWidth < 960) {
-        numberOfBars = 11;
-        endSS=10;
+        NumberOfBars = 11;
+        EndTrainer=10;
     } else{
-        numberOfBars = 20;
+        NumberOfBars = 20;
     }
 
-    for (var i = 0; i < numberOfBars; i++) {
+    for (var i = 0; i < NumberOfBars; i++) {
         // Return a value from 1 to 100 (both inclusive)
-        var valSS = Number(Math.ceil(Math.random() * 100));
-        arrSS.push(valSS);
+        var ValueTrainer = Number(Math.ceil(Math.random() * 100));
+        ArrayTrainer.push(ValueTrainer);
     }
 
 
-    arrSS.sort(function (a, b) {
+    ArrayTrainer.sort(function (a, b) {
         return a - b;
     });
-    var RandomNumber = Number(Math.ceil(Math.random() * numberOfBars));
-    var TextRN= document.getElementById("textRN");
-    arrRN =arrSS[RandomNumber];
-    console.log(arrRN);
+    var RandomNumber = Number(Math.ceil(Math.random() * NumberOfBars));
+    var TextRandomNumber= document.getElementById("textRandom");
+    ArrayRandomNumber =ArrayTrainer[RandomNumber];
+    console.log(ArrayRandomNumber);
     console.log(RandomNumber);
-    TextRN.innerText = "Suche nach der Nummer: "+ arrRN;
-    for (var i = 0; i < numberOfBars; i++) {
-        var valueSS = arrSS[i];
+    TextRandomNumber.innerText = "Suche nach der Nummer: "+ ArrayRandomNumber;
+    for (var i = 0; i < NumberOfBars; i++) {
+        var DivValueTrainer = ArrayTrainer[i];
 
 
-        var array_eleSS = document.createElement("div");
+        var ElementTrainer = document.createElement("div");
 
 
-        array_eleSS.classList.add("blockSS");
+        ElementTrainer.classList.add("blockTrainer");
 
 
-        array_eleSS.style.height = `${valueSS * 3}px`;
-        //array_eleSS.style.transform = `translate(${i * 30}px)`;
+        ElementTrainer.style.height = `${DivValueTrainer * 3}px`;
 
-        var array_ele_labelSS = document.createElement("label");
-        array_ele_labelSS.classList.add("block_id");
-        array_ele_labelSS.innerText = valueSS;
+        var LabelTrainer = document.createElement("label");
+        LabelTrainer.classList.add("blockId");
+        LabelTrainer.innerText = DivValueTrainer;
 
 
-        array_eleSS.appendChild(array_ele_labelSS);
-        containerSS.appendChild(array_eleSS);
+        ElementTrainer.appendChild(LabelTrainer);
+        ContainerTrainer.appendChild(ElementTrainer);
     }
 
 }
-generatearraySS();
+generateArrayTrainer();
 
 //Div Element anklickbar
 
-var clicked = document.getElementsByClassName('blockSS');
-for (let i = 0; i < clicked.length; i++ ){
-    clicked[i].addEventListener("click",function (){
-        numSS = arrSS[i];
-        SelfSearch();
+var Clicked = document.getElementsByClassName('blockTrainer');
+for (let i = 0; i < Clicked.length; i++ ){
+    Clicked[i].addEventListener("click",function (){
+        NumberTrainer = ArrayTrainer[i];
+        Trainer();
     })
 
 }
 
 // Funktion für die interaktive Suche
-function SelfSearch() {
-    var blocksSS = document.querySelectorAll(".blockSS");
-    var outputSS = document.getElementById("textSS");
+function Trainer() {
+    var BlocksTrainer = document.querySelectorAll(".blockTrainer");
+    var OutputTrainer = document.getElementById("textTrainer");
 
-    outputSS.innerText = "";
+    OutputTrainer.innerText = "";
 
     //Iterativ
-    while (startSS <= endSS) {
-        let midSS = Math.floor((startSS + endSS) / 2);
+    while (StartTrainer <= EndTrainer) {
+        let MidTrainer = Math.floor((StartTrainer + EndTrainer) / 2);
 
-        var valueSS = Number(blocksSS[midSS].childNodes[0].innerHTML);
+        var DivValueTrainer = Number(BlocksTrainer[MidTrainer].childNodes[0].innerHTML);
 
 
-        if (arrRN == numSS) {
+        if (ArrayRandomNumber == NumberTrainer) {
 
-            outputSS.innerText = "Du hast es geschafft!";
-            for (var i = 0; i < blocksSS.length; i += 1) {
-                blocksSS[i].style.backgroundColor = "#ffd700";
+            OutputTrainer.innerText = "Du hast es geschafft!";
+            for (var i = 0; i < BlocksTrainer.length; i += 1) {
+                BlocksTrainer[i].style.backgroundColor = "#ffd700";
             }
             break;
-        } else if (numSS == valueSS) {
+        } else if (NumberTrainer == DivValueTrainer) {
 
 
-            outputSS.innerText = "Richtig";
-            blocksSS[midSS].style.backgroundColor = "#3cc016";
+            OutputTrainer.innerText = "Richtig";
+            BlocksTrainer[MidTrainer].style.backgroundColor = "#36dc0a";
 
-            if (arrRN < numSS) {
-                endSS = midSS - 1;
+            if (ArrayRandomNumber < NumberTrainer) {
+                EndTrainer = MidTrainer - 1;
                 break;
             } else  {
-                startSS = midSS + 1;
+                StartTrainer = MidTrainer + 1;
                 break;
             }
             break;
 
         } else {
-            outputSS.innerText = "Falsch";
-            for (var i = 0; i < blocksSS.length; i += 1) {
-                blocksSS[i].style.backgroundColor = "#c50319";
+            OutputTrainer.innerText = "Falsch";
+            for (var i = 0; i < BlocksTrainer.length; i += 1) {
+                BlocksTrainer[i].style.backgroundColor = "#c50219";
             }
             break;
         }
     }
-
-
-
 }
 
