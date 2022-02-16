@@ -2,7 +2,7 @@
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
-gsap.from('.ubung_button', { duration: 1, opacity: 0, ease: 'sine'})
+gsap.from('.uebung_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
 
 gsap.to('.beispiel_titelbild',{
