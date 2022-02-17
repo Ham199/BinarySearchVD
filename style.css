@@ -15,7 +15,13 @@ body {
     margin: 0;
     line-height: 1.2;
     color: #676767;
-
+    background: url("img/vecteezy_abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background_534015.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: Bahnschrift, serif;
     text-align: justify;
 }
