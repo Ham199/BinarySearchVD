@@ -1,22 +1,13 @@
 
+gsap.registerEffect(ScrollTrigger);
+
+
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.uebung_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
 
-gsap.to('.beispiel_titelbild',{
-    scrollTrigger: { trigger: '.beispiel_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
-})
-gsap.to('.theorie_titelbild',{
-    scrollTrigger: { trigger: '.theorie_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
-})
-gsap.to('.simulation_titelbild',{
-    scrollTrigger: { trigger: '.simulation_titelbild', start: "top center" }, opacity: 1, ease: 'sine'
-})
-gsap.to('.beispiel',{
-    scrollTrigger: { trigger: '.beispiel', start: "top center" }, opacity: 1, ease: 'sine'
-})
 
 //Für eine Bildschirmbreite unter 500 px
 if (window.innerWidth > 500) {
@@ -35,6 +26,22 @@ if (window.innerWidth > 500) {
     gsap.to(".intro", {y: "100%", duration: 0});
 
 }
+
+$(window).on("load",function() {
+    $(window).scroll(function() {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fade").each(function() {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+            /* If the element is completely within bounds of the window, fade it in */
+            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css("opacity")==0) {$(this).fadeTo(700,1);}
+            }
+        });
+    }).scroll(); //invoke scroll-handler on page-load
+});
+
 
 document.addEventListener("click", e=>{
     const isDropdownButton = e.target.matches("[data-dropdown-button]")

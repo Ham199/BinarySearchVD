@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass1/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,45 +113,45 @@
         <h2>Ein simpler Einstieg</h2>
 
         <div class="beispiel_text">
-            <p class="beispiel_beschreibung">Bevor es an die Theorie geht, fangen wir erst einmal mit einem Beispiel an. Die folgenden Abbildungen zeigen Schritt für Schritt, wie die binäre Suche vorgeht, um einen gesuchten Wert zu finden. Wir haben ein Feld (Array) mit 9 Speicherplätzen.
+            <p class="beispiel_beschreibung fade">Bevor es an die Theorie geht, fangen wir erst einmal mit einem Beispiel an. Die folgenden Abbildungen zeigen Schritt für Schritt, wie die binäre Suche vorgeht, um einen gesuchten Wert zu finden. Wir haben ein Feld (Array) mit 9 Speicherplätzen.
                 Der Algorithmus schaut sich in jedem Suchdurchlauf (Iteration) den Wert an, der in der Mitte des Arrays steht. In diesem Beispiel wird die Zahl <b>55</b> gesucht.
             </p>
-            <img class="beispiel" src="img/frontend beispiel1.png" alt="">
-            <p class="beispiel_bild_beschreibung">In der Mitte des Arrays ist der Wert <b>14</b>, dieser ist kleiner als <b>55</b>.</p>
-            <img class="beispiel" src="img/frontend beispiel2.png" alt="">
-            <p class="beispiel_bild_beschreibung">Das bedeutet, wir brauchen alle anderen Werte, die vor der <b>14</b> stehen, nicht zu beachten, da diese Werte kleiner als <b>55</b> sind.</p>
-            <img class="beispiel" src="img/frontend beispiel3.png" alt="">
-            <p class="beispiel_bild_beschreibung">Die neue Mitte, im nun reduzierten Array, ist <b>32</b>.</p>
-            <img class="beispiel" src="img/frontend beispiel4.png" alt="">
-            <p class="beispiel_bild_beschreibung">Die <b>32</b> ist kleiner als der gesuchte Wert:<b> 55</b>. Demzufolge muss der gesuchte Wert rechts von 32 liegen.</p>
-            <img class="beispiel" src="img/frontend beispiel5.png" alt="">
-            <p class="beispiel_bild_beschreibung">Es sind nun drei Felder übrig, in denen sich der gesuchte Wert befindet. Die Mitte ist die <b>45</b>.</p>
-            <img class="beispiel" src="img/frontend beispiel6.png" alt="">
-            <p class="beispiel_bild_beschreibung">Da <b>45</b> kleiner als <b>55</b> ist, kann der gesuchte Wert nur rechts davon liegen. Zwei Felder sind nun noch übrig</p>
-            <img class="beispiel" src="img/frontend beispiel7.png" alt="">
-            <p class="beispiel_bild_beschreibung">Der verbleibende Bezugswert ist <b>45</b>. Folglich, liegt der gesuchte Wert <b>55</b> rechts davon.</p>
-            <img class="beispiel" src="img/frontend beispiel8.png" alt="">
-            <p class="beispiel_bild_beschreibung"><b>55</b> wurde gefunden.</p>
+            <img class="beispiel fade" src="img/frontend beispiel1.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">In der Mitte des Arrays ist der Wert <b>14</b>, dieser ist kleiner als <b>55</b>.</p>
+            <img class="beispiel fade" src="img/frontend beispiel2.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">Das bedeutet, wir brauchen alle anderen Werte, die vor der <b>14</b> stehen, nicht zu beachten, da diese Werte kleiner als <b>55</b> sind.</p>
+            <img class="beispiel fade" src="img/frontend beispiel3.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">Die neue Mitte, im nun reduzierten Array, ist <b>32</b>.</p>
+            <img class="beispiel fade" src="img/frontend beispiel4.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">Die <b>32</b> ist kleiner als der gesuchte Wert:<b> 55</b>. Demzufolge muss der gesuchte Wert rechts von 32 liegen.</p>
+            <img class="beispiel fade" src="img/frontend beispiel5.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">Es sind nun drei Felder übrig, in denen sich der gesuchte Wert befindet. Die Mitte ist die <b>45</b>.</p>
+            <img class="beispiel fade" src="img/frontend beispiel6.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">Da <b>45</b> kleiner als <b>55</b> ist, kann der gesuchte Wert nur rechts davon liegen. Zwei Felder sind nun noch übrig</p>
+            <img class="beispiel fade" src="img/frontend beispiel7.png" alt="">
+            <p class="beispiel_bild_beschreibung fade">Der verbleibende Bezugswert ist <b>45</b>. Folglich, liegt der gesuchte Wert <b>55</b> rechts davon.</p>
+            <img class="beispiel fade" src="img/frontend beispiel8.png" alt="">
+            <p class="beispiel_bild_beschreibung fade"><b>55</b> wurde gefunden.</p>
         </div>
     </section>
 
     <hr>
 
     <section id="section_Theorie">
-        <h1 class="ueberschrift">Theorie</h1>
-        <img class="theorie_titelbild" src="img/pixabay.comdephotosschreibtisch-laptop-notizbuch-stift-593327.jpg" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
+        <h1 class="ueberschrift fade">Theorie</h1>
+        <img class="theorie_titelbild fade" src="img/pixabay.comdephotosschreibtisch-laptop-notizbuch-stift-593327.jpg" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
         <h2><span>Wie funktioniert die binäre Suche?</span></h2>
         <div class="theorie_text">
-            <p class="content_text">Beispiel, wir suchen in einem Wörterbuch einen bestimmten Begriff. Mit etwas Glück finden wir das Wort auf den ersten Seiten vielleicht erst am Ende oder gar nicht. Das würden wir aber erst auf der letzten Seite feststellen. Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir also ziemlich lange suchen.</p>
-            <p class="content_text">Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf, schauen, ob das Wort in der alphabetischen Reihenfolge davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buches sich das gesuchte Wort befindet und können somit den anderen Teil ignorieren. Danach orientieren wir uns wieder in der Mitte des verbleibenden Teils, und schränken somit den Suchbereich erneut um die Hälfte ein. Mit jedem weiteren Suchschritt wird die Anzahl der verbleibenden Seiten wiederrum halbiert. Auf diese Weise kommen wir mit relativ wenigen Suchschritten zur Zielseite und damit zum gesuchten Wort.</p>
-            <p class="content_text">Allgemein formuliert benötigt die Binäre Suche drei Schritte:</p>
-            <ol><li class="theorie_tabelle">Im ersten Schritt vergleichen wir den gesuchten Wert 61 mit dem mittleren Element 36. Der gesuchte Wert ist größer, muss sich also rechts von der 36 befinden.</li>
-                <li class="theorie_tabelle">Im zweiten Schritt vergleichen wir die 61 mit dem mittleren Element des rechten Bereichs, der 79. Der gesuchte Wert ist kleiner, muss sich also links von der 79 befinden.</li>
-                <li class="theorie_tabelle">Zwischen 36 und 79 befindet sich nur noch ein Element. Auch dieses müssen wir noch einmal mit dem gesuchten Element vergleichen.
+            <p class="content_text fade">Beispiel, wir suchen in einem Wörterbuch einen bestimmten Begriff. Mit etwas Glück finden wir das Wort auf den ersten Seiten vielleicht erst am Ende oder gar nicht. Das würden wir aber erst auf der letzten Seite feststellen. Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir also ziemlich lange suchen.</p>
+            <p class="content_text fade">Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf, schauen, ob das Wort in der alphabetischen Reihenfolge davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buches sich das gesuchte Wort befindet und können somit den anderen Teil ignorieren. Danach orientieren wir uns wieder in der Mitte des verbleibenden Teils, und schränken somit den Suchbereich erneut um die Hälfte ein. Mit jedem weiteren Suchschritt wird die Anzahl der verbleibenden Seiten wiederrum halbiert. Auf diese Weise kommen wir mit relativ wenigen Suchschritten zur Zielseite und damit zum gesuchten Wort.</p>
+            <p class="content_text fade">Allgemein formuliert benötigt die Binäre Suche drei Schritte:</p>
+            <ol><li class="theorie_tabelle fade">Im ersten Schritt vergleichen wir den gesuchten Wert 61 mit dem mittleren Element 36. Der gesuchte Wert ist größer, muss sich also rechts von der 36 befinden.</li>
+                <li class="theorie_tabelle fade">Im zweiten Schritt vergleichen wir die 61 mit dem mittleren Element des rechten Bereichs, der 79. Der gesuchte Wert ist kleiner, muss sich also links von der 79 befinden.</li>
+                <li class="theorie_tabelle fade">Zwischen 36 und 79 befindet sich nur noch ein Element. Auch dieses müssen wir noch einmal mit dem gesuchten Element vergleichen.
                     In diesem Beispiel haben wir das gesuchte Element 61 gefunden. Hier hätte sich aber auch eine andere Zahl zwischen 36 und 79 befinden können. Das hätte bedeutet, dass das Array gar keine 61 enthält.</li></ol>
         </div>
-        <h3><span id="Binare Suche iterativ"><span id="Binare_Suche_iterativ">Pseudocode: Binäre Suche - iterativ</span></span></h3>
-        <pre>  BinarySearch(A[0..N-1], value) {
+        <h3><span id="Binare_Suche_iterativ fade">Pseudocode: Binäre Suche - iterativ</span></h3>
+        <pre class="fade">  BinarySearch(A[0..N-1], value) {
       low = 0
       high = N - 1
       while (low &lt;= high) {
@@ -169,7 +169,7 @@
   }
 </pre>
 
-        <h3><span><span id="Binare_Suche_rekursiv">Pseudocode: Binäre Suche - rekursiv</span></span></h3>
+        <h3><span class="Binare_Suche_rekursiv fade">Pseudocode: Binäre Suche - rekursiv</span></h3>
         <pre>  // initially called with low = 0, high = N-1
             BinarySearch(A[0..N-1], value, low, high) {
               // invariants: value &gt; A[i] for all i &lt; low
@@ -191,12 +191,12 @@
     <hr>
 
     <section id="section_Simulation">
-        <h1 class="ueberschrift">Simulation</h1>
-        <img class="simulation_titelbild" src="img/pixabay.comdevectorsgetriebe-arbeit-team-zusammen-5193383.png" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
+        <h1 class="ueberschrift fade">Simulation</h1>
+        <img class="simulation_titelbild fade" src="img/pixabay.comdevectorsgetriebe-arbeit-team-zusammen-5193383.png" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
         <h3 style="text-align: center">Binäre Suche - Simulator</h3>
-        <div class="simulation_text">
-            <p class="content_text">Nun wird es ein bisschen praktischer. Durch den Binäre Suche - Simulator wird die Binäre Suche visuell dargestellt. Hier kann eine Zahl aus der unten aufgeführten Zahlenreihe im Bereich von 1 bis 100 eingeben werden. Im Anschluss wird durch die binäre Suche überprüft, ob die ausgewählte Zahl in der dargestellten, zufällig erzeugten Zahlenreihe enthalten ist. Die jeweiligen Arbeitsschritte werden über das Aufleuchten der Balken angezeigt. Der rote Balken zeigt, bei welcher Zahl der Zeiger ist. Der für die Suche relevante Teil wird durch die hellgrünen Balken visualisiert. Ist man am Ziel angekommen so wird der Balken grün, anderenfalls verschwindet er. </p>
-            <p class="content_text">Probiere es doch gerne einmal aus.</p>
+        <div class="simulation_text fade">
+            <p class="content_text fade">Nun wird es ein bisschen praktischer. Durch den Binäre Suche - Simulator wird die Binäre Suche visuell dargestellt. Hier kann eine Zahl aus der unten aufgeführten Zahlenreihe im Bereich von 1 bis 100 eingeben werden. Im Anschluss wird durch die binäre Suche überprüft, ob die ausgewählte Zahl in der dargestellten, zufällig erzeugten Zahlenreihe enthalten ist. Die jeweiligen Arbeitsschritte werden über das Aufleuchten der Balken angezeigt. Der rote Balken zeigt, bei welcher Zahl der Zeiger ist. Der für die Suche relevante Teil wird durch die hellgrünen Balken visualisiert. Ist man am Ziel angekommen so wird der Balken grün, anderenfalls verschwindet er. </p>
+            <p class="content_text fade">Probiere es doch gerne einmal aus.</p>
         </div>
 
         <div id="arraySimulation"></div>
@@ -204,17 +204,17 @@
         <br />
         <br />
 
-        <div style="text-align: center">
+        <div class="fade" style="text-align: center">
             <label for="nameSimulation">
                 Gesuchte Nummer:
             </label>
-            <input type="text" id="nameSimulation"
+            <input type="text" id="nameSimulation" onfocus="this.value=''"
                    name="nameSimulation" placeholder="Eine Zahl von 1-100"/>
             <br /><br />
             <img id="leftArrow" src="img/LeftArrow.png"/>
             <img id="rightArrow" src="img/RightArrow.png"/>
             <button id="buttonSimulation" onclick="binarySearchSimulation()" class="try_knopf">Suche</button>
-            <button onClick="window.location.reload();" class="try_knopf">RESET</button>
+            <button onClick="window.location.reload();" class="try_knopf">Reset</button>
             <br><br />
             <div id="textSimulation"></div>
             <hr>
@@ -227,10 +227,10 @@
         <br />
 
         <div></div>
-        <h3 id="section_Uebung" style="text-align: center">Binäre Suche - interaktiv</h3>
+        <h3 id="section_Uebung" class="fade" style="text-align: center">Binäre Suche - interaktiv</h3>
         <div class="simulation_text">
-            <p class="beispiel_beschreibung">Hier bist du nun selbst dran! Im interaktiven Teil kannst du nun zeigen, wie gut du die Binäre Suche verstanden hast. Deine Aufgabe ist nämlich die vorgegebene Zahl zu finden. Hierfür darfst du allerdings ausschliesslich die Vorgehensweise der Binären Suche verwenden.</p>
-            <p class="beispiel_beschreibung"> Dies tust du, indem du die Zahl die im nächsten Schritt an der Reihe ist anklickst. Liegst du richtig, so wird der Balken grün. Wenn du jedoch falsch liegst, dann färben sich alle Balken rot! In diesem Fall kannst du einfach mit dem dafür vorgesehen Button einen neuen Durchlauf starten. Kommst du schließlich am Ziel an, dann erscheinen alle Balken in Gold. </p>
+            <p class="beispiel_beschreibung fade">Hier bist du nun selbst dran! Im interaktiven Teil kannst du nun zeigen, wie gut du die Binäre Suche verstanden hast. Deine Aufgabe ist nämlich die vorgegebene Zahl zu finden. Hierfür darfst du allerdings ausschliesslich die Vorgehensweise der Binären Suche verwenden.</p>
+            <p class="beispiel_beschreibung fade"> Dies tust du, indem du die Zahl die im nächsten Schritt an der Reihe ist anklickst. Liegst du richtig, so wird der Balken grün. Wenn du jedoch falsch liegst, dann färben sich alle Balken rot! In diesem Fall kannst du einfach mit dem dafür vorgesehen Button einen neuen Durchlauf starten. Kommst du schließlich am Ziel an, dann erscheinen alle Balken in Gold. </p>
             <p>Nun bleibt nur noch zu sagen, viel Erfolg beim Üben!</p>
         </div>
 
@@ -238,13 +238,13 @@
         <div id="arrayTrainer"></div>
         <br />
 
-        <p class= "beispiel_bild_beschreibung"style="font-style: italic; width: auto">Klicke die Zahl an, die im Algorithmus als Nächstes dran ist!</p>
+        <p class= "beispiel_bild_beschreibung fade"style="font-style: italic; width: auto">Klicke die Zahl an, die im Algorithmus als Nächstes dran ist!</p>
         <div id="textRandom" style="text-align: center"></div>
         <div id="midRandom" style="text-align: center"></div>
         <br />
         <br />
         <div style="text-align: center">
-            <button onClick="window.location.reload();" class="try_knopf">RESET</button>
+            <button onClick="window.location.reload();" class="try_knopf">Reset</button>
             <br />
             <br />
             <div id="textTrainer"></div>
@@ -271,6 +271,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 
 <script src="index.js" defer></script>

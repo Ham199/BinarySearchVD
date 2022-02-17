@@ -351,7 +351,7 @@ nav.navi {
     border-radius: 4px;
     padding: 8px;
     -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14);
-    width: 100%;
+    width: 90%;
     color: #707070;
     font-size: 1.4em; }
 
@@ -360,6 +360,172 @@ nav.navi {
     width: 100%;
     margin: 10em auto 0 auto;
     padding: 0 0%;
+    box-shadow: 3px 3px;
+    border-radius: 0.4em;
+    -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
+@media (min-width: 420px) {
+  nav.navi {
+    display: none; }
+
+  .toolbar {
+    border-bottom: 0px solid #DFE1E6; }
+
+  div.banner2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%); }
+
+  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    object-fit: cover;
+    height: 200px; }
+
+  img.beispiel {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 90%; }
+
+  .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 8px;
+    -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14);
+    width: 90%;
+    color: #707070;
+    font-size: 1.4em; }
+
+  .link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #dcdcdd;
+    font-family: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+    top: 15px;
+    border-radius: 3px;
+    padding: 5px; }
+
+  .dropdown.active > .link, .link:hover {
+    background-color: #738596; }
+
+  .dropdown {
+    position: relative;
+    left: 30px; }
+
+  .dropdown-menu {
+    position: absolute;
+    right: 20px;
+    top: 62px;
+    background-color: #dedede;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateY(-10px); }
+
+  .dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; }
+
+  div.mittelpart {
+    background: #fafafa;
+    width: 100%;
+    margin: 4em auto 0 auto;
+    padding: 0 0;
+    box-shadow: 3px 3px;
+    border-radius: 0.4em;
+    -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
+@media (min-width: 499px) {
+  nav.navi {
+    display: none; }
+
+  .toolbar {
+    border-bottom: 0px solid #DFE1E6; }
+
+  div.banner2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%); }
+
+  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    object-fit: cover;
+    height: 200px; }
+
+  img.beispiel {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 90%; }
+
+  .link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #dcdcdd;
+    font-family: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    right: 30px;
+    top: 15px;
+    border-radius: 3px;
+    padding: 5px; }
+
+  .dropdown.active > .link, .link:hover {
+    background-color: #738596; }
+
+  .dropdown {
+    position: relative;
+    left: 30px; }
+
+  .dropdown-menu {
+    position: absolute;
+    right: 30px;
+    top: 62px;
+    background-color: #dedede;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateY(-10px); }
+
+  .dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; }
+
+  div.mittelpart {
+    background: #fafafa;
+    width: 100%;
+    margin: 4em auto 0 auto;
+    padding: 0 0;
     box-shadow: 3px 3px;
     border-radius: 0.4em;
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
@@ -430,84 +596,6 @@ nav.navi {
     width: 50%;
     margin: 10em auto 0 auto;
     padding: 0 0%;
-    box-shadow: 3px 3px;
-    border-radius: 0.4em;
-    -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
-@media (max-width: 499px) {
-  nav.navi {
-    display: none; }
-
-  .toolbar {
-    border-bottom: 0px solid #DFE1E6; }
-
-  div.banner2 {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%); }
-
-  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
-    display: block;
-    margin-top: 24px;
-    margin-bottom: 36px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    object-fit: cover;
-    height: 200px; }
-
-  img.beispiel {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0;
-    margin-right: 0;
-    width: 90%; }
-
-  .link {
-    background: none;
-    border: none;
-    text-decoration: none;
-    color: #dcdcdd;
-    font-family: inherit;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    top: 15px;
-    border-radius: 3px;
-    padding: 5px; }
-
-  .dropdown.active > .link, .link:hover {
-    background-color: #738596; }
-
-  .dropdown {
-    position: relative;
-    left: 30px; }
-
-  .dropdown-menu {
-    position: absolute;
-    left: 0;
-    top: 62px;
-    background-color: #dedede;
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    transform: translateY(-10px); }
-
-  .dropdown.active > .link + .dropdown-menu {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto; }
-
-  div.mittelpart {
-    background: #fafafa;
-    width: 100%;
-    margin: 4em auto 0 auto;
-    padding: 0 0;
     box-shadow: 3px 3px;
     border-radius: 0.4em;
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
