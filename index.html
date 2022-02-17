@@ -140,7 +140,7 @@
     <section id="section_Theorie">
         <h1 class="ueberschrift">Theorie</h1>
         <img class="theorie_titelbild" src="img/pixabay.comdephotosschreibtisch-laptop-notizbuch-stift-593327.jpg" alt="img/Screen_Shot_2018-07-18_at_2.21.03_PM.jpg">
-        <h2><span id="so funktioniert die binäre Suche"><span id="So_funktioniert_die__binarer_Suche">Wie funktioniert die binäre Suche?</span></span></h2>
+        <h2><span>Wie funktioniert die binäre Suche?</span></h2>
         <div class="theorie_text">
             <p class="content_text">Beispiel, wir suchen in einem Wörterbuch einen bestimmten Begriff. Mit etwas Glück finden wir das Wort auf den ersten Seiten vielleicht erst am Ende oder gar nicht. Das würden wir aber erst auf der letzten Seite feststellen. Auch bei relativ weit vorne liegenden Wörtern (wie z. B. "Binärsuche") müssten wir also ziemlich lange suchen.</p>
             <p class="content_text">Natürlich würde in einem Wörterbuch niemand auf diese Weise suchen. Stattdessen schlagen wir das Buch ungefähr in der Mitte auf, schauen, ob das Wort in der alphabetischen Reihenfolge davor oder danach einzuordnen ist. Wir wissen somit, in welcher Hälfte des Buches sich das gesuchte Wort befindet und können somit den anderen Teil ignorieren. Danach orientieren wir uns wieder in der Mitte des verbleibenden Teils, und schränken somit den Suchbereich erneut um die Hälfte ein. Mit jedem weiteren Suchschritt wird die Anzahl der verbleibenden Seiten wiederrum halbiert. Auf diese Weise kommen wir mit relativ wenigen Suchschritten zur Zielseite und damit zum gesuchten Wort.</p>
@@ -169,7 +169,7 @@
   }
 </pre>
 
-        <h3><span id="Binare Suche rekursiv"><span id="Binare_Suche_rekursiv">Pseudocode: Binäre Suche - rekursiv</span></span></h3>
+        <h3><span><span id="Binare_Suche_rekursiv">Pseudocode: Binäre Suche - rekursiv</span></span></h3>
         <pre>  // initially called with low = 0, high = N-1
             BinarySearch(A[0..N-1], value, low, high) {
               // invariants: value &gt; A[i] for all i &lt; low
@@ -214,6 +214,7 @@
             <img id="leftArrow" src="img/LeftArrow.png"/>
             <img id="rightArrow" src="img/RightArrow.png"/>
             <button id="buttonSimulation" onclick="binarySearchSimulation()" class="try_knopf">Suche</button>
+            <button onClick="window.location.reload();" class="try_knopf">RESET</button>
             <br><br />
             <div id="textSimulation"></div>
             <hr>
