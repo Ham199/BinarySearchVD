@@ -62,7 +62,9 @@ pre {
     border: 1px solid #cccccc;
     border-radius: 5px;
     overflow: auto; }
-
+#textRandom{
+    color: #676767;
+}
 p, label, div.textRandom {
     color: #676767;
     font-size: 17px;

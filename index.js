@@ -69,17 +69,9 @@ let ArrayTrainer = [];
 let StartSimulation = 0;
 let EndSimulation = 19;
 let FlagSimulation = 0;
- let NumberTrainer = 0;
-function showDropdown() {
-    document.getElementById("popup").classList.toggle("show");
-}
-window.onclick = function(event) {
-    if (!event.target.matches(".burger") || event.target.parentNode.matches(".burger")) {
-        let dropdowns = document.getElementById("popup");
+let NumberTrainer = 0;
 
-        dropdowns.classList.remove("show");
-    }
-}
+
 
 // Array erstellen
 function generateArraySimulation() {
