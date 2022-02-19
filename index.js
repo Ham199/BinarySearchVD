@@ -207,7 +207,7 @@ function generateArrayTrainer() {
     ArrayTrainer.sort(function (a, b) {
         return a - b;
     });
-    var RandomNumber = Number(Math.ceil(Math.random() * NumberOfBars));
+    var RandomNumber = Number(Math.ceil(Math.random() * NumberOfBars-1));
     var TextRandomNumber= document.getElementById("textRandom");
     ArrayRandomNumber =ArrayTrainer[RandomNumber];
     console.log(ArrayRandomNumber);

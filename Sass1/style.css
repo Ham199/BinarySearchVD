@@ -187,7 +187,7 @@ section {
 
 img {
   border-radius: 0.4em; }
-  img.banner {
+  img.bannerbild {
     display: flex;
     margin-bottom: 48px;
     margin-left: auto;
@@ -370,7 +370,7 @@ nav.navi {
   .toolbar {
     border-bottom: 0px solid #DFE1E6; }
 
-  div.banner2 {
+  div.bannertext {
     position: relative;
     top: 50%;
     left: 50%;
@@ -457,7 +457,7 @@ nav.navi {
   .toolbar {
     border-bottom: 0px solid #DFE1E6; }
 
-  div.banner2 {
+  div.bannertext {
     position: relative;
     top: 50%;
     left: 50%;
@@ -533,7 +533,7 @@ nav.navi {
   .header {
     display: none; }
 
-  div.banner2 {
+  div.bannertext {
     position: relative;
     top: 50%;
     left: 50%;
@@ -547,7 +547,7 @@ nav.navi {
     border-radius: 0.4em;
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
 @media (min-width: 768px) {
-  div.banner2 {
+  div.bannertext {
     position: relative;
     top: 50%;
     left: 50%;
@@ -586,7 +586,7 @@ nav.navi {
   .header {
     display: none; }
 
-  div.banner2 {
+  div.bannertext {
     position: relative;
     top: 50%;
     left: 50%;
