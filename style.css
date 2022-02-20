@@ -46,6 +46,9 @@ h3 {
     border-radius: 0.2em;
     padding: 1%; }
 
+h3.anmerkung{
+    text-align: left;
+}
 h4, h5, h6, p, .oxy-rich-text p:last-child {
     margin: 0 24px 36px; }
 
@@ -62,9 +65,9 @@ pre {
     border: 1px solid #cccccc;
     border-radius: 5px;
     overflow: auto; }
-#textRandom, #textTrainer, #textSimulation{
+#textTrainer, #textSimulation{
     color: #676767;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 
@@ -81,7 +84,7 @@ pre {
 
 }
 
-p, label {
+p, #textRandom, label {
     color: #676767;
     font-size: 17px;
     font-weight: 400;
@@ -92,7 +95,7 @@ p.beispiel_beschreibung {
     font-weight: 400;
     font-family: "roboto", serif;
     line-height: 1.4em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     width: 85%; }
 p.content_text {
     font-size: 17px;
@@ -103,7 +106,7 @@ p.content_text {
 
 #arrayTrainer, #arraySimulation{
     background-color: rgba(138, 138, 138, 0.07);
-    padding: 3%;
+
 }
 
 div.beispiel_text, .theorie_text, .simulation_text {
@@ -138,7 +141,14 @@ ol {
     padding-left: 15%;
     padding-right: 5%;
     line-height: 1.4em;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+}
+ol.anmerkung_liste{
+    list-style-type: square;
+    width: 50%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
 
 li {
     color: #676767;
@@ -170,7 +180,11 @@ span.beispielzeile, .theoriezeile, .simulationzeile {
 hr {
     margin-top: auto;
     opacity: 30%; }
-
+div.simulation_gesuchtenummer{
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+/*
 .intro {
     background: #ffffff;
     position: fixed;
@@ -203,7 +217,7 @@ hr {
     overflow: hidden; }
 .hide span {
     transform: translateY(100%);
-    display: inline-block; }
+    display: inline-block; } */
 .fade{
 
     opacity: 0;
@@ -318,14 +332,14 @@ nav.navi {
     transition: 0.5s; }
 
 #arraySimulation, #arrayTrainer {
-    height: 300px;
+    height: auto;
     width: auto;
     margin-top: 60px;
-    position: center;
     text-align: center; }
 
 .blockSimulation, .blockTrainer {
     display: inline-block;
+    text-align: center;
     width: 28px;
     background-color: #5e7080;
     position: relative;
@@ -656,7 +670,7 @@ nav.navi {
         transform: translate(-50%, -60%); }
     div.mittelpart {
         background: #fafafa;
-        width: 60%;
+        width: 1000px;
         margin: 10em auto 0 auto;
         padding: 0 0%;
         box-shadow: 3px 3px;

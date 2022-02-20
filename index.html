@@ -17,7 +17,7 @@
     <title>Binäre Suche - Alles was du wissen musst</title>
 </head>
 
-<div class="intro">
+<!--<div class="intro">
     <div class="intro-text">
         <h1 class="hide">
             <span class="text"> Left or Right  ?  </span>
@@ -31,7 +31,7 @@
     </div>
 </div>
 <div class="slider"></div>
-
+-->
 <body>
 
 <section class="toolbar">
@@ -114,7 +114,15 @@
 
         <div class="beispiel_text">
             <p class="beispiel_beschreibung fade">Bevor es an die Theorie geht, fangen wir erst einmal mit einem Beispiel an. Die folgenden Abbildungen zeigen Schritt für Schritt, wie die binäre Suche vorgeht, um einen gesuchten Wert zu finden. Wir haben ein Feld (Array) mit 9 Speicherplätzen.
-                Der Algorithmus schaut sich in jedem Suchdurchlauf (Iteration) den Wert an, der in der Mitte des Arrays steht. In diesem Beispiel wird die Zahl <b>55</b> gesucht.
+                Der Algorithmus schaut sich in jedem Suchdurchlauf (Iteration) den Wert an, der in der Mitte des Arrays steht. In diesem Beispiel wird die Zahl <b>55</b> gesucht. <br>
+            <ol class="anmerkung_liste fade"> <h3 class="anmerkung">Wichtige Hinweise:</h3>
+            <li>
+                <p>Die Liste muss vor Anwendung der Binären Suche sortiert sein.</p>
+        </li>
+            <li>
+                <p>Wenn die Mitte zwischen zwei Feldern steht, wird sich für das Linke entschieden, da Indices ausschließlich Ganzzahlen und keine Dezimalzahlen sind. Es wird bei der Suche quasi abgerundet.</p>
+            </li>
+        </ol>
             </p>
             <img class="beispiel fade" src="img/frontend beispiel1.png" alt="">
             <p class="beispiel_bild_beschreibung fade">In der Mitte des Arrays ist der Wert <b>14</b>, dieser ist kleiner als <b>55</b>.</p>
@@ -150,7 +158,7 @@
                 <li class="theorie_tabelle fade">Zwischen 36 und 79 befindet sich nur noch ein Element. Auch dieses müssen wir noch einmal mit dem gesuchten Element vergleichen.
                     In diesem Beispiel haben wir das gesuchte Element 61 gefunden. Hier hätte sich aber auch eine andere Zahl zwischen 36 und 79 befinden können. Das hätte bedeutet, dass das Array gar keine 61 enthält.</li></ol>
         </div>
-        <h3><span id="Binare_Suche_iterativ fade">Pseudocode: Binäre Suche - iterativ</span></h3>
+        <h3><span id="Binare_Suche_iterativ fade">Pseudocode: Binäre Suche - iterativ (für Fortgeschrittene)</span></h3>
         <pre class="fade">  BinarySearch(A[0..N-1], value) {
       low = 0
       high = N - 1
@@ -169,7 +177,7 @@
   }
 </pre>
 
-        <h3><span class="Binare_Suche_rekursiv fade">Pseudocode: Binäre Suche - rekursiv</span></h3>
+        <h3><span class="Binare_Suche_rekursiv fade">Pseudocode: Binäre Suche - rekursiv (für Fortgeschrittene)</span></h3>
         <pre>  // initially called with low = 0, high = N-1
             BinarySearch(A[0..N-1], value, low, high) {
               // invariants: value &gt; A[i] for all i &lt; low
@@ -201,10 +209,8 @@
 
         <div id="arraySimulation"></div>
 
-        <br />
-        <br />
 
-        <div class="fade" style="text-align: center">
+        <div class="simulation_gesuchtenummer fade" style="text-align: center">
             <label for="nameSimulation">
                 Gesuchte Nummer:
             </label>
@@ -236,7 +242,7 @@
 
         <br />
         <div id="arrayTrainer"></div>
-        <br />
+
 
         <p class= "hinweis fade"style="font-style: italic; width: auto">Klicke die Zahl an, die im Algorithmus als Nächstes dran ist!</p>
         <div id="textRandom" style="text-align: center"></div>
