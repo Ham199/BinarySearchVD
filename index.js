@@ -105,7 +105,6 @@ function generateArraySimulation() {
 
         ElementSimulation.classList.add("blockSimulation");
         ElementSimulation.style.height = `${DivValueSimulation * 3}px`;
-       // ElementSimulation.style.transform = `translate(${i * 30}px)`;
 
         var LabelSimulation = document.createElement("label");
         LabelSimulation.classList.add("blockId");
@@ -118,11 +117,9 @@ function generateArraySimulation() {
 }
 
 // Binäre Suche
-async function binarySearchSimulation(delay = 2000) {
+async function binarySearchSimulation(delay = 3000) {
     var BlocksSimulation = document.querySelectorAll(".blockSimulation");
     var OutputSimulation= document.getElementById("textSimulation");
-    var LeftArrow = document.getElementById("leftArrow");
-    var RightArrow = document.getElementById("rightArrow");
     var NumberSimulation = document.getElementById("nameSimulation").value;
 
 
@@ -160,8 +157,6 @@ async function binarySearchSimulation(delay = 2000) {
         if (ElementValueSimulation > NumberSimulation) {
             EndSimulation = MidSimulation - 1;
 
-            LeftArrow.style.display = 'block';
-            RightArrow.style.display = 'none';
             for (var i = StartSimulation; i < MidSimulation; i += 1) {
                 BlocksSimulation[i].style.backgroundColor = "#90da93";
             }
@@ -171,8 +166,6 @@ async function binarySearchSimulation(delay = 2000) {
         } else {
             StartSimulation = MidSimulation + 1;
 
-            LeftArrow.style.display = 'none';
-            RightArrow.style.display = 'block';
             for (var i = MidSimulation; i <= EndSimulation; i += 1) {
                 BlocksSimulation[i].style.backgroundColor = "#90da93";
 
