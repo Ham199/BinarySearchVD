@@ -259,14 +259,14 @@ function Trainer() {
 
             OutputTrainer.innerText = "Du hast es geschafft!";
             for (var i = 0; i < BlocksTrainer.length; i += 1) {
-                BlocksTrainer[i].style.backgroundColor = "#ffd700";
+                BlocksTrainer[i].style.backgroundColor = "#36dc0a";
             }
             break;
         } else if (NumberTrainer == DivValueTrainer) {
 
 
-            OutputTrainer.innerText = "Richtig";
-            BlocksTrainer[MidTrainer].style.backgroundColor = "#36dc0a";
+            OutputTrainer.innerText = "Richtig!";
+            BlocksTrainer[MidTrainer].style.backgroundColor = "#ffd700";
 
             if (ArrayRandomNumber < NumberTrainer) {
                 EndTrainer = MidTrainer - 1;
@@ -278,7 +278,7 @@ function Trainer() {
             break;
 
         } else {
-            OutputTrainer.innerText = "Falsch";
+            OutputTrainer.innerText = "Falsch.";
             for (var i = 0; i < BlocksTrainer.length; i += 1) {
                 BlocksTrainer[i].style.backgroundColor = "#c50219";
             }
