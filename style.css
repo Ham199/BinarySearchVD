@@ -65,12 +65,11 @@ pre {
     border: 1px solid #cccccc;
     border-radius: 5px;
     overflow: auto; }
+
 #textTrainer, #textSimulation{
     color: #676767;
     font-size: 1em;
 }
-
-
 
 #textTrainer{
     display: inline-block;
@@ -146,8 +145,8 @@ ol {
 ol.anmerkung_liste{
     list-style-type: square;
     width: 50%;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 li {
@@ -268,10 +267,7 @@ img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
 
 img.beispiel {
     display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0;
     width: 75%; }
 
 nav.navi {
@@ -323,7 +319,7 @@ nav.navi {
     width: 20%;
     color: #707070;
     font-size: 1.4em;
-    font-family: Bahnschrift; }
+    font-family: Bahnschrift, serif; }
 
 .try_knopf:hover{
     background: rgba(222, 222, 222, 0.18);
@@ -401,12 +397,17 @@ nav.navi {
         object-fit: cover;
         height: 200px; }
 
+    h3.anmerkung{
+        text-align: center;
+    }
+
+    ol.anmerkung_liste{
+        width: 80%;
+    }
+
     img.beispiel {
         display: block;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 0;
-        margin-right: 0;
+        margin: auto 0;
         width: 90%; }
 
     .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
@@ -438,7 +439,13 @@ nav.navi {
     .toolbar {
         border-bottom: 0px solid #DFE1E6; }
 
+    h3.anmerkung_liste{
+        text-align: center;
+    }
 
+    ol.anmerkung_liste{
+        width: 100%;
+    }
 
     img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
         display: block;
@@ -452,10 +459,7 @@ nav.navi {
 
     img.beispiel {
         display: block;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 0;
-        margin-right: 0;
+        margin: auto 0;
         width: 90%; }
 
     .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
@@ -524,7 +528,7 @@ nav.navi {
         width: 20%;
         color: #707070;
         font-size: 1em;
-        font-family: Bahnschrift; }
+        font-family: Bahnschrift, serif; }
 }
 
 @media (max-width: 499px) {
@@ -532,14 +536,20 @@ nav.navi {
         display: none; }
 
     .toolbar {
-        border-bottom: 0px solid #DFE1E6; }
+        border-bottom: 0 solid #DFE1E6; }
 
     div.bannertext {
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -30%); }
+    h3.anmerkung_liste{
+        text-align: center;
+    }
 
+    ol.anmerkung_liste{
+        width: 100%;
+    }
     img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
         display: block;
         margin-top: 24px;
@@ -570,7 +580,7 @@ nav.navi {
         position: relative;
         top: 15px;
         border-radius: 3px;
-        padding: 5px; }
+    }
 
     .dropdown.active > .link, .link:hover {
         background-color: #738596; }
@@ -614,6 +624,14 @@ nav.navi {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
+
+    h3.anmerkung_liste{
+        text-align: center;
+    }
+
+    ol.anmerkung_liste{
+        width: 100%;
+    }
     div.mittelpart {
         background: #fafafa;
         width: 100%;
@@ -621,8 +639,10 @@ nav.navi {
         padding: 0 0%;
         box-shadow: 3px 3px;
         border-radius: 0.4em;
-        -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
-@media (min-width: 768px) {
+        -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); }
+}
+
+@media (min-width: 900px) {
     div.bannertext {
         position: relative;
         top: 50%;
@@ -631,20 +651,21 @@ nav.navi {
 
     img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
         display: block;
-        margin-top: 24px;
-        margin-bottom: 36px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 24px auto 36px;
         width: 90%;
         object-fit: cover;
         height: 350px; }
 
+    h3.anmerkung_liste{
+        text-align: center;
+    }
+
+    ol.anmerkung_liste{
+        width: 50%;
+    }
     img.beispiel {
         display: block;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 0;
-        margin-right: 0;
+        margin: auto 0;
         width: 50%; }
 
     p.beispiel_bild_beschreibung {
@@ -655,14 +676,21 @@ nav.navi {
         background: #fafafa;
         width: 100%;
         margin: 10em auto 0 auto;
-        padding: 0 0%;
+        padding: 0 0;
         box-shadow: 3px 3px;
         border-radius: 0.4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
-@media (min-width: 1280px) {
+@media (min-width: 1100px) {
     .header {
         display: none; }
 
+    h3.anmerkung_liste{
+        text-align: center;
+    }
+
+    ol.anmerkung_liste{
+        width: 50%;
+    }
     div.bannertext {
         position: relative;
         top: 50%;
@@ -670,11 +698,11 @@ nav.navi {
         transform: translate(-50%, -60%); }
     div.mittelpart {
         background: #fafafa;
-        width: 1000px;
+        width: 1100px;
         margin: 10em auto 0 auto;
         padding: 0 0%;
         box-shadow: 3px 3px;
         border-radius: 0.4em;
         -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
 
-/*# sourceMappingURL=style.css.map */
+
