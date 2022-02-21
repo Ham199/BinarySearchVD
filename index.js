@@ -1,7 +1,3 @@
-
-gsap.registerEffect(ScrollTrigger);
-
-
 gsap.from('.beispiel_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.theorie_button', { duration: 1, opacity: 0, ease: 'sine'})
 gsap.from('.simulation_button', { duration: 1, opacity: 0, ease: 'sine'})
@@ -11,20 +7,66 @@ gsap.from('.banner', { duration: 1, opacity: 0, ease: 'power3'})
 
 //Für eine Bildschirmbreite unter 500 px
 if (window.innerWidth > 500) {
-
+    const first_time= document.cookie;
     const tl = gsap.timeline({defaults: {ease: "power1.out"}});
 
-   /* tl.to(".text", {y: "0%", duration: 1, stagger: 0.5});
+    if (first_time == "visited"){
+    skipIntro(tl)
+    }
+    if (first_time == ""){
+    playIntro(tl)
+    }
+
+    document.cookie= "visited"
+} else {
+    mobile_skipIntro()
+
+}
+
+function playIntro(tl){
+    tl.to(".text", {y: "0%", duration: 1, stagger: 0.5});
     tl.to(".slider", {y: "-100%", duration: 1.5, delay: 0.5});
     tl.to(".intro", {y: "-100%", duration: 1}, "-=1");
-    */tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
+    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
     tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 1}, "-=1");
     tl.from('.toolbar', {duration: 1, y: '-100%', ease: 'sine', duration: 1}, "-=1")
+}
 
-} else {
+function skipIntro(tl){
+    tl.to(".text", {opacity: 0});
+    tl.to(".slider", {opacity: 0});
+    tl.to(".intro", {opacity: 0});
+    tl.to(".text", {y: "0%", duration: 0.1, stagger: 0.5});
+    tl.to(".slider", {y: "-100%", duration: 0.1, delay: 0.5});
+    tl.to(".intro", {y: "-100%", duration: 0.1}, "-=1");
+    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
+    tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 1}, "-=2");
+    tl.from('.toolbar', {y: '-100%', ease: 'sine', duration: 1}, "-=2")
+}
+function navibar_slide(tl){
+    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
+    tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 1}, "-=1");
+    tl.from('.toolbar', {duration: 1, y: '-100%', ease: 'sine', duration: 1}, "-=1")
+}
+function mobile_skipIntro(){
     gsap.to(".slider", {y: "100%", duration: 0});
     gsap.to(".intro", {y: "100%", duration: 0});
+}
 
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 $(window).on("load",function() {

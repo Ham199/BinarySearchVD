@@ -183,7 +183,7 @@ div.simulation_gesuchtenummer{
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
-/*
+
 .intro {
     background: #ffffff;
     position: fixed;
@@ -216,7 +216,7 @@ div.simulation_gesuchtenummer{
     overflow: hidden; }
 .hide span {
     transform: translateY(100%);
-    display: inline-block; } */
+    display: inline-block; }
 .fade{
 
     opacity: 0;
