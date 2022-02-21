@@ -331,6 +331,7 @@ nav.navi {
     height: auto;
     width: auto;
     margin-top: 60px;
+    padding: 15px;
     text-align: center; }
 
 .blockSimulation, .blockTrainer {
