@@ -39,49 +39,30 @@ function skipIntro(tl){
     tl.to(".text", {y: "0%", duration: 0.1, stagger: 0.5});
     tl.to(".slider", {y: "-100%", duration: 0.1, delay: 0.5});
     tl.to(".intro", {y: "-100%", duration: 0.1}, "-=1");
-    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
-    tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 1}, "-=2");
-    tl.from('.toolbar', {y: '-100%', ease: 'sine', duration: 1}, "-=2")
+    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'}, "-=1");
+    tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 0.5}, "-=2");
+    tl.from('.toolbar', {y: '-100%', ease: 'sine', duration: 0.5}, "-=2")
 }
-function navibar_slide(tl){
-    tl.fromTo("nav", {opacity: 0}, {opacity: 1, duration: 1, ease: 'power1'});
-    tl.fromTo(".big-text", {opacity: 0}, {opacity: 1, duration: 1}, "-=1");
-    tl.from('.toolbar', {duration: 1, y: '-100%', ease: 'sine', duration: 1}, "-=1")
-}
+
 function mobile_skipIntro(){
     gsap.to(".slider", {y: "100%", duration: 0});
     gsap.to(".intro", {y: "100%", duration: 0});
 }
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
 
 $(window).on("load",function() {
     $(window).scroll(function() {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".fade").each(function() {
-            /* Check the location of each desired element */
+       
             var objectBottom = $(this).offset().top + $(this).outerHeight();
 
-            /* If the element is completely within bounds of the window, fade it in */
-            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+
+            if (objectBottom < windowBottom) {
                 if ($(this).css("opacity")==0) {$(this).fadeTo(700,1);}
             }
         });
-    }).scroll(); //invoke scroll-handler on page-load
+    }).scroll();
 });
 
 
