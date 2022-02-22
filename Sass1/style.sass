@@ -11,8 +11,7 @@ body
   padding: 0
   margin: 0
   line-height: 1.2
-  color: #676767
-  background: url(vecteezy_abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background_534015.jpg)
+  background: url("img/vecteezy_abstract-gray-background-low-poly-textured-triangle-shapes-in-random-pattern-trendy-lowpoly-background_534015.jpg")
   background-repeat: no-repeat
   background-size: cover
   background-attachment: fixed
@@ -20,35 +19,38 @@ body
   text-align: justify
 
 h1.ueberschrift
-  font-family: 'Roboto Condensed', sans-serif
+  font-family: "Roboto Condensed", sans-serif
   margin-top: 48px
   color: #2c2c2c
   font-size: 60px
   text-align: center
-  border-radius: .2em
+  border-radius: 0.2em
   padding: 1%
 
 h2
-  font-family: 'Roboto Condensed', sans-serif
+  font-family: "Roboto Condensed", sans-serif
   margin-top: 38px
   color: #525252
   font-size: 36px
   text-align: center
-  border-radius: .2em
+  border-radius: 0.2em
   padding: 1%
 
 h3
-  font-family: 'Roboto Condensed', sans-serif
+  font-family: "Roboto Condensed", sans-serif
   margin-top: 38px
   color: #656565
   font-size: 24px
   text-align: center
   line-height: 1.7
-  border-radius: .2em
+  border-radius: 0.2em
   padding: 1%
 
+  &.anmerkung
+    text-align: left
+
 h4, h5, h6, p, .oxy-rich-text p:last-child
-  margin: 0  24px 36px
+  margin: 0 24px 36px
 
 pre
   display: block
@@ -64,18 +66,34 @@ pre
   border-radius: 5px
   overflow: auto
 
-p
+#textTrainer, #textSimulation
+  color: #676767
+  font-size: 1em
+
+#textTrainer
+  display: inline-block
+  text-align: center
+  margin-top: 10px
+  margin-bottom: 20px
+  width: 20%
+  color: #666667
+  background: rgba(194, 194, 194, 0.28)
+  border-radius: 4px
+
+p, #textRandom, label
+  color: #676767
   font-size: 17px
   font-weight: 400
   font-family: "roboto", serif
   line-height: 1.4em
 
+p
   &.beispiel_beschreibung
     font-size: 17px
     font-weight: 400
     font-family: "roboto", serif
     line-height: 1.4em
-    margin-bottom: 5em
+    margin-bottom: 2em
     width: 85%
 
   &.content_text
@@ -85,10 +103,16 @@ p
     line-height: 1.4em
     width: 85%
 
+#arrayTrainer, #arraySimulation
+  background-color: rgba(138, 138, 138, 0.07)
+
 div.beispiel_text, .theorie_text, .simulation_text
   display: flex
   flex-direction: column
   align-items: center
+
+div.blockSimulation
+  border-radius: 2px
 
 p.beispiel_bild_beschreibung
   font-size: 17px
@@ -99,13 +123,30 @@ p.beispiel_bild_beschreibung
   width: 75%
   margin-top: 2em
 
+.hinweis
+  font-size: 17px
+  font-weight: 400
+  font-family: "roboto", serif
+  line-height: 1.4em
+  text-align: center
+  width: 75%
+  color: rgba(44, 44, 44, 0.42)
+  margin-top: 2em
+
 ol
   padding-left: 15%
   padding-right: 5%
   line-height: 1.4em
   margin-bottom: 48px
 
+  &.anmerkung_liste
+    list-style-type: square
+    width: 50%
+    padding-left: 0
+    padding-right: 0
+
 li
+  color: #676767
   padding-left: 5%
   padding-right: 5%
   line-height: 1.4em
@@ -135,6 +176,10 @@ span.beispielzeile, .theoriezeile, .simulationzeile
 hr
   margin-top: auto
   opacity: 30%
+
+div.simulation_gesuchtenummer
+  margin-top: 1.5em
+  margin-bottom: 0.5em
 
 .intro
   background: #ffffff
@@ -171,13 +216,16 @@ hr
     transform: translateY(100%)
     display: inline-block
 
+.fade
+  opacity: 0
+
 .material-icons
   line-height: normal
 
 .logozeile
   display: flex
   justify-content: center
-  background: rgba(93, 111, 126, 99%)
+  background: rgba(93, 111, 126, 0.99)
 
 section
   margin-bottom: 2em
@@ -190,7 +238,7 @@ section
   z-index: 1
 
 img
-  border-radius: .4em
+  border-radius: 0.4em
 
   &.bannerbild
     display: flex
@@ -217,22 +265,19 @@ img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild
 
 img.beispiel
   display: block
-  margin-top: auto
-  margin-bottom: auto
-  margin-left: 0
-  margin-right: 0
+  margin: auto 0
   width: 75%
 
 nav.navi
   display: inline-block
   position: center
-  background: rgba(248, 248, 248, 95%)
+  background: rgba(236, 236, 236, 0.95)
   width: 100%
   margin: 0 auto
   box-shadow: 5px 5px
   padding: 0.3%
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35)
-  color: #222222
+  color: #adadad
   text-align: center
 
 .beispiel_button, .theorie_button, .simulation_button, .uebung_button
@@ -240,16 +285,15 @@ nav.navi
   border-radius: 4px
   padding: 8px
   -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14)
-  color: #707070
   font-size: 1.4em
 
 .Logo
-  margin: .4em .2em
-  padding: .3em 1em
+  margin: 0.4em 0.2em
+  padding: 0.3em 1em
   color: #dedede
-  font-family: 'Raleway', sans-serif
+  font-family: "Raleway", sans-serif
   font-size: 1.5em
-  letter-spacing: .05em
+  letter-spacing: 0.05em
 
 .logo
   text-align: right
@@ -259,8 +303,7 @@ nav.navi
 
 .beispiel_button:hover, .theorie_button:hover, .simulation_button:hover, .uebung_button:hover
   background: rgba(250, 250, 250, 0.57)
-  color: rgba(93, 111, 126, 99%)
-  -webkit-filter: brightness(150%)
+  color: rgba(93, 111, 126, 0.99)
   text-decoration: none
   transition: 0.5s
 
@@ -274,17 +317,24 @@ nav.navi
   width: 20%
   color: #707070
   font-size: 1.4em
-  font-family: Bahnschrift
+  font-family: Bahnschrift, serif
+
+  &:hover
+    background: rgba(222, 222, 222, 0.18)
+    color: rgba(93, 111, 126, 0.99)
+    text-decoration: none
+    transition: 0.5s
 
 #arraySimulation, #arrayTrainer
-  height: 300px
+  height: auto
   width: auto
   margin-top: 60px
-  position: center
+  padding: 15px
   text-align: center
 
 .blockSimulation, .blockTrainer
   display: inline-block
+  text-align: center
   width: 28px
   background-color: #5e7080
   position: relative
@@ -309,7 +359,7 @@ nav.navi
 .footer-basic
   padding: 48px 0
   background-color: #ececec
-  color: rgb(103, 103, 103)
+  color: #676767
 
   ul
     padding: 0
@@ -348,12 +398,15 @@ nav.navi
     object-fit: cover
     height: 200px
 
+  h3.anmerkung
+    text-align: center
+
+  ol.anmerkung_liste
+    width: 80%
+
   img.beispiel
     display: block
-    margin-top: auto
-    margin-bottom: auto
-    margin-left: 0
-    margin-right: 0
+    margin: auto 0
     width: 90%
 
   .beispiel_button, .theorie_button, .simulation_button, .uebung_button
@@ -371,22 +424,21 @@ nav.navi
     margin: 10em auto 0 auto
     padding: 0 0%
     box-shadow: 3px 3px
-    border-radius: .4em
+    border-radius: 0.4em
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
 
-
-@media (min-width: 420px)
+@media (max-width: 420px)
   nav.navi
     display: none
 
   .toolbar
     border-bottom: 0px solid #DFE1E6
 
-  div.bannertext
-    position: relative
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -40%)
+  h3.anmerkung_liste
+    text-align: center
+
+  ol.anmerkung_liste
+    width: 100%
 
   img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild
     display: block
@@ -400,12 +452,8 @@ nav.navi
 
   img.beispiel
     display: block
-    margin-top: auto
-    margin-bottom: auto
-    margin-left: 0
-    margin-right: 0
+    margin: auto 0
     width: 90%
-
 
   .beispiel_button, .theorie_button, .simulation_button, .uebung_button
     display: inline-block
@@ -425,7 +473,7 @@ nav.navi
     font-size: 30px
     cursor: pointer
     position: relative
-    right: 30px
+    right: 10px
     top: 15px
     border-radius: 3px
     padding: 5px
@@ -439,11 +487,11 @@ nav.navi
 
   .dropdown-menu
     position: absolute
-    right: 20px
+    right: 5px
     top: 62px
     background-color: #dedede
-    padding: .75rem
-    border-radius: .25rem
+    padding: 0.75rem
+    border-radius: 0.25rem
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
     opacity: 0
     pointer-events: none
@@ -461,23 +509,37 @@ nav.navi
     margin: 4em auto 0 auto
     padding: 0 0
     box-shadow: 3px 3px
-    border-radius: .4em
+    border-radius: 0.4em
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
 
+  .try_knopf
+    background: #ebebec
+    border-radius: 4px
+    padding: 8px
+    -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14)
+    width: 20%
+    color: #707070
+    font-size: 1em
+    font-family: Bahnschrift, serif
 
-
-@media (min-width: 499px)
+@media (max-width: 499px)
   nav.navi
     display: none
 
   .toolbar
-    border-bottom: 0px solid #DFE1E6
+    border-bottom: 0 solid #DFE1E6
 
   div.bannertext
     position: relative
     top: 50%
     left: 50%
-    transform: translate(-50%, -40%)
+    transform: translate(-50%, -30%)
+
+  h3.anmerkung_liste
+    text-align: center
+
+  ol.anmerkung_liste
+    width: 100%
 
   img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild
     display: block
@@ -496,8 +558,6 @@ nav.navi
     margin-left: 0
     margin-right: 0
     width: 90%
-
-
 
   .link
     background: none
@@ -509,25 +569,22 @@ nav.navi
     cursor: pointer
     padding: 0
     position: relative
-    right: 30px
     top: 15px
     border-radius: 3px
-    padding: 5px
 
   .dropdown.active > .link, .link:hover
     background-color: #738596
 
   .dropdown
     position: relative
-    left: 30px
+    left: 15px
 
   .dropdown-menu
     position: absolute
-    right: 30px
     top: 62px
     background-color: #dedede
-    padding: .75rem
-    border-radius: .25rem
+    padding: 0.75rem
+    border-radius: 0.25rem
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
     opacity: 0
     pointer-events: none
@@ -545,32 +602,35 @@ nav.navi
     margin: 4em auto 0 auto
     padding: 0 0
     box-shadow: 3px 3px
-    border-radius: .4em
+    border-radius: 0.4em
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
-
-
 
 @media (min-width: 500px)
   .header
     display: none
 
-  div
-    &.bannertext
-      position: relative
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
+  div.bannertext
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 
-    &.mittelpart
-      background: #fafafa
-      width: 100%
-      margin: 10em auto 0 auto
-      padding: 0 0%
-      box-shadow: 3px 3px
-      border-radius: .4em
-      -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
+  h3.anmerkung_liste
+    text-align: center
 
-@media (min-width: 768px)
+  ol.anmerkung_liste
+    width: 100%
+
+  div.mittelpart
+    background: #fafafa
+    width: 100%
+    margin: 10em auto 0 auto
+    padding: 0 0%
+    box-shadow: 3px 3px
+    border-radius: 0.4em
+    -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
+
+@media (min-width: 900px)
   div.bannertext
     position: relative
     top: 50%
@@ -579,20 +639,20 @@ nav.navi
 
   img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild
     display: block
-    margin-top: 24px
-    margin-bottom: 36px
-    margin-left: auto
-    margin-right: auto
+    margin: 24px auto 36px
     width: 90%
     object-fit: cover
     height: 350px
 
+  h3.anmerkung_liste
+    text-align: center
+
+  ol.anmerkung_liste
+    width: 50%
+
   img.beispiel
     display: block
-    margin-top: auto
-    margin-bottom: auto
-    margin-left: 0
-    margin-right: 0
+    margin: auto 0
     width: 50%
 
   p.beispiel_bild_beschreibung
@@ -602,14 +662,20 @@ nav.navi
     background: #fafafa
     width: 100%
     margin: 10em auto 0 auto
-    padding: 0 0%
+    padding: 0 0
     box-shadow: 3px 3px
-    border-radius: .4em
+    border-radius: 0.4em
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
 
-@media (min-width: 1500px)
+@media (min-width: 1100px)
   .header
     display: none
+
+  h3.anmerkung_liste
+    text-align: center
+
+  ol.anmerkung_liste
+    width: 50%
 
   div
     &.bannertext
@@ -620,10 +686,9 @@ nav.navi
 
     &.mittelpart
       background: #fafafa
-      width: 50%
+      width: 1100px
       margin: 10em auto 0 auto
       padding: 0 0%
       box-shadow: 3px 3px
-      border-radius: .4em
+      border-radius: 0.4em
       -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35)
-
