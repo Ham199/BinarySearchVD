@@ -52,7 +52,7 @@ h3.anmerkung{
 h4, h5, h6, p, .oxy-rich-text p:last-child {
     margin: 0 24px 36px; }
 
-pre {
+pre{
     display: block;
     padding: 9.5px;
     margin: 0 0 10px;
@@ -89,14 +89,14 @@ p, #textRandom, label {
     font-weight: 400;
     font-family: "roboto", serif;
     line-height: 1.4em; }
-p.beispiel_beschreibung {
+p.beispielBeschreibung {
     font-size: 17px;
     font-weight: 400;
     font-family: "roboto", serif;
     line-height: 1.4em;
     margin-bottom: 2em;
     width: 85%; }
-p.content_text {
+p.contentText {
     font-size: 17px;
     font-weight: 400;
     font-family: "roboto", serif;
@@ -108,7 +108,7 @@ p.content_text {
 
 }
 
-div.beispiel_text, .theorie_text, .simulation_text {
+div.beispielText, .theorieText, .simulationText {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +118,7 @@ div.blockSimulation{
     border-radius: 2px;
 }
 
-p.beispiel_bild_beschreibung {
+p.beispielBildBeschreibung {
     font-size: 17px;
     font-weight: 400;
     font-family: "roboto", serif;
@@ -142,7 +142,7 @@ ol {
     line-height: 1.4em;
     margin-bottom: 48px;
 }
-ol.anmerkung_liste{
+ol.anmerkungListe{
     list-style-type: square;
     width: 50%;
     padding-left: 0;
@@ -156,14 +156,14 @@ li {
     line-height: 1.4em;
     margin-bottom: 12px;
     font-family: Roboto, serif; }
-li.list_element {
+li.listElement {
     padding-left: 2%;
     padding-right: 2%;
     line-height: 1.4em;
     margin-bottom: 12px;
     font-family: Roboto, serif; }
 
-ul.buttonlist {
+ul.buttonList {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -172,14 +172,14 @@ ul.buttonlist {
     list-style: none;
     width: 100%; }
 
-span.beispielzeile, .theoriezeile, .simulationzeile {
+span.beispielZeile, .theorieZeile, .simulationZeile {
     padding-left: 24px;
     padding-right: 24px; }
 
 hr {
     margin-top: auto;
     opacity: 30%; }
-div.simulation_gesuchtenummer{
+div.simulationGesuchteNummer{
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -206,7 +206,7 @@ div.simulation_gesuchtenummer{
     transform: translateY(100%);
     z-index: 100; }
 
-.intro-text {
+.introText {
     color: #35373f;
     font-family: "roboto", serif;
     font-size: 3rem; }
@@ -242,7 +242,7 @@ section {
 
 img {
     border-radius: 0.4em; }
-img.bannerbild {
+img.bannerBild {
     display: flex;
     margin-bottom: 48px;
     margin-left: auto;
@@ -251,12 +251,12 @@ img.bannerbild {
     opatcity: 100%;
     z-index: 0; }
 
-.Titelbild_part {
+.titelbildPart {
     position: relative;
     text-align: center;
     color: white; }
 
-img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
     display: block;
     margin-top: 24px;
     margin-bottom: 48px;
@@ -282,37 +282,36 @@ nav.navi {
     color: #adadad;
     text-align: center; }
 
-.beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+.beispielButton, .theorieButton, .simulationButton, .uebungButton {
     display: inline-block;
     border-radius: 4px;
     padding: 8px;
     -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14);
     font-size: 1.4em; }
 
-.Logo {
+.logo {
     margin: 0.4em 0.2em;
     padding: 0.3em 1em;
     color: #dedede;
     font-family: "Raleway", sans-serif;
     font-size: 1.5em;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.05em;
+    text-align: right;
+}
 
-.logo {
-    text-align: right; }
-
-.beispiel_button:link, .theorie_button:link, .simulation_button:link, .uebung_button:link, .Logo:link {
+.beispielButton:link, .theorieButton:link, .simulationButton:link, .uebungButton:link, .logo:link {
     text-decoration: none; }
 
-.beispiel_button:hover, .theorie_button:hover, .simulation_button:hover, .uebung_button:hover {
+.beispielButton:hover, .theorieButton:hover, .simulationButton:hover, .uebungButton:hover {
     background: rgba(250, 250, 250, 0.57);
     color: rgba(93, 111, 126, 0.99);
     text-decoration: none;
     transition: 0.5s; }
 
-#section_Beispiel, #sectionSimulation, #section_Theorie, #sectionUebung {
+#sectionBeispiel, #sectionSimulation, #sectionTheorie, #sectionUebung {
     scroll-margin-top: 180px; }
 
-.try_knopf {
+.tryKnopf {
     border-radius: 4px;
     padding: 8px;
     -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14);
@@ -321,7 +320,7 @@ nav.navi {
     font-size: 1.4em;
     font-family: Bahnschrift, serif; }
 
-.try_knopf:hover{
+.tryKnopf:hover{
     background: rgba(222, 222, 222, 0.18);
     color: rgba(93, 111, 126, 0.99);
     text-decoration: none;
@@ -358,26 +357,26 @@ nav.navi {
     margin-left: auto;
     margin-right: auto; }
 
-.footer-basic {
+.footerBasic {
     padding: 48px 0;
     background-color: #ececec;
     color: #676767; }
-.footer-basic ul {
+.footerBasic ul {
     padding: 0;
     list-style: none;
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 0; }
-.footer-basic li {
+.footerBasic li {
     padding: 0 10px; }
-.footer-basic ul a {
+.footerBasic ul a {
     color: inherit;
     text-decoration: none;
     opacity: 0.8; }
-.footer-basic ul a:hover {
+.footerBasic ul a:hover {
     opacity: 1; }
-.footer-basic .copyright {
+.footerBasic .copyright {
     margin-top: 15px;
     text-align: center;
     font-size: 13px;
@@ -388,7 +387,7 @@ nav.navi {
 
 
 
-    img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+    img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
         display: block;
         margin-top: 24px;
         margin-bottom: 36px;
@@ -402,7 +401,7 @@ nav.navi {
         text-align: center;
     }
 
-    ol.anmerkung_liste{
+    ol.anmerkungListe{
         width: 80%;
     }
 
@@ -411,7 +410,7 @@ nav.navi {
         margin: auto 0;
         width: 90%; }
 
-    .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+    .beispielButton, .theorieButton, .simulationButton, .uebungButton {
         display: inline-block;
         border-radius: 4px;
         padding: 8px;
@@ -440,15 +439,15 @@ nav.navi {
     .toolbar {
         border-bottom: 0px solid #DFE1E6; }
 
-    h3.anmerkung_liste{
+    h3.anmerkungListe{
         text-align: center;
     }
 
-    ol.anmerkung_liste{
+    ol.anmerkungListe{
         width: 100%;
     }
 
-    img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+    img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
         display: block;
         margin-top: 24px;
         margin-bottom: 36px;
@@ -463,7 +462,7 @@ nav.navi {
         margin: auto 0;
         width: 90%; }
 
-    .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+    .beispielButton, .theorieButton, .simulationButton, .uebungButton {
         display: inline-block;
         border-radius: 4px;
         padding: 8px;
@@ -493,7 +492,7 @@ nav.navi {
         position: relative;
         left: 30px; }
 
-    .dropdown-menu {
+    .dropdownMenu {
         position: absolute;
         right: 5px;
         top: 62px;
@@ -506,7 +505,7 @@ nav.navi {
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
         transform: translateY(-10px); }
 
-    .dropdown.active > .link + .dropdown-menu {
+    .dropdown.active > .link + .dropdownMenu {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto; }
@@ -521,7 +520,7 @@ nav.navi {
         -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); }
 
 
-    .try_knopf {
+    .tryKnopf {
         background: #ebebec;
         border-radius: 4px;
         padding: 8px;
@@ -539,19 +538,19 @@ nav.navi {
     .toolbar {
         border-bottom: 0 solid #DFE1E6; }
 
-    div.bannertext {
+    div.bannerText {
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -30%); }
-    h3.anmerkung_liste{
+    h3.anmerkungListe{
         text-align: center;
     }
 
-    ol.anmerkung_liste{
+    ol.anmerkungListe{
         width: 100%;
     }
-    img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+    img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
         display: block;
         margin-top: 24px;
         margin-bottom: 36px;
@@ -590,7 +589,7 @@ nav.navi {
         position: relative;
         left: 15px; }
 
-    .dropdown-menu {
+    .dropdownMenu {
         position: absolute;
 
         top: 62px;
@@ -603,7 +602,7 @@ nav.navi {
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
         transform: translateY(-10px); }
 
-    .dropdown.active > .link + .dropdown-menu {
+    .dropdown.active > .link + .dropdownMenu {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto; }
@@ -620,17 +619,17 @@ nav.navi {
     .header {
         display: none; }
 
-    div.bannertext {
+    div.bannerText {
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
 
-    h3.anmerkung_liste{
+    h3.anmerkungListe{
         text-align: center;
     }
 
-    ol.anmerkung_liste{
+    ol.anmerkungListe{
         width: 100%;
     }
     div.mittelpart {
@@ -644,24 +643,24 @@ nav.navi {
 }
 
 @media (min-width: 900px) {
-    div.bannertext {
+    div.bannerText {
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
 
-    img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+    img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
         display: block;
         margin: 24px auto 36px;
         width: 90%;
         object-fit: cover;
         height: 350px; }
 
-    h3.anmerkung_liste{
+    h3.anmerkungListe{
         text-align: center;
     }
 
-    ol.anmerkung_liste{
+    ol.anmerkungListe{
         width: 50%;
     }
     img.beispiel {
@@ -669,7 +668,7 @@ nav.navi {
         margin: auto 0;
         width: 50%; }
 
-    p.beispiel_bild_beschreibung {
+    p.beispielBildBeschreibung {
         width: 50%;
         }
 
@@ -685,14 +684,14 @@ nav.navi {
     .header {
         display: none; }
 
-    h3.anmerkung_liste{
+    h3.anmerkungListe{
         text-align: center;
     }
 
-    ol.anmerkung_liste{
+    ol.anmerkungListe{
         width: 50%;
     }
-    div.bannertext {
+    div.bannerText {
         position: relative;
         top: 50%;
         left: 50%;

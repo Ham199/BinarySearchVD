@@ -69,26 +69,26 @@ p {
   font-weight: 400;
   font-family: "roboto", serif;
   line-height: 1.4em; }
-  p.beispiel_beschreibung {
+  p.beispielBeschreibung {
     font-size: 17px;
     font-weight: 400;
     font-family: "roboto", serif;
     line-height: 1.4em;
     margin-bottom: 5em;
     width: 85%; }
-  p.content_text {
+  p.contentText {
     font-size: 17px;
     font-weight: 400;
     font-family: "roboto", serif;
     line-height: 1.4em;
     width: 85%; }
 
-div.beispiel_text, .theorie_text, .simulation_text {
+div.beispielText, .theorieText, .simulationText {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-p.beispiel_bild_beschreibung {
+p.beispielBildBeschreibung {
   font-size: 17px;
   font-weight: 400;
   font-family: "roboto", serif;
@@ -109,14 +109,14 @@ li {
   line-height: 1.4em;
   margin-bottom: 12px;
   font-family: Roboto, serif; }
-  li.list_element {
+  li.listElement {
     padding-left: 2%;
     padding-right: 2%;
     line-height: 1.4em;
     margin-bottom: 12px;
     font-family: Roboto, serif; }
 
-ul.buttonlist {
+ul.buttonList {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -125,7 +125,7 @@ ul.buttonlist {
   list-style: none;
   width: 100%; }
 
-span.beispielzeile, .theoriezeile, .simulationzeile {
+span.beispielZeile, .theorieZeile, .simulationZeile {
   padding-left: 24px;
   padding-right: 24px; }
 
@@ -155,7 +155,7 @@ hr {
   transform: translateY(100%);
   z-index: 100; }
 
-.intro-text {
+.introText {
   color: #35373f;
   font-family: "roboto", serif;
   font-size: 3rem; }
@@ -187,7 +187,7 @@ section {
 
 img {
   border-radius: 0.4em; }
-  img.bannerbild {
+  img.bannerBild {
     display: flex;
     margin-bottom: 48px;
     margin-left: auto;
@@ -196,12 +196,12 @@ img {
     opatcity: 100%;
     z-index: 0; }
 
-.Titelbild_part {
+.titelbildPart {
   position: relative;
   text-align: center;
   color: white; }
 
-img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
   display: block;
   margin-top: 24px;
   margin-bottom: 48px;
@@ -230,7 +230,7 @@ nav.navi {
   color: #222222;
   text-align: center; }
 
-.beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+.beispielButton, .theorieButton, .simulationButton, .uebungButton {
   display: inline-block;
   border-radius: 4px;
   padding: 8px;
@@ -238,7 +238,7 @@ nav.navi {
   color: #707070;
   font-size: 1.4em; }
 
-.Logo {
+.logo {
   margin: 0.4em 0.2em;
   padding: 0.3em 1em;
   color: #dedede;
@@ -249,20 +249,20 @@ nav.navi {
 .logo {
   text-align: right; }
 
-.beispiel_button:link, .theorie_button:link, .simulation_button:link, .uebung_button:link, .Logo:link {
+.beispielButton:link, .theorieButton:link, .simulationButton:link, .uebungButton:link, .logo:link {
   text-decoration: none; }
 
-.beispiel_button:hover, .theorie_button:hover, .simulation_button:hover, .uebung_button:hover {
+.beispielButton:hover, .theorieButton:hover, .simulationButton:hover, .uebungButton:hover {
   background: rgba(250, 250, 250, 0.57);
   color: rgba(93, 111, 126, 0.99);
   -webkit-filter: brightness(150%);
   text-decoration: none;
   transition: 0.5s; }
 
-#section_Beispiel, #sectionSimulation, #section_Theorie, #sectionUebung {
+#sectionBeispiel, #sectionSimulation, #sectionTheorie, #sectionUebung {
   scroll-margin-top: 180px; }
 
-.try_knopf {
+.tryKnopf {
   border-radius: 4px;
   padding: 8px;
   -webkit-box-shadow: 5px 5px 2px -1px rgba(0, 0, 0, 0.14);
@@ -301,26 +301,26 @@ nav.navi {
   margin-left: auto;
   margin-right: auto; }
 
-.footer-basic {
+.footerBasic {
   padding: 48px 0;
   background-color: #ececec;
   color: #676767; }
-  .footer-basic ul {
+  .footerBasic ul {
     padding: 0;
     list-style: none;
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 0; }
-  .footer-basic li {
+  .footerBasic li {
     padding: 0 10px; }
-  .footer-basic ul a {
+  .footerBasic ul a {
     color: inherit;
     text-decoration: none;
     opacity: 0.8; }
-    .footer-basic ul a:hover {
+    .footerBasic ul a:hover {
       opacity: 1; }
-  .footer-basic .copyright {
+  .footerBasic .copyright {
     margin-top: 15px;
     text-align: center;
     font-size: 13px;
@@ -328,7 +328,7 @@ nav.navi {
     margin-bottom: 0; }
 
 @media (min-width: 320px) {
-  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+  img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
     display: block;
     margin-top: 24px;
     margin-bottom: 36px;
@@ -346,7 +346,7 @@ nav.navi {
     margin-right: 0;
     width: 90%; }
 
-  .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+  .beispielButton, .theorieButton, .simulationButton, .uebungButton {
     display: inline-block;
     border-radius: 4px;
     padding: 8px;
@@ -370,13 +370,13 @@ nav.navi {
   .toolbar {
     border-bottom: 0px solid #DFE1E6; }
 
-  div.bannertext {
+  div.bannerText {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%); }
 
-  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+  img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
     display: block;
     margin-top: 24px;
     margin-bottom: 36px;
@@ -394,7 +394,7 @@ nav.navi {
     margin-right: 0;
     width: 90%; }
 
-  .beispiel_button, .theorie_button, .simulation_button, .uebung_button {
+  .beispielButton, .theorieButton, .simulationButton, .uebungButton {
     display: inline-block;
     border-radius: 4px;
     padding: 8px;
@@ -424,7 +424,7 @@ nav.navi {
     position: relative;
     left: 30px; }
 
-  .dropdown-menu {
+  .dropdownMenu {
     position: absolute;
     right: 20px;
     top: 62px;
@@ -437,7 +437,7 @@ nav.navi {
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     transform: translateY(-10px); }
 
-  .dropdown.active > .link + .dropdown-menu {
+  .dropdown.active > .link + .dropdownMenu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto; }
@@ -457,13 +457,13 @@ nav.navi {
   .toolbar {
     border-bottom: 0px solid #DFE1E6; }
 
-  div.bannertext {
+  div.bannerText {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%); }
 
-  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+  img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
     display: block;
     margin-top: 24px;
     margin-bottom: 36px;
@@ -503,7 +503,7 @@ nav.navi {
     position: relative;
     left: 30px; }
 
-  .dropdown-menu {
+  .dropdownMenu {
     position: absolute;
     right: 30px;
     top: 62px;
@@ -516,7 +516,7 @@ nav.navi {
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     transform: translateY(-10px); }
 
-  .dropdown.active > .link + .dropdown-menu {
+  .dropdown.active > .link + .dropdownMenu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto; }
@@ -533,7 +533,7 @@ nav.navi {
   .header {
     display: none; }
 
-  div.bannertext {
+  div.bannerText {
     position: relative;
     top: 50%;
     left: 50%;
@@ -547,13 +547,13 @@ nav.navi {
     border-radius: 0.4em;
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.35); } }
 @media (min-width: 768px) {
-  div.bannertext {
+  div.bannerText {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
 
-  img.beispiel_titelbild, .theorie_titelbild, .simulation_titelbild {
+  img.beispielTitelbild, .theorieTitelbild, .simulationTitelbild {
     display: block;
     margin-top: 24px;
     margin-bottom: 36px;
@@ -571,7 +571,7 @@ nav.navi {
     margin-right: 0;
     width: 50%; }
 
-  p.beispiel_bild_beschreibung {
+  p.beispielBildBeschreibung {
     width: 50%; }
 
   div.mittelpart {
@@ -586,7 +586,7 @@ nav.navi {
   .header {
     display: none; }
 
-  div.bannertext {
+  div.bannerText {
     position: relative;
     top: 50%;
     left: 50%;
