@@ -11,10 +11,10 @@ if(window.innerWidth > 500) {
     const tl = gsap.timeline({defaults: {ease: "power1.out"}});
 
     if(first_time == "visited"){
-    skipIntro(tl)
+        skipIntro(tl)
     }
     if (first_time == ""){
-    playIntro(tl)
+        playIntro(tl)
     }
 
     document.cookie= "visited"
@@ -54,7 +54,7 @@ $(window).on("load",function() {
     $(window).scroll(function() {
         let windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".fade").each(function() {
-       
+
             let objectBottom = $(this).offset().top + $(this).outerHeight();
 
             if(objectBottom < windowBottom) {
@@ -70,7 +70,7 @@ document.addEventListener("click", e=>{
     if(!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
     let currentDropdown
     if(isDropdownButton){
-    currentDropdown = e.target.closest('[data-dropdown]')
+        currentDropdown = e.target.closest('[data-dropdown]')
         currentDropdown.classList.toggle('active')
     }
     document.querySelectorAll("[data-dropdown].active").forEach(dropdown =>{
@@ -94,7 +94,7 @@ let NumberTrainer = 0;
 
 // Array für Simulation erstellen
 function generateArraySimulation() {
-   // Für Mobile Version 11 Balken & für Desktop-Version 20 Balken
+    // Für Mobile Version 11 Balken & für Desktop-Version 20 Balken
     if (window.innerWidth < 960) {
         NumberOfBars = 11
         EndSimulation=10;
@@ -274,7 +274,7 @@ function Trainer() {
             }
             break;
         }else if(NumberTrainer == DivValueTrainer) {
-        //If Bedingungen für "Richtiger Zwischenschritt"
+            //If Bedingungen für "Richtiger Zwischenschritt"
             OutputTrainer.innerText = "Richtig!";
             BlocksTrainer[MidTrainer].style.backgroundColor = "#ffd700";
 
@@ -296,4 +296,3 @@ function Trainer() {
         }
     }
 }
-
