@@ -105,13 +105,13 @@ function generateArraySimulation() {
 
     let ArraySimulation = [];
 
-// Array befüllen
+    // Array befüllen
     for(let i = 0; i < NumberOfBars; i++) {
         let ValueSimulation = Number(Math.ceil(Math.random() * 100));
         ArraySimulation.push(ValueSimulation);
 
     }
-// Array sortieren
+    // Array sortieren
     ArraySimulation.sort(function (a, b) {
         return a - b;
     });
@@ -198,7 +198,7 @@ async function binarySearchSimulation(delay = 3000) {
 }
 
 generateArraySimulation();
-// Array für Übung erstellen
+    // Array für Übung erstellen
 function generateArrayTrainer() {
     // Für Mobile Version 11 Balken & für Desktop-Version 20 Balken
     if(window.innerWidth < 960) {
@@ -207,12 +207,12 @@ function generateArrayTrainer() {
     }else{
         NumberOfBars = 20;
     }
-// Array befüllen
+    // Array befüllen
     for(let i = 0; i < NumberOfBars; i++) {
         let ValueTrainer = Number(Math.ceil(Math.random() * 100));
         ArrayTrainer.push(ValueTrainer);
     }
-//Array sortieren
+    //Array sortieren
     ArrayTrainer.sort(function (a, b) {
         return a - b;
     });
