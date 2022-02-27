@@ -22,7 +22,7 @@ if(window.innerWidth > 500) {
     mobileSkipIntro()
 
 }
-
+// Umsetzung ds Intros
 function playIntro(tl){
     tl.to(".text", {y: "0%", duration: 1, stagger: 0.5});
     tl.to(".slider", {y: "-100%", duration: 1.5, delay: 0.5});
@@ -49,7 +49,7 @@ function mobileSkipIntro(){
     gsap.to(".intro", {y: "100%", duration: 0});
 }
 
-
+// Einblendung durch scrollen
 $(window).on("load",function() {
     $(window).scroll(function() {
         let windowBottom = $(this).scrollTop() + $(this).innerHeight();
@@ -64,7 +64,7 @@ $(window).on("load",function() {
     }).scroll();
 });
 
-
+// Menü in Mobile-Version
 document.addEventListener("click", e=>{
     const isDropdownButton = e.target.matches("[data-dropdown-button]")
     if(!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
@@ -80,6 +80,7 @@ document.addEventListener("click", e=>{
 
 })
 
+//Alle Variablen
 let NumberOfBars =0;
 let ContainerSimulation = document.getElementById("arraySimulation");
 let ContainerTrainer = document.getElementById("arrayTrainer");
@@ -91,8 +92,9 @@ let EndSimulation = 19;
 let FlagSimulation = 0;
 let NumberTrainer = 0;
 
-// Array erstellen
+// Array für Simulation erstellen
 function generateArraySimulation() {
+   // Für Mobile Version 11 Balken & für Desktop-Version 20 Balken
     if (window.innerWidth < 960) {
         NumberOfBars = 11
         EndSimulation=10;
@@ -109,7 +111,7 @@ function generateArraySimulation() {
         ArraySimulation.push(ValueSimulation);
 
     }
-
+// Array sortieren
     ArraySimulation.sort(function (a, b) {
         return a - b;
     });
@@ -133,13 +135,13 @@ function generateArraySimulation() {
     }
 }
 
-// Binäre Suche
+// Funktion der Binären Suche für Simulation
 async function binarySearchSimulation(delay = 3000) {
     let BlocksSimulation = document.querySelectorAll(".blockSimulation");
     let OutputSimulation= document.getElementById("textSimulation");
     let NumberSimulation = document.getElementById("nameSimulation").value;
 
-
+    // Binäre Suche
     for(let i = 0; i < BlocksSimulation.length; i += 1) {
         BlocksSimulation[i].style.backgroundColor = "#5e7080";
     }
@@ -160,14 +162,14 @@ async function binarySearchSimulation(delay = 3000) {
             }, delay)
         );
 
-
+        //If Bedingung für "Element gefunden"
         if(ElementValueSimulation == NumberSimulation) {
             OutputSimulation.innerText = "Die Zahl wurde in der Zahlenmenge gefunden!";
             BlocksSimulation[MidSimulation].style.backgroundColor = "#36dc0a";
             FlagSimulation = 1;
             break;
         }
-
+        //If Bedingungen für "Element ist kleiner/größer als die Mitte"
         if(ElementValueSimulation > NumberSimulation) {
             EndSimulation = MidSimulation - 1;
 
@@ -189,28 +191,28 @@ async function binarySearchSimulation(delay = 3000) {
             }
         }
     }
+    //If Bedingungen für "Element ist nicht in der Zahlenmenge"
     if(FlagSimulation === 0) {
         OutputSimulation.innerText = "Die Zahl existiert nicht in der Zahlenmenge.";
     }
 }
 
 generateArraySimulation();
-
+// Array für Übung erstellen
 function generateArrayTrainer() {
+    // Für Mobile Version 11 Balken & für Desktop-Version 20 Balken
     if(window.innerWidth < 960) {
         NumberOfBars = 11;
         EndTrainer=10;
     }else{
         NumberOfBars = 20;
     }
-
+// Array befüllen
     for(let i = 0; i < NumberOfBars; i++) {
-        // Return a value from 1 to 100 (both inclusive)
         let ValueTrainer = Number(Math.ceil(Math.random() * 100));
         ArrayTrainer.push(ValueTrainer);
     }
-
-
+//Array sortieren
     ArrayTrainer.sort(function (a, b) {
         return a - b;
     });
@@ -221,6 +223,7 @@ function generateArrayTrainer() {
     console.log(RandomNumber);
     TextRandomNumber.innerText = "Suche nach der Nummer: "+ ArrayRandomNumber;
     for (let i = 0; i < NumberOfBars; i++) {
+        // Div Elemente werden erstellt
         let DivValueTrainer = ArrayTrainer[i];
 
         let ElementTrainer = document.createElement("div");
@@ -233,16 +236,14 @@ function generateArrayTrainer() {
         LabelTrainer.classList.add("blockId");
         LabelTrainer.innerText = DivValueTrainer;
 
-
+        // Div Elemente werden zur HTML Datei hinzugefügt
         ElementTrainer.appendChild(LabelTrainer);
         ContainerTrainer.appendChild(ElementTrainer);
     }
 
 }
 generateArrayTrainer();
-
-//Div Element anklickbar
-
+//Div Element nun anklickbar
 let Clicked = document.getElementsByClassName('blockTrainer');
 for (let i = 0; i < Clicked.length; i++ ){
     Clicked[i].addEventListener("click",function (){
@@ -259,12 +260,12 @@ function Trainer() {
 
     OutputTrainer.innerText = "";
 
-    //Iterativ
+    //Binäre Suche
     while(StartTrainer <= EndTrainer) {
         let MidTrainer = Math.floor((StartTrainer + EndTrainer) / 2);
 
         let DivValueTrainer = Number(BlocksTrainer[MidTrainer].childNodes[0].innerHTML);
-
+        //If Bedingungen für "Finales Element gefunden"
         if(ArrayRandomNumber == NumberTrainer) {
 
             OutputTrainer.innerText = "Du hast es geschafft!";
@@ -273,7 +274,7 @@ function Trainer() {
             }
             break;
         }else if(NumberTrainer == DivValueTrainer) {
-
+        //If Bedingungen für "Richtiger Zwischenschritt"
             OutputTrainer.innerText = "Richtig!";
             BlocksTrainer[MidTrainer].style.backgroundColor = "#ffd700";
 
@@ -286,6 +287,7 @@ function Trainer() {
             }
 
         }else{
+            //If Bedingungen für "Falscher Zwischenschritt"
             OutputTrainer.innerText = "Falsch.";
             for(let i = 0; i < BlocksTrainer.length; i += 1) {
                 BlocksTrainer[i].style.backgroundColor = "#c50219";
